@@ -26,5 +26,10 @@ namespace AterrizarSA_Grupo5
         {
             listView3.View = View.Details;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

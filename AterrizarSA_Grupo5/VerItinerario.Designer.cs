@@ -483,6 +483,7 @@
             button7.TabIndex = 30;
             button7.Text = "Volver atrás";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // VerItinerario
             // 

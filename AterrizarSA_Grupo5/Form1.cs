@@ -11,5 +11,28 @@ namespace AterrizarSA_Grupo5
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListadoHoteles hotel = new ListadoHoteles();
+            hotel.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListadoVuelos vuelo = new ListadoVuelos();
+            vuelo.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GestionItinerarios itinerario = new GestionItinerarios();
+            itinerario.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
