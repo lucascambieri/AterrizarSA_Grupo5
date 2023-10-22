@@ -16,5 +16,21 @@ namespace AterrizarSA_Grupo5
         {
             InitializeComponent();
         }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VerItinerario verItinerario = new VerItinerario();
+            verItinerario.Show();
+        }
     }
 }

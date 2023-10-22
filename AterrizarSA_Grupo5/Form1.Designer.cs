@@ -28,90 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("Itinerario n°: NO SELECCIONADO");
-            label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            listView1 = new ListView();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(42, 54);
-            label1.Name = "label1";
-            label1.Size = new Size(173, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Seleccione una de las opciones:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(90, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione una de las opciones:";
             // 
             // button1
             // 
-            button1.Location = new Point(51, 83);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 62);
-            button1.TabIndex = 1;
-            button1.Text = "Consultar / Agregar hotel";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(51, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(297, 51);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Consultar / Agregar hotel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            button2.Location = new Point(51, 163);
-            button2.Name = "button2";
-            button2.Size = new Size(154, 62);
-            button2.TabIndex = 2;
-            button2.Text = "Consultar / Agregar vuelo";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(51, 164);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(297, 51);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Consultar / Agregar vuelo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
-            button3.Location = new Point(51, 252);
-            button3.Name = "button3";
-            button3.Size = new Size(154, 62);
-            button3.TabIndex = 3;
-            button3.Text = "Gestión de itinerarios";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(51, 88);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(297, 51);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Gestión de itinerarios";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
-            button4.Location = new Point(90, 351);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Salir";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            this.button4.Location = new System.Drawing.Point(135, 325);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(116, 38);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Salir";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // listView1
+            // label2
             // 
-            listView1.Items.AddRange(new ListViewItem[] { listViewItem1 });
-            listView1.LabelWrap = false;
-            listView1.Location = new Point(26, 12);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(208, 27);
-            listView1.TabIndex = 6;
-            listView1.UseCompatibleStateImageBehavior = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "N° Itinerario:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(103, 14);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(110, 23);
+            this.textBox1.TabIndex = 6;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(255, 429);
-            Controls.Add(listView1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(390, 392);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -121,6 +131,7 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private ListView listView1;
+        private Label label2;
+        private TextBox textBox1;
     }
 }

@@ -31,5 +31,14 @@ namespace AterrizarSA_Grupo5
         {
             Close();
         }
+
+        private void listView3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
