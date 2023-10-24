@@ -285,6 +285,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "GestionItinerarios";
             Text = "GestionItinerarios";
+            Load += GestionItinerarios_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
