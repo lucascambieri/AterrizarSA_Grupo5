@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AterrizarSA_Grupo5
 {
@@ -75,6 +76,38 @@ namespace AterrizarSA_Grupo5
                 // Copiar el valor al textBox3
                 textBox3.Text = valorColumna1;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string buscarNumeroItinerario = textBox1.Text;
+
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                string columnaItinerario = item.SubItems[0].Text;
+                if (columnaItinerario == buscarNumeroItinerario)
+                {
+                    listView1.Items.Clear();
+                    string[] infoFila = new string[item.SubItems.Count];
+                    for (int i = 0; i < item.SubItems.Count; i++)
+                    {
+                        infoFila[i] = item.SubItems[i].Text;
+                    }
+
+                    listView1.Items.Add(new ListViewItem(infoFila));
+                }
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
