@@ -28,646 +28,586 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView8 = new System.Windows.Forms.ListView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader23 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader24 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader25 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader29 = new System.Windows.Forms.ColumnHeader();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader30 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader31 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader32 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader33 = new System.Windows.Forms.ColumnHeader();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listView5 = new System.Windows.Forms.ListView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView9 = new System.Windows.Forms.ListView();
-            this.columnHeader26 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader27 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader28 = new System.Windows.Forms.ColumnHeader();
-            this.listView7 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader35 = new System.Windows.Forms.ColumnHeader();
-            this.listView6 = new System.Windows.Forms.ListView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView10 = new System.Windows.Forms.ListView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.listView11 = new System.Windows.Forms.ListView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label7 = new Label();
+            listView8 = new ListView();
+            label8 = new Label();
+            button4 = new Button();
+            button5 = new Button();
+            label10 = new Label();
+            label11 = new Label();
+            button7 = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            listView1 = new ListView();
+            columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
+            columnHeader7 = new ColumnHeader();
+            columnHeader8 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader19 = new ColumnHeader();
+            columnHeader20 = new ColumnHeader();
+            columnHeader21 = new ColumnHeader();
+            columnHeader22 = new ColumnHeader();
+            columnHeader23 = new ColumnHeader();
+            columnHeader24 = new ColumnHeader();
+            columnHeader25 = new ColumnHeader();
+            columnHeader29 = new ColumnHeader();
+            listView2 = new ListView();
+            columnHeader30 = new ColumnHeader();
+            columnHeader31 = new ColumnHeader();
+            columnHeader32 = new ColumnHeader();
+            columnHeader33 = new ColumnHeader();
+            groupBox1 = new GroupBox();
+            listView3 = new ListView();
+            label3 = new Label();
+            button1 = new Button();
+            listView4 = new ListView();
+            label4 = new Label();
+            listView5 = new ListView();
+            groupBox2 = new GroupBox();
+            listView9 = new ListView();
+            columnHeader26 = new ColumnHeader();
+            columnHeader27 = new ColumnHeader();
+            columnHeader28 = new ColumnHeader();
+            listView7 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader9 = new ColumnHeader();
+            columnHeader10 = new ColumnHeader();
+            columnHeader11 = new ColumnHeader();
+            columnHeader12 = new ColumnHeader();
+            columnHeader13 = new ColumnHeader();
+            columnHeader14 = new ColumnHeader();
+            columnHeader15 = new ColumnHeader();
+            columnHeader16 = new ColumnHeader();
+            columnHeader17 = new ColumnHeader();
+            columnHeader18 = new ColumnHeader();
+            columnHeader35 = new ColumnHeader();
+            listView6 = new ListView();
+            label5 = new Label();
+            button2 = new Button();
+            listView10 = new ListView();
+            label6 = new Label();
+            button3 = new Button();
+            label9 = new Label();
+            button6 = new Button();
+            listView11 = new ListView();
+            label12 = new Label();
+            label13 = new Label();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Numero itinerario:";
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Numero itinerario:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(341, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha de inicio:";
+            label2.AutoSize = true;
+            label2.Location = new Point(298, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(89, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Fecha de inicio:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Servicios Hoteleria";
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 26);
+            label7.Name = "label7";
+            label7.Size = new Size(104, 15);
+            label7.TabIndex = 17;
+            label7.Text = "Servicios Hoteleria";
             // 
             // listView8
             // 
-            this.listView8.Location = new System.Drawing.Point(505, 196);
-            this.listView8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(138, 41);
-            this.listView8.TabIndex = 22;
-            this.listView8.UseCompatibleStateImageBehavior = false;
+            listView8.Location = new Point(442, 147);
+            listView8.Name = "listView8";
+            listView8.Size = new Size(121, 32);
+            listView8.TabIndex = 22;
+            listView8.UseCompatibleStateImageBehavior = false;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(434, 207);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Subtotal";
+            label8.AutoSize = true;
+            label8.Location = new Point(380, 155);
+            label8.Name = "label8";
+            label8.Size = new Size(51, 15);
+            label8.TabIndex = 21;
+            label8.Text = "Subtotal";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(7, 196);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 43);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Editar pasajeros";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(6, 147);
+            button4.Name = "button4";
+            button4.Size = new Size(119, 32);
+            button4.TabIndex = 20;
+            button4.Text = "Editar pasajeros";
+            button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(150, 196);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 43);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Quitar";
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Location = new Point(131, 147);
+            button5.Name = "button5";
+            button5.Size = new Size(119, 32);
+            button5.TabIndex = 19;
+            button5.Text = "Quitar";
+            button5.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(681, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 20);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Servicios Extra";
+            label10.AutoSize = true;
+            label10.Location = new Point(596, 26);
+            label10.Name = "label10";
+            label10.Size = new Size(82, 15);
+            label10.TabIndex = 23;
+            label10.Text = "Servicios Extra";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1137, 713);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 20);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "TOTAL";
+            label11.AutoSize = true;
+            label11.Location = new Point(995, 535);
+            label11.Name = "label11";
+            label11.Size = new Size(39, 15);
+            label11.TabIndex = 28;
+            label11.Text = "TOTAL";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1193, 753);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(136, 43);
-            this.button7.TabIndex = 30;
-            this.button7.Text = "Volver atrás";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            button7.Location = new Point(1044, 565);
+            button7.Name = "button7";
+            button7.Size = new Size(119, 32);
+            button7.TabIndex = 30;
+            button7.Text = "Volver atrás";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click_1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(458, 21);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(114, 27);
-            this.textBox1.TabIndex = 31;
+            textBox1.Location = new Point(401, 16);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 31;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 20);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(114, 27);
-            this.textBox2.TabIndex = 32;
+            textBox2.Location = new Point(125, 15);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 32;
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader4,
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25,
-            this.columnHeader29});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(7, 59);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(636, 128);
-            this.listView1.TabIndex = 52;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader4, columnHeader19, columnHeader20, columnHeader21, columnHeader22, columnHeader23, columnHeader24, columnHeader25, columnHeader29 });
+            listView1.FullRowSelect = true;
+            listView1.Location = new Point(6, 44);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(557, 97);
+            listView1.TabIndex = 52;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Código";
+            columnHeader5.Text = "Código";
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Hotel";
+            columnHeader6.Text = "Hotel";
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Ciudad";
+            columnHeader7.Text = "Ciudad";
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Dirección";
+            columnHeader8.Text = "Dirección";
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Habitación";
+            columnHeader4.Text = "Habitación";
             // 
             // columnHeader19
             // 
-            this.columnHeader19.Text = "Tarifa";
+            columnHeader19.Text = "Tarifa";
             // 
             // columnHeader20
             // 
-            this.columnHeader20.Text = "Capacidad";
+            columnHeader20.Text = "Capacidad";
             // 
             // columnHeader21
             // 
-            this.columnHeader21.Text = "Adultos máx.";
+            columnHeader21.Text = "Adultos máx.";
             // 
             // columnHeader22
             // 
-            this.columnHeader22.Text = "Menor máx.";
+            columnHeader22.Text = "Menor máx.";
             // 
             // columnHeader23
             // 
-            this.columnHeader23.Text = "Infante máx.";
+            columnHeader23.Text = "Infante máx.";
             // 
             // columnHeader24
             // 
-            this.columnHeader24.Text = "Desde";
+            columnHeader24.Text = "Desde";
             // 
             // columnHeader25
             // 
-            this.columnHeader25.Text = "Hasta";
+            columnHeader25.Text = "Hasta";
             // 
             // columnHeader29
             // 
-            this.columnHeader29.Text = "Disponibilidad";
+            columnHeader29.Text = "Disponibilidad";
             // 
             // listView2
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader30,
-            this.columnHeader31,
-            this.columnHeader32,
-            this.columnHeader33});
-            this.listView2.FullRowSelect = true;
-            this.listView2.Location = new System.Drawing.Point(681, 59);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(636, 128);
-            this.listView2.TabIndex = 53;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader30, columnHeader31, columnHeader32, columnHeader33 });
+            listView2.FullRowSelect = true;
+            listView2.Location = new Point(596, 44);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(557, 97);
+            listView2.TabIndex = 53;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
             // 
             // columnHeader30
             // 
-            this.columnHeader30.Text = "Código";
-            this.columnHeader30.Width = 100;
+            columnHeader30.Text = "Código";
+            columnHeader30.Width = 100;
             // 
             // columnHeader31
             // 
-            this.columnHeader31.Text = "Descripción";
-            this.columnHeader31.Width = 300;
+            columnHeader31.Text = "Descripción";
+            columnHeader31.Width = 300;
             // 
             // columnHeader32
             // 
-            this.columnHeader32.Text = "Tarifa";
-            this.columnHeader32.Width = 100;
+            columnHeader32.Text = "Tarifa";
+            columnHeader32.Width = 100;
             // 
             // columnHeader33
             // 
-            this.columnHeader33.Text = "¿Por pasajero?";
-            this.columnHeader33.Width = 100;
+            columnHeader33.Text = "¿Por pasajero?";
+            columnHeader33.Width = 100;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.listView2);
-            this.groupBox1.Controls.Add(this.listView4);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.listView8);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(14, 383);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1342, 297);
-            this.groupBox1.TabIndex = 54;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hotelería";
+            groupBox1.Controls.Add(listView3);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(listView1);
+            groupBox1.Controls.Add(listView2);
+            groupBox1.Controls.Add(listView4);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(listView8);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Location = new Point(12, 287);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1174, 223);
+            groupBox1.TabIndex = 54;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Hotelería";
             // 
             // listView3
             // 
-            this.listView3.Location = new System.Drawing.Point(1179, 247);
-            this.listView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(138, 41);
-            this.listView3.TabIndex = 61;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            listView3.Location = new Point(1032, 185);
+            listView3.Name = "listView3";
+            listView3.Size = new Size(121, 32);
+            listView3.TabIndex = 61;
+            listView3.UseCompatibleStateImageBehavior = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1062, 259);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 20);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Total Hotelería:";
+            label3.AutoSize = true;
+            label3.Location = new Point(929, 194);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 15);
+            label3.TabIndex = 60;
+            label3.Text = "Total Hotelería:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(681, 196);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 43);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Quitar";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(596, 147);
+            button1.Name = "button1";
+            button1.Size = new Size(119, 32);
+            button1.TabIndex = 56;
+            button1.Text = "Quitar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // listView4
             // 
-            this.listView4.Location = new System.Drawing.Point(1179, 196);
-            this.listView4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(138, 41);
-            this.listView4.TabIndex = 59;
-            this.listView4.UseCompatibleStateImageBehavior = false;
+            listView4.Location = new Point(1032, 147);
+            listView4.Name = "listView4";
+            listView4.Size = new Size(121, 32);
+            listView4.TabIndex = 59;
+            listView4.UseCompatibleStateImageBehavior = false;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1108, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "Subtotal";
+            label4.AutoSize = true;
+            label4.Location = new Point(970, 155);
+            label4.Name = "label4";
+            label4.Size = new Size(51, 15);
+            label4.TabIndex = 58;
+            label4.Text = "Subtotal";
             // 
             // listView5
             // 
-            this.listView5.Location = new System.Drawing.Point(1193, 703);
-            this.listView5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(138, 41);
-            this.listView5.TabIndex = 62;
-            this.listView5.UseCompatibleStateImageBehavior = false;
+            listView5.Location = new Point(1044, 527);
+            listView5.Name = "listView5";
+            listView5.Size = new Size(121, 32);
+            listView5.TabIndex = 62;
+            listView5.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView9);
-            this.groupBox2.Controls.Add(this.listView7);
-            this.groupBox2.Controls.Add(this.listView6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.listView10);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.listView11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(14, 63);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1342, 297);
-            this.groupBox2.TabIndex = 62;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vuelos";
+            groupBox2.Controls.Add(listView9);
+            groupBox2.Controls.Add(listView7);
+            groupBox2.Controls.Add(listView6);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(listView10);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(listView11);
+            groupBox2.Controls.Add(label12);
+            groupBox2.Controls.Add(label13);
+            groupBox2.Location = new Point(12, 47);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(1174, 223);
+            groupBox2.TabIndex = 62;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Vuelos";
             // 
             // listView9
             // 
-            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader26,
-            this.columnHeader27,
-            this.columnHeader28});
-            this.listView9.FullRowSelect = true;
-            this.listView9.Location = new System.Drawing.Point(681, 59);
-            this.listView9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(636, 128);
-            this.listView9.TabIndex = 63;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            this.listView9.View = System.Windows.Forms.View.Details;
+            listView9.Columns.AddRange(new ColumnHeader[] { columnHeader26, columnHeader27, columnHeader28 });
+            listView9.FullRowSelect = true;
+            listView9.Location = new Point(596, 44);
+            listView9.Name = "listView9";
+            listView9.Size = new Size(557, 97);
+            listView9.TabIndex = 63;
+            listView9.UseCompatibleStateImageBehavior = false;
+            listView9.View = View.Details;
             // 
             // columnHeader26
             // 
-            this.columnHeader26.Text = "Código";
+            columnHeader26.Text = "Código";
             // 
             // columnHeader27
             // 
-            this.columnHeader27.Text = "Descripción";
-            this.columnHeader27.Width = 400;
+            columnHeader27.Text = "Descripción";
+            columnHeader27.Width = 400;
             // 
             // columnHeader28
             // 
-            this.columnHeader28.Text = "Tarifa";
-            this.columnHeader28.Width = 100;
+            columnHeader28.Text = "Tarifa";
+            columnHeader28.Width = 100;
             // 
             // listView7
             // 
-            this.listView7.AllowColumnReorder = true;
-            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader35});
-            this.listView7.FullRowSelect = true;
-            this.listView7.Location = new System.Drawing.Point(7, 59);
-            this.listView7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(636, 128);
-            this.listView7.TabIndex = 62;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            this.listView7.View = System.Windows.Forms.View.Details;
+            listView7.AllowColumnReorder = true;
+            listView7.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader9, columnHeader10, columnHeader11, columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16, columnHeader17, columnHeader18, columnHeader35 });
+            listView7.FullRowSelect = true;
+            listView7.Location = new Point(6, 44);
+            listView7.Name = "listView7";
+            listView7.Size = new Size(557, 97);
+            listView7.TabIndex = 62;
+            listView7.UseCompatibleStateImageBehavior = false;
+            listView7.View = View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Código";
+            columnHeader1.Text = "Código";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Origen";
+            columnHeader2.Text = "Origen";
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Destino";
+            columnHeader3.Text = "Destino";
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Paradas";
+            columnHeader9.Text = "Paradas";
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Fecha salida";
+            columnHeader10.Text = "Fecha salida";
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "Fecha arribo";
+            columnHeader11.Text = "Fecha arribo";
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Tiempo de vuelo";
+            columnHeader12.Text = "Tiempo de vuelo";
             // 
             // columnHeader13
             // 
-            this.columnHeader13.Text = "Aerolinea";
+            columnHeader13.Text = "Aerolinea";
             // 
             // columnHeader14
             // 
-            this.columnHeader14.Text = "Clase";
+            columnHeader14.Text = "Clase";
             // 
             // columnHeader15
             // 
-            this.columnHeader15.Text = "Tipo de pasajero";
+            columnHeader15.Text = "Tipo de pasajero";
             // 
             // columnHeader16
             // 
-            this.columnHeader16.Text = "Base";
+            columnHeader16.Text = "Base";
             // 
             // columnHeader17
             // 
-            this.columnHeader17.Text = "Impuesto";
+            columnHeader17.Text = "Impuesto";
             // 
             // columnHeader18
             // 
-            this.columnHeader18.Text = "Comisión";
+            columnHeader18.Text = "Comisión";
             // 
             // columnHeader35
             // 
-            this.columnHeader35.Text = "Disponibilidad";
+            columnHeader35.Text = "Disponibilidad";
             // 
             // listView6
             // 
-            this.listView6.Location = new System.Drawing.Point(1179, 247);
-            this.listView6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(138, 41);
-            this.listView6.TabIndex = 61;
-            this.listView6.UseCompatibleStateImageBehavior = false;
+            listView6.Location = new Point(1032, 185);
+            listView6.Name = "listView6";
+            listView6.Size = new Size(121, 32);
+            listView6.TabIndex = 61;
+            listView6.UseCompatibleStateImageBehavior = false;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1062, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Total Hotelería:";
+            label5.AutoSize = true;
+            label5.Location = new Point(929, 194);
+            label5.Name = "label5";
+            label5.Size = new Size(86, 15);
+            label5.TabIndex = 60;
+            label5.Text = "Total Hotelería:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(681, 196);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 43);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Quitar";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(596, 147);
+            button2.Name = "button2";
+            button2.Size = new Size(119, 32);
+            button2.TabIndex = 56;
+            button2.Text = "Quitar";
+            button2.UseVisualStyleBackColor = true;
             // 
             // listView10
             // 
-            this.listView10.Location = new System.Drawing.Point(1179, 196);
-            this.listView10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(138, 41);
-            this.listView10.TabIndex = 59;
-            this.listView10.UseCompatibleStateImageBehavior = false;
+            listView10.Location = new Point(1032, 147);
+            listView10.Name = "listView10";
+            listView10.Size = new Size(121, 32);
+            listView10.TabIndex = 59;
+            listView10.UseCompatibleStateImageBehavior = false;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Servicios Vuelos";
+            label6.AutoSize = true;
+            label6.Location = new Point(6, 26);
+            label6.Name = "label6";
+            label6.Size = new Size(91, 15);
+            label6.TabIndex = 17;
+            label6.Text = "Servicios Vuelos";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(150, 196);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 43);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Quitar";
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Location = new Point(131, 147);
+            button3.Name = "button3";
+            button3.Size = new Size(119, 32);
+            button3.TabIndex = 19;
+            button3.Text = "Quitar";
+            button3.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1108, 207);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 20);
-            this.label9.TabIndex = 58;
-            this.label9.Text = "Subtotal";
+            label9.AutoSize = true;
+            label9.Location = new Point(970, 155);
+            label9.Name = "label9";
+            label9.Size = new Size(51, 15);
+            label9.TabIndex = 58;
+            label9.Text = "Subtotal";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(7, 196);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 43);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Editar pasajeros";
-            this.button6.UseVisualStyleBackColor = true;
+            button6.Location = new Point(6, 147);
+            button6.Name = "button6";
+            button6.Size = new Size(119, 32);
+            button6.TabIndex = 20;
+            button6.Text = "Editar pasajeros";
+            button6.UseVisualStyleBackColor = true;
             // 
             // listView11
             // 
-            this.listView11.Location = new System.Drawing.Point(505, 196);
-            this.listView11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(138, 41);
-            this.listView11.TabIndex = 22;
-            this.listView11.UseCompatibleStateImageBehavior = false;
+            listView11.Location = new Point(442, 147);
+            listView11.Name = "listView11";
+            listView11.Size = new Size(121, 32);
+            listView11.TabIndex = 22;
+            listView11.UseCompatibleStateImageBehavior = false;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(434, 208);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 20);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Subtotal";
+            label12.AutoSize = true;
+            label12.Location = new Point(380, 156);
+            label12.Name = "label12";
+            label12.Size = new Size(51, 15);
+            label12.TabIndex = 21;
+            label12.Text = "Subtotal";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(681, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 20);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Servicios Extra";
+            label13.AutoSize = true;
+            label13.Location = new Point(596, 26);
+            label13.Name = "label13";
+            label13.Size = new Size(82, 15);
+            label13.TabIndex = 23;
+            label13.Text = "Servicios Extra";
             // 
             // VerItinerario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1378, 805);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.listView5);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "VerItinerario";
-            this.Text = "VerItinerario";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1206, 604);
+            Controls.Add(groupBox2);
+            Controls.Add(listView5);
+            Controls.Add(groupBox1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(button7);
+            Controls.Add(label11);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "VerItinerario";
+            Text = "VerItinerario";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

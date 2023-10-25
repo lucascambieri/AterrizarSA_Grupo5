@@ -18,31 +18,15 @@ namespace AterrizarSA_Grupo5
             InitializeComponent();
         }
 
-        
+
         // Crea la lista de itinerarios
-
-        List<Itinerario> listaItinerarios = new List<Itinerario>();
-        public void AgregarListaItinerarios()
-        {
-            Itinerario itinerario1 = new Itinerario(1, "Carlos Gomez", DateTime.Now, "Inactivo");
-            Itinerario itinerario2 = new Itinerario(2, "German Puentes", DateTime.Now, "Activo");
-            Itinerario itinerario3 = new Itinerario(3, "Lucía Pérez", DateTime.Now, "Activo");
-            Itinerario itinerario4 = new Itinerario(4, "Julieta Pacheco", DateTime.Now, "Inactivo");
-
-
-            listaItinerarios.Add(itinerario1);
-            listaItinerarios.Add(itinerario2);
-            listaItinerarios.Add(itinerario3);
-            listaItinerarios.Add(itinerario4);
-
-        }
+        List<Itinerario> listaItinerarios = Itinerario.CrearItinerario();
+             
 
         // Agrega la lista de itinerarios en el ListView
         private void GestionItinerarios_Load(object sender, EventArgs e)
         {
-            AgregarListaItinerarios();
-
-            foreach (var itinerario in listaItinerarios)
+                   foreach (var itinerario in listaItinerarios)
             {
                 ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D4"));
                 listViewItem.SubItems.Add(itinerario.NombreCliente);

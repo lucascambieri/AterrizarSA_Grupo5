@@ -21,7 +21,30 @@ namespace AterrizarSA_Grupo5
             EstadoItinerario = estado;
         }
 
-        
+        public Itinerario()
+        {
+
+        }
+
+        public static List<Itinerario> CrearItinerario()
+        {
+            List<Itinerario> listaItinerarios = new List<Itinerario>();
+
+            Itinerario itinerario1 = new Itinerario(1, "Carlos Gomez", DateTime.Now, "Inactivo");
+            Itinerario itinerario2 = new Itinerario(2, "German Puentes", DateTime.Now, "Activo");
+            Itinerario itinerario3 = new Itinerario(3, "Lucía Pérez", DateTime.Now, "Activo");
+            Itinerario itinerario4 = new Itinerario(4, "Julieta Pacheco", DateTime.Now, "Inactivo");
+
+
+            listaItinerarios.Add(itinerario1);
+            listaItinerarios.Add(itinerario2);
+            listaItinerarios.Add(itinerario3);
+            listaItinerarios.Add(itinerario4);
+
+            // Agregar un itinerario a la lista
+
+            return listaItinerarios;
+        }
 
     }
 
