@@ -1,8 +1,8 @@
 namespace AterrizarSA_Grupo5
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -21,19 +21,19 @@ namespace AterrizarSA_Grupo5
         private void button3_Click(object sender, EventArgs e)
         {
             GestionItinerarios itinerarios = new GestionItinerarios();
-            itinerarios.Show();
+            itinerarios.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ListadoVuelos vuelos = new ListadoVuelos();
-            vuelos.Show();
+            vuelos.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ListadoHoteles hoteles = new ListadoHoteles();
-            hoteles.Show();
+            hoteles.ShowDialog();
         }
     }
 }

@@ -18,50 +18,21 @@ namespace AterrizarSA_Grupo5
             InitializeComponent();
         }
 
-
-        // Crea la lista de itinerarios
         List<Itinerario> listaItinerarios = Itinerario.CrearItinerario();
-             
 
-        // Agrega la lista de itinerarios en el ListView
-        private void GestionItinerarios_Load(object sender, EventArgs e)
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-                   foreach (var itinerario in listaItinerarios)
-            {
-                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D4"));
-                listViewItem.SubItems.Add(itinerario.NombreCliente);
-                listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
-                listViewItem.SubItems.Add(itinerario.EstadoItinerario);
-                listView1.Items.Add(listViewItem);
-            }
+
         }
 
 
-
-        private void Eliminar_Click(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            {
-                // Verificar si se ha seleccionado un elemento en listView1
-                if (listView1.SelectedItems.Count > 0)
-                {
-                    // Eliminar el elemento seleccionado
-                    listView1.Items.Remove(listView1.SelectedItems[0]);
-                }
-            }
+
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            VerItinerario verItinerario = new VerItinerario();
-            verItinerario.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             {
                 int codigoUnico = listaItinerarios[3].NumeroItinerario++;
@@ -87,7 +58,7 @@ namespace AterrizarSA_Grupo5
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
             {
@@ -95,17 +66,43 @@ namespace AterrizarSA_Grupo5
                 string valorColumna1 = listView1.SelectedItems[0].SubItems[0].Text;
 
                 // Copiar el valor al textBox3
-                textBox3.Text = valorColumna1;
+                label3.Text = valorColumna1;
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-
+            VerItinerario verItinerario = new VerItinerario();
+            verItinerario.ShowDialog();
         }
 
-        // Buscar número de itinerario
-        private void button6_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                // Verificar si se ha seleccionado un elemento
+                ListViewItem selectedItem = listView1.SelectedItems[0]; // Obtener el elemento seleccionado
+
+                // Modificar la ColumnHeader4 (indice 3) del elemento seleccionado
+                selectedItem.SubItems[3].Text = "Pre-Reservado";
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
+            }
+        }
+
+        private void Eliminar_Click_1(object sender, EventArgs e)
+        {
+            // Verificar si se ha seleccionado un elemento en listView1
+            if (listView1.SelectedItems.Count > 0)
+            {
+                // Eliminar el elemento seleccionado
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -123,10 +120,10 @@ namespace AterrizarSA_Grupo5
                     }
 
                 }
-                    
-                
+
+
             }
-            
+
             string buscarNumeroItinerario = textBox1.Text;
 
 
@@ -147,11 +144,46 @@ namespace AterrizarSA_Grupo5
             }
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (label3.Text != "NO SELECCIONADO")
+            {
+                ListadoHoteles listadoHoteles = new ListadoHoteles();
+                listadoHoteles.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (label3.Text != "NO SELECCIONADO")
+            {
+                ListadoVuelos listadoVuelos = new ListadoVuelos();
+                listadoVuelos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void GestionItinerarios_Load_1(object sender, EventArgs e)
+        {
+            foreach (var itinerario in listaItinerarios)
+            {
+                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D4"));
+                listViewItem.SubItems.Add(itinerario.NombreCliente);
+                listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
+                listViewItem.SubItems.Add(itinerario.EstadoItinerario);
+                listView1.Items.Add(listViewItem);
+            }
+        }
     }
 }

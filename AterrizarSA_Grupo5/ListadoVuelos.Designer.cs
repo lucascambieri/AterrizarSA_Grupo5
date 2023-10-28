@@ -76,11 +76,17 @@
             this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox5
@@ -230,9 +236,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 18);
+            this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Seleccione la cantidad de personas:";
+            this.label1.Text = "Disponibilidad para:";
             // 
             // comboBox6
             // 
@@ -299,7 +305,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -313,7 +319,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -327,7 +333,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Bisque;
+            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Black;
@@ -342,14 +348,14 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOrange;
+            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(984, 169);
+            this.button4.Location = new System.Drawing.Point(979, 127);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 71);
+            this.button4.Size = new System.Drawing.Size(147, 67);
             this.button4.TabIndex = 47;
             this.button4.Text = "BUSCAR";
             this.button4.UseVisualStyleBackColor = false;
@@ -469,25 +475,17 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 24);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label16.Location = new System.Drawing.Point(14, 15);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 18);
+            this.label16.Size = new System.Drawing.Size(126, 18);
             this.label16.TabIndex = 51;
             this.label16.Text = "N° de itinerario:";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Wheat;
-            this.textBox1.Location = new System.Drawing.Point(134, 21);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(128, 24);
-            this.textBox1.TabIndex = 52;
-            // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Snow;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.comboBox8);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label1);
@@ -545,15 +543,51 @@
             this.label17.TabIndex = 48;
             this.label17.Text = "Seleccione la clase:";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1238, 50);
+            this.panel1.TabIndex = 54;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(146, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(153, 18);
+            this.label18.TabIndex = 50;
+            this.label18.Text = "NO SELECCIONADO";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AterrizarSA_Grupo5.Properties.Resources.landing_bg_object_2;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 449);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 349);
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AterrizarSA_Grupo5.Properties.Resources.bg_donut;
+            this.pictureBox3.Location = new System.Drawing.Point(814, 406);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(515, 392);
+            this.pictureBox3.TabIndex = 56;
+            this.pictureBox3.TabStop = false;
+            // 
             // ListadoVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1216, 791);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.listView3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.button3);
@@ -561,6 +595,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -568,6 +604,10 @@
             this.Text = "ListadoVuelos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,9 +663,12 @@
         private ColumnHeader columnHeader16;
         private ColumnHeader columnHeader17;
         private Label label16;
-        private TextBox textBox1;
         private GroupBox groupBox1;
         private ComboBox comboBox8;
         private Label label17;
+        private Panel panel1;
+        private Label label18;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
     }
 }

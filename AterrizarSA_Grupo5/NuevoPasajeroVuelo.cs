@@ -22,5 +22,6 @@ namespace AterrizarSA_Grupo5
         {
             this.Close();
         }
+
     }
 }
