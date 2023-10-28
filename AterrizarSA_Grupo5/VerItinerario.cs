@@ -24,7 +24,6 @@ namespace AterrizarSA_Grupo5
 
         private void VerItinerario_Load(object sender, EventArgs e)
         {
-            listView3.View = View.Details;
         }
 
         private void button7_Click(object sender, EventArgs e)
