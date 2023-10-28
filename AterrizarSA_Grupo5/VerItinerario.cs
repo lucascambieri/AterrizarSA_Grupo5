@@ -35,9 +35,21 @@ namespace AterrizarSA_Grupo5
         {
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
+        private void button7_Click_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
+            nuevoPasajeroVuelo.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
+            nuevoPasajeroHotel.Show();
         }
     }
 }

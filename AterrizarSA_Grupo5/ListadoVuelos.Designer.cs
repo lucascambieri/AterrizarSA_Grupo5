@@ -338,6 +338,7 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "Volver al menú";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 

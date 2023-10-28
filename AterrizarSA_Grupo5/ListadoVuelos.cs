@@ -17,7 +17,7 @@ namespace AterrizarSA_Grupo5
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

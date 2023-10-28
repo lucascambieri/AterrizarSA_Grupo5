@@ -59,10 +59,16 @@
             this.columnHeader32 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader33 = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.listView9 = new System.Windows.Forms.ListView();
             this.columnHeader26 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader27 = new System.Windows.Forms.ColumnHeader();
@@ -90,12 +96,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -150,6 +150,7 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Editar pasajeros";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -194,6 +195,7 @@
             this.button7.TabIndex = 30;
             this.button7.Text = "Volver atrás";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
             // textBox1
             // 
@@ -353,6 +355,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hotelería";
             // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.Wheat;
+            this.textBox8.Location = new System.Drawing.Point(1326, 227);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(155, 24);
+            this.textBox8.TabIndex = 68;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Wheat;
+            this.textBox7.Location = new System.Drawing.Point(1326, 183);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(155, 24);
+            this.textBox7.TabIndex = 67;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Wheat;
+            this.textBox4.Location = new System.Drawing.Point(556, 183);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(155, 24);
+            this.textBox4.TabIndex = 64;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -408,6 +440,36 @@
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vuelos";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Wheat;
+            this.textBox6.Location = new System.Drawing.Point(1326, 230);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(155, 24);
+            this.textBox6.TabIndex = 66;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Wheat;
+            this.textBox5.Location = new System.Drawing.Point(1326, 183);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(155, 24);
+            this.textBox5.TabIndex = 65;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Wheat;
+            this.textBox3.Location = new System.Drawing.Point(556, 184);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(155, 24);
+            this.textBox3.TabIndex = 63;
             // 
             // listView9
             // 
@@ -587,6 +649,7 @@
             this.button6.TabIndex = 20;
             this.button6.Text = "Editar pasajeros";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label12
             // 
@@ -605,66 +668,6 @@
             this.label13.Size = new System.Drawing.Size(107, 18);
             this.label13.TabIndex = 23;
             this.label13.Text = "Servicios Extra";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Wheat;
-            this.textBox3.Location = new System.Drawing.Point(556, 184);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(155, 24);
-            this.textBox3.TabIndex = 63;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.Wheat;
-            this.textBox4.Location = new System.Drawing.Point(556, 183);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(155, 24);
-            this.textBox4.TabIndex = 64;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Wheat;
-            this.textBox5.Location = new System.Drawing.Point(1326, 183);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(155, 24);
-            this.textBox5.TabIndex = 65;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Wheat;
-            this.textBox6.Location = new System.Drawing.Point(1326, 230);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(155, 24);
-            this.textBox6.TabIndex = 66;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Wheat;
-            this.textBox7.Location = new System.Drawing.Point(1326, 183);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(155, 24);
-            this.textBox7.TabIndex = 67;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.Wheat;
-            this.textBox8.Location = new System.Drawing.Point(1326, 227);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(155, 24);
-            this.textBox8.TabIndex = 68;
             // 
             // textBox9
             // 
