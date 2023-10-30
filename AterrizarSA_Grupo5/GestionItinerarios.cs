@@ -121,8 +121,17 @@ namespace AterrizarSA_Grupo5
             // Verificar si se ha seleccionado un elemento en listView1
             if (listView1.SelectedItems.Count > 0)
             {
+                // Obtén el elemento seleccionado
+                ListViewItem itemSeleccionado = listView1.SelectedItems[0];
+
+                // Verifica si el texto de columnHeader1 del elemento seleccionado coincide con el texto actual de label1
+                if (label3.Text == itemSeleccionado.SubItems[0].Text)
+                {
+                    label3.Text = "NO SELECCIONADO";
+                }
+
                 // Eliminar el elemento seleccionado
-                listView1.Items.Remove(listView1.SelectedItems[0]);
+                listView1.Items.Remove(itemSeleccionado);
             }
         }
 
