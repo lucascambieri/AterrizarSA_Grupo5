@@ -67,6 +67,26 @@ namespace AterrizarSA_Grupo5
 
                 // Copiar el valor al textBox3
                 label3.Text = valorColumna1;
+
+                foreach (ListViewItem item in listView1.Items)
+                {
+                    if (item.SubItems[3].Text == "Activo")
+                    {
+                        // Cambiar el estado del elemento activo anterior a "Itinerario creado"
+                        item.SubItems[3].Text = "Itinerario creado";
+                    }
+                }
+
+                if (listView1.SelectedItems.Count > 0)
+                {
+                    // Cambiar el estado del elemento seleccionado a "Activo"
+                    ListViewItem selectedItem = listView1.SelectedItems[0];
+                    selectedItem.SubItems[3].Text = "Activo";
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
+                }
             }
         }
 
@@ -85,6 +105,10 @@ namespace AterrizarSA_Grupo5
 
                 // Modificar la ColumnHeader4 (indice 3) del elemento seleccionado
                 selectedItem.SubItems[3].Text = "Pre-Reservado";
+
+                MessageBox.Show("Revisar y agregar los pasajeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                VerItinerario verItinerario = new VerItinerario();
+                verItinerario.ShowDialog();
             }
             else
             {
@@ -102,7 +126,7 @@ namespace AterrizarSA_Grupo5
             }
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
+    private void button6_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -183,6 +207,20 @@ namespace AterrizarSA_Grupo5
                 listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
                 listViewItem.SubItems.Add(itinerario.EstadoItinerario);
                 listView1.Items.Add(listViewItem);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                selectedItem.SubItems[3].Text = "Confirmado";
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un itinerario en la lista antes de cambiar el estado.");
             }
         }
     }

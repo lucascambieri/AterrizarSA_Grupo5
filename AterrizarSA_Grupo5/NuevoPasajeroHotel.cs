@@ -22,28 +22,35 @@ namespace AterrizarSA_Grupo5
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string valorColumna1 = textBox3.Text;
+            string valorColumna2 = textBox4.Text;
+            DateTime fechaSeleccionada = dateTimePicker1.Value.Date;  // Obtiene solo la fecha (día, mes y año)
+
+            ListViewItem nuevoItem = new ListViewItem(valorColumna1);
+            nuevoItem.SubItems.Add(valorColumna2);
+            nuevoItem.SubItems.Add(fechaSeleccionada.ToString("dd/MM/yyyy"));
+
+            listView1.Items.Add(nuevoItem);
+
+            textBox3.Clear();
+            textBox4.Clear();
+            dateTimePicker1.Value = DateTime.Now.Date;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            string valorColumna1 = textBox3.Text;
-            string valorColumna2 = textBox4.Text;
-            string valorColumna3 = dateTimePicker1.Value.ToString();
-
-            ListViewItem nuevoItem = new ListViewItem(valorColumna1);
-            nuevoItem.SubItems.Add(valorColumna2);
-            nuevoItem.SubItems.Add(valorColumna3);
-
-            // Agregar el nuevo elemento a la listView1
-            listView1.Items.Add(nuevoItem);
-
-            // Limpiar los controles después de agregar los datos
-            textBox3.Clear();
-            textBox4.Clear();
-            dateTimePicker1.Value = DateTime.Now;
+            if (listView1.SelectedItems.Count > 0)
+            {
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+            }
         }
     }
 }

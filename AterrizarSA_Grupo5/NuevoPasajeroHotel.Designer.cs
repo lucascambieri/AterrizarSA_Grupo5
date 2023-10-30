@@ -46,9 +46,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -213,6 +213,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -241,6 +242,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Quitar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
             // 
@@ -254,14 +256,14 @@
             this.panel1.Size = new System.Drawing.Size(1031, 94);
             this.panel1.TabIndex = 9;
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 18);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Personas:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(168, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "NO SELECCIONADO";
             // 
             // label7
             // 
@@ -272,14 +274,14 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "NO SELECCIONADO";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(168, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "NO SELECCIONADO";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Personas:";
             // 
             // pictureBox1
             // 

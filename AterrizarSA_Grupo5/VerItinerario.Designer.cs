@@ -96,11 +96,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -689,6 +690,24 @@
             this.panel1.Size = new System.Drawing.Size(1557, 53);
             this.panel1.TabIndex = 73;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(544, 19);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(153, 18);
+            this.label24.TabIndex = 74;
+            this.label24.Text = "NO SELECCIONADO";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(167, 19);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(153, 18);
+            this.label23.TabIndex = 73;
+            this.label23.Text = "NO SELECCIONADO";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AterrizarSA_Grupo5.Properties.Resources.bg_donut_1;
@@ -716,23 +735,20 @@
             this.pictureBox4.TabIndex = 80;
             this.pictureBox4.TabStop = false;
             // 
-            // label23
+            // button8
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(167, 19);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(153, 18);
-            this.label23.TabIndex = 73;
-            this.label23.Text = "NO SELECCIONADO";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(544, 19);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 18);
-            this.label24.TabIndex = 74;
-            this.label24.Text = "NO SELECCIONADO";
+            this.button8.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(24, 659);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(130, 52);
+            this.button8.TabIndex = 81;
+            this.button8.Text = "Generar pre-reserva";
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // VerItinerario
             // 
@@ -740,6 +756,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1550, 724);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.groupBox2);
@@ -846,5 +863,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
+        private Button button8;
     }
 }
