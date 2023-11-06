@@ -1,0 +1,154 @@
+{
+  "Hoteles": [
+    {
+      "IdHotel": "00001",
+      "CodHotel": "HIL",
+      "Nombre": "Hilton",
+      "Ciudad": "Mendoza",
+      "Calificacion": "4 estrellas",
+      "Direccion": "Guemes 351",
+      "Habitaciones": [
+        {
+          "IdHabitacion": "00001",
+          "Descripcion": "Suite",
+          "CapacidadMaxima": 6,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 1,
+          "CantidadCamasInfantes": 1,
+          "PrecioNoche": "20000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00002",
+          "Descripcion": "SuiteMax",
+          "CapacidadMaxima": 8,
+          "CantidadCamasAdultos": 4,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": "25000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00003",
+          "Descripcion": "Simple",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": "15000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00004",
+          "Descripcion": "Simple",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": "15000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00005",
+          "Descripcion": "Simple",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": "15000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00006",
+          "Descripcion": "Simple",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": "15000,00",
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-12-01"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Vuelos": [
+    {
+      "IdVuelo": "00001",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Mendoza",
+      "Paradas": "0",
+      "TiempoViaje": "2.45",
+      "FechayHoraPartida": "2023-12-01 08:00:00.000",
+      "FechayHoraLlegada": "2023-12-01 10:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00001",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00002",
+          "Categoria": "B",
+          "Precio": "55000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 13
+        },
+        {
+          "IdPasaje": "00003",
+          "Categoria": "P",
+          "Precio": "85000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 5
+        },
+        {
+          "IdPasaje": "00004",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Menores",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00005",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 4
+        }
+
+      ]
+    }
+  ]
+}
