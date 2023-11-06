@@ -23,9 +23,10 @@ namespace AterrizarSA_Grupo5
         //public int CantidadCamasMenores { get; set; }
         //public int CantidadCamasInfantes { get; set; }
         public double PrecioNoche { get; set; }
-        public List<DisponibilidadHabitacionEnt> Disponibilidad {  get; set; }
+        public DateTime FechaInicioDisp {  get; set; }
+        public DateTime FechaFinDisp { get; set; }
 
-        public ListadoHotelesModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, double precioNoche, List<DisponibilidadHabitacionEnt> disponibilidad)
+        public ListadoHotelesModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, double precioNoche, DateTime fechaInic, DateTime fechaFin)
         {
             this.IdHotel = idHotel;
             this.CodHotel = codHotel;
@@ -37,7 +38,8 @@ namespace AterrizarSA_Grupo5
             this.Descripcion = descripcion;
             this.CapacidadMaxima = capacidadMaxima;
             this.PrecioNoche = precioNoche;
-            this.Disponibilidad = disponibilidad;
+            this.FechaInicioDisp = fechaInic;
+            this.FechaFinDisp = fechaFin;
         }
 
         public ListadoHotelesModel()
@@ -50,8 +52,11 @@ namespace AterrizarSA_Grupo5
             int i = 0;
             foreach (var habitacion in InventarioAlmacen.Hoteles)
             {
-                ListadoHotelesModel habitacionModel = new ListadoHotelesModel(habitacion.IdHotel, habitacion.CodHotel, habitacion.Nombre, habitacion.Ciudad, habitacion.Calificacion, habitacion.Direccion, habitacion.Habitaciones[i].IdHabitacion, habitacion.Habitaciones[i].Descripcion, habitacion.Habitaciones[i].CapacidadMaxima, habitacion.Habitaciones[i].PrecioNoche, habitacion.Habitaciones[i].Disponibilidad);
-                listaHabitaciones.Add(habitacionModel);
+                foreach(var disponibilidad in habitacion.Habitaciones[i].Disponibilidad)
+                {
+                    ListadoHotelesModel habitacionModel = new ListadoHotelesModel(habitacion.IdHotel, habitacion.CodHotel, habitacion.Nombre, habitacion.Ciudad, habitacion.Calificacion, habitacion.Direccion, habitacion.Habitaciones[i].IdHabitacion, habitacion.Habitaciones[i].Descripcion, habitacion.Habitaciones[i].CapacidadMaxima, habitacion.Habitaciones[i].PrecioNoche, disponibilidad.FechaInicioDisp, disponibilidad.FechaFinDisp);
+                    listaHabitaciones.Add(habitacionModel);
+                }
                 i++;
             }
 

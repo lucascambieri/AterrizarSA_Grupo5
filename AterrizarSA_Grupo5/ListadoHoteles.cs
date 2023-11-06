@@ -28,13 +28,14 @@ namespace AterrizarSA_Grupo5
 
         private void ListadoHoteles_Load(object sender, EventArgs e)
         {
-            foreach (var itinerario in listaHabitaciones)
+            foreach (var habitacion in listaHabitaciones)
             {
-                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D5"));
-                listViewItem.SubItems.Add(itinerario.NombreCliente);
-                listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
-                listViewItem.SubItems.Add(itinerario.EstadoItinerario);
-                listViewHabitaciones.Items.Add(listViewItem);
+                //ListViewItem listViewItem = new ListViewItem(habitacion.NumeroItinerario.ToString("D5"));
+                //listViewItem.SubItems.Add(habitacion.NombreCliente);
+                //listViewItem.SubItems.Add(habitacion.FechaCreado.ToString("dd/MM/yyyy"));
+                //listViewItem.SubItems.Add(habitacion.EstadoItinerario);
+                //listViewHabitaciones.Items.Add(listViewItem);
+                MessageBox.Show("OK");
             }
         }
     }

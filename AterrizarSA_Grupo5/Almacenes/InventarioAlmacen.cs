@@ -10,6 +10,7 @@ namespace AterrizarSA_Grupo5.Almacenes
 {
     internal class InventarioAlmacen
     {
+        public static List<InventarioEnt> Inventario;
         public static List<HotelEnt> Hoteles;
         public static List<VueloEnt> Vuelos;
 
@@ -18,8 +19,8 @@ namespace AterrizarSA_Grupo5.Almacenes
             var inventarioJson = File.ReadAllText("Inventario.json");
             // revisar como dividir el json para que los hoteles se guarden en la lista de entidad de hoteles
             // y los vuelos en las listas de entidad de vuelos
-            var hotelesJson = JsonConvert.DeserializeObject<List<HotelEnt>>(inventarioJson);
-            var vuelosJson = JsonConvert.DeserializeObject<List<VueloEnt>>(inventarioJson);
+            Inventario = JsonConvert.DeserializeObject<List<InventarioEnt>>(inventarioJson);
+            Hoteles = Inventario[0];
         }
 
         public static void Grabar()
