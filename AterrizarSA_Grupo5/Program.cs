@@ -1,3 +1,5 @@
+using AterrizarSA_Grupo5.Almacenes;
+
 namespace AterrizarSA_Grupo5
 {
     internal static class Program
@@ -12,6 +14,8 @@ namespace AterrizarSA_Grupo5
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Menu());
+
+            // ItinerarioAlmacen.Grabar(); //descomentar cuando esté terminado
         }
     }
 }

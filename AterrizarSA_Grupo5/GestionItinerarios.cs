@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AterrizarSA_Grupo5.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace AterrizarSA_Grupo5
             InitializeComponent();
         }
 
-        List<Itinerario> listaItinerarios = Itinerario.CrearItinerario();
+        List<GestionItinerarioModel> listaItinerarios = GestionItinerarioModel.ListarItinerarios();
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -32,29 +33,39 @@ namespace AterrizarSA_Grupo5
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonNuevoItinerario_Click(object sender, EventArgs e)
         {
+            string nombreCliente = textNombreCliente.Text;
+            if (!string.IsNullOrEmpty(nombreCliente))
             {
-                int codigoUnico = listaItinerarios[3].NumeroItinerario++;
+                int codigoUnico = listaItinerarios[listaItinerarios.Count - 1].NumeroItinerario++;
                 codigoUnico++;
 
                 // Generar un código único de cuatro dígitos
-                string codigo = codigoUnico.ToString("D4");
+                string codigo = codigoUnico.ToString("D5");
 
                 // Obtener la fecha actual
                 string fecha = DateTime.Now.ToString("dd/MM/yyyy");
 
-                // Crear una nueva fila
-                ListViewItem nuevaFila = new ListViewItem(codigo);
-                nuevaFila.SubItems.Add(""); // Columna vacía
-                nuevaFila.SubItems.Add(fecha);
-                nuevaFila.SubItems.Add("Itinerario creado");
+                // Crea el itinerario
+                if(GestionItinerarioModel.CrearItinerario(codigoUnico, nombreCliente, DateTime.Now) == null)
+                {
+                    // Crear una nueva fila
+                    ListViewItem nuevaFila = new ListViewItem(codigo);
+                    nuevaFila.SubItems.Add(nombreCliente); // Columna vacía
+                    nuevaFila.SubItems.Add(fecha);
+                    nuevaFila.SubItems.Add("Itinerario creado");
 
-                // Agregar la nueva fila a listView1
-                listView1.Items.Add(nuevaFila);
+                    // Agregar la nueva fila a listView1
+                    listView1.Items.Add(nuevaFila);
 
-                // Incrementar el contador de códigos únicos para el próximo elemento
-                codigoUnico++;
+                    // Incrementar el contador de códigos únicos para el próximo elemento
+                    codigoUnico++;
+                }
+            }
+            else 
+            { 
+            MessageBox.Show("Debe ingresar un nombre de cliente", "Ingrese nombre", MessageBoxButtons.OK);
             }
         }
 
@@ -135,7 +146,7 @@ namespace AterrizarSA_Grupo5
             }
         }
 
-    private void button6_Click_1(object sender, EventArgs e)
+        private void button6_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
@@ -188,7 +199,8 @@ namespace AterrizarSA_Grupo5
             {
                 ListadoHoteles listadoHoteles = new ListadoHoteles();
                 listadoHoteles.ShowDialog();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -211,7 +223,7 @@ namespace AterrizarSA_Grupo5
         {
             foreach (var itinerario in listaItinerarios)
             {
-                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D4"));
+                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D5"));
                 listViewItem.SubItems.Add(itinerario.NombreCliente);
                 listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
                 listViewItem.SubItems.Add(itinerario.EstadoItinerario);
@@ -232,5 +244,6 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("Selecciona un itinerario en la lista antes de cambiar el estado.");
             }
         }
+
     }
 }
