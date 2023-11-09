@@ -16,9 +16,10 @@ namespace AterrizarSA_Grupo5.Entidades
         public int CantAdultos { get; set; }
         public int CantMenores { get; set; }
         public int CantInfantes { get; set; }
-        public IList<HabitacionesSelec> HabitacionesSelec { get; set; }
-        public IList<PasajesSelec> PasajesSelec { get; set; }
+        public List<HabitacionesSelecEnt> HabitacionesSelec { get; set; }
+        public List<PasajesSelecEnt> PasajesSelec { get; set; }
         public double TarifaTotal { get; set; }
+        public bool EsActivo {  get; set; }
 
     }
 }

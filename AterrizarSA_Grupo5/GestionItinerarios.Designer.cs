@@ -33,13 +33,13 @@
             textBox1 = new TextBox();
             textNombreCliente = new TextBox();
             ButtonNuevoItinerario = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            buttonActivaItinerario = new Button();
+            buttonVerItinerario = new Button();
+            buttonGenerarReserva = new Button();
+            buttonVolverAtras = new Button();
             Eliminar = new Button();
-            button6 = new Button();
-            listView1 = new ListView();
+            buttonBuscar = new Button();
+            listViewItinerarios = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
@@ -48,12 +48,12 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            label3 = new Label();
-            button7 = new Button();
-            button8 = new Button();
+            ItinerarioSeleccionado = new Label();
+            buttonAgregarHotel = new Button();
+            buttonAgregarVuelo = new Button();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            button9 = new Button();
+            buttonConfirmarReserva = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -108,64 +108,64 @@
             ButtonNuevoItinerario.UseVisualStyleBackColor = false;
             ButtonNuevoItinerario.Click += buttonNuevoItinerario_Click;
             // 
-            // button2
+            // buttonActivaItinerario
             // 
-            button2.BackColor = Color.CornflowerBlue;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(222, 332);
-            button2.Name = "button2";
-            button2.Size = new Size(114, 39);
-            button2.TabIndex = 58;
-            button2.Text = "Establecer como activo";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            buttonActivaItinerario.BackColor = Color.CornflowerBlue;
+            buttonActivaItinerario.FlatAppearance.BorderSize = 0;
+            buttonActivaItinerario.FlatStyle = FlatStyle.Flat;
+            buttonActivaItinerario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonActivaItinerario.ForeColor = Color.White;
+            buttonActivaItinerario.Location = new Point(222, 332);
+            buttonActivaItinerario.Name = "buttonActivaItinerario";
+            buttonActivaItinerario.Size = new Size(114, 39);
+            buttonActivaItinerario.TabIndex = 58;
+            buttonActivaItinerario.Text = "Establecer como activo";
+            buttonActivaItinerario.UseVisualStyleBackColor = false;
+            buttonActivaItinerario.Click += buttonActivaItinerario_Click_;
             // 
-            // button3
+            // buttonVerItinerario
             // 
-            button3.BackColor = Color.CornflowerBlue;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(393, 332);
-            button3.Name = "button3";
-            button3.Size = new Size(114, 39);
-            button3.TabIndex = 59;
-            button3.Text = "Ver itinerario y presupuesto";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            buttonVerItinerario.BackColor = Color.CornflowerBlue;
+            buttonVerItinerario.FlatAppearance.BorderSize = 0;
+            buttonVerItinerario.FlatStyle = FlatStyle.Flat;
+            buttonVerItinerario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonVerItinerario.ForeColor = Color.White;
+            buttonVerItinerario.Location = new Point(393, 332);
+            buttonVerItinerario.Name = "buttonVerItinerario";
+            buttonVerItinerario.Size = new Size(114, 39);
+            buttonVerItinerario.TabIndex = 59;
+            buttonVerItinerario.Text = "Ver itinerario y presupuesto";
+            buttonVerItinerario.UseVisualStyleBackColor = false;
+            buttonVerItinerario.Click += buttonVerItinerario_Click;
             // 
-            // button4
+            // buttonGenerarReserva
             // 
-            button4.BackColor = Color.CornflowerBlue;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(564, 332);
-            button4.Name = "button4";
-            button4.Size = new Size(114, 39);
-            button4.TabIndex = 60;
-            button4.Text = "Generar pre-reserva";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            buttonGenerarReserva.BackColor = Color.CornflowerBlue;
+            buttonGenerarReserva.FlatAppearance.BorderSize = 0;
+            buttonGenerarReserva.FlatStyle = FlatStyle.Flat;
+            buttonGenerarReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonGenerarReserva.ForeColor = Color.White;
+            buttonGenerarReserva.Location = new Point(564, 332);
+            buttonGenerarReserva.Name = "buttonGenerarReserva";
+            buttonGenerarReserva.Size = new Size(114, 39);
+            buttonGenerarReserva.TabIndex = 60;
+            buttonGenerarReserva.Text = "Generar pre-reserva";
+            buttonGenerarReserva.UseVisualStyleBackColor = false;
+            buttonGenerarReserva.Click += buttonGenerarReserva_Click;
             // 
-            // button5
+            // buttonVolverAtras
             // 
-            button5.BackColor = Color.LightSteelBlue;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(738, 397);
-            button5.Name = "button5";
-            button5.Size = new Size(114, 38);
-            button5.TabIndex = 61;
-            button5.Text = "Volver atrás";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click_1;
+            buttonVolverAtras.BackColor = Color.LightSteelBlue;
+            buttonVolverAtras.FlatAppearance.BorderSize = 0;
+            buttonVolverAtras.FlatStyle = FlatStyle.Flat;
+            buttonVolverAtras.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonVolverAtras.Location = new Point(738, 397);
+            buttonVolverAtras.Name = "buttonVolverAtras";
+            buttonVolverAtras.Size = new Size(114, 38);
+            buttonVolverAtras.TabIndex = 61;
+            buttonVolverAtras.Text = "Volver atrás";
+            buttonVolverAtras.UseVisualStyleBackColor = false;
+            buttonVolverAtras.Click += buttonVolverAtras_Click;
             // 
             // Eliminar
             // 
@@ -182,35 +182,35 @@
             Eliminar.UseVisualStyleBackColor = false;
             Eliminar.Click += Eliminar_Click_1;
             // 
-            // button6
+            // buttonBuscar
             // 
-            button6.BackColor = Color.RoyalBlue;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(537, 20);
-            button6.Margin = new Padding(3, 2, 3, 2);
-            button6.Name = "button6";
-            button6.Size = new Size(114, 37);
-            button6.TabIndex = 63;
-            button6.Text = "Buscar";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click_1;
+            buttonBuscar.BackColor = Color.RoyalBlue;
+            buttonBuscar.FlatAppearance.BorderSize = 0;
+            buttonBuscar.FlatStyle = FlatStyle.Flat;
+            buttonBuscar.ForeColor = Color.White;
+            buttonBuscar.Location = new Point(537, 20);
+            buttonBuscar.Margin = new Padding(3, 2, 3, 2);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(114, 37);
+            buttonBuscar.TabIndex = 63;
+            buttonBuscar.Text = "Buscar";
+            buttonBuscar.UseVisualStyleBackColor = false;
+            buttonBuscar.Click += buttonBuscar_Click;
             // 
-            // listView1
+            // listViewItinerarios
             // 
-            listView1.Alignment = ListViewAlignment.Left;
-            listView1.BackColor = Color.White;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            listView1.FullRowSelect = true;
-            listView1.Location = new Point(27, 140);
-            listView1.Margin = new Padding(3, 2, 3, 2);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(849, 169);
-            listView1.TabIndex = 64;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewItinerarios.Alignment = ListViewAlignment.Left;
+            listViewItinerarios.BackColor = Color.White;
+            listViewItinerarios.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            listViewItinerarios.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            listViewItinerarios.FullRowSelect = true;
+            listViewItinerarios.Location = new Point(27, 140);
+            listViewItinerarios.Margin = new Padding(3, 2, 3, 2);
+            listViewItinerarios.Name = "listViewItinerarios";
+            listViewItinerarios.Size = new Size(849, 169);
+            listViewItinerarios.TabIndex = 64;
+            listViewItinerarios.UseCompatibleStateImageBehavior = false;
+            listViewItinerarios.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -238,7 +238,7 @@
             groupBox1.BackgroundImageLayout = ImageLayout.None;
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(button6);
+            groupBox1.Controls.Add(buttonBuscar);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textNombreCliente);
             groupBox1.FlatStyle = FlatStyle.Popup;
@@ -279,7 +279,7 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(ItinerarioSeleccionado);
             panel1.Controls.Add(label4);
             panel1.Location = new Point(-4, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
@@ -287,45 +287,45 @@
             panel1.Size = new Size(905, 34);
             panel1.TabIndex = 64;
             // 
-            // label3
+            // ItinerarioSeleccionado
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(131, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(121, 15);
-            label3.TabIndex = 65;
-            label3.Text = "NO SELECCIONADO";
+            ItinerarioSeleccionado.AutoSize = true;
+            ItinerarioSeleccionado.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ItinerarioSeleccionado.Location = new Point(131, 11);
+            ItinerarioSeleccionado.Name = "ItinerarioSeleccionado";
+            ItinerarioSeleccionado.Size = new Size(121, 15);
+            ItinerarioSeleccionado.TabIndex = 65;
+            ItinerarioSeleccionado.Text = "NO SELECCIONADO";
             // 
-            // button7
+            // buttonAgregarHotel
             // 
-            button7.BackColor = Color.RoyalBlue;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(62, 397);
-            button7.Name = "button7";
-            button7.Size = new Size(114, 38);
-            button7.TabIndex = 68;
-            button7.Text = "Agregar Hotel";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            buttonAgregarHotel.BackColor = Color.RoyalBlue;
+            buttonAgregarHotel.FlatAppearance.BorderSize = 0;
+            buttonAgregarHotel.FlatStyle = FlatStyle.Flat;
+            buttonAgregarHotel.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonAgregarHotel.ForeColor = Color.White;
+            buttonAgregarHotel.Location = new Point(62, 397);
+            buttonAgregarHotel.Name = "buttonAgregarHotel";
+            buttonAgregarHotel.Size = new Size(114, 38);
+            buttonAgregarHotel.TabIndex = 68;
+            buttonAgregarHotel.Text = "Agregar Hotel";
+            buttonAgregarHotel.UseVisualStyleBackColor = false;
+            buttonAgregarHotel.Click += buttonAgregarHabitacion_Click;
             // 
-            // button8
+            // buttonAgregarVuelo
             // 
-            button8.BackColor = Color.RoyalBlue;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(222, 397);
-            button8.Name = "button8";
-            button8.Size = new Size(114, 38);
-            button8.TabIndex = 69;
-            button8.Text = "Agregar Vuelo";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            buttonAgregarVuelo.BackColor = Color.RoyalBlue;
+            buttonAgregarVuelo.FlatAppearance.BorderSize = 0;
+            buttonAgregarVuelo.FlatStyle = FlatStyle.Flat;
+            buttonAgregarVuelo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonAgregarVuelo.ForeColor = Color.White;
+            buttonAgregarVuelo.Location = new Point(222, 397);
+            buttonAgregarVuelo.Name = "buttonAgregarVuelo";
+            buttonAgregarVuelo.Size = new Size(114, 38);
+            buttonAgregarVuelo.TabIndex = 69;
+            buttonAgregarVuelo.Text = "Agregar Vuelo";
+            buttonAgregarVuelo.UseVisualStyleBackColor = false;
+            buttonAgregarVuelo.Click += buttonAgregarVuelo_Click;
             // 
             // pictureBox2
             // 
@@ -348,20 +348,20 @@
             pictureBox3.TabIndex = 71;
             pictureBox3.TabStop = false;
             // 
-            // button9
+            // buttonConfirmarReserva
             // 
-            button9.BackColor = Color.RoyalBlue;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(393, 396);
-            button9.Name = "button9";
-            button9.Size = new Size(114, 39);
-            button9.TabIndex = 72;
-            button9.Text = "Confirmar reserva";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            buttonConfirmarReserva.BackColor = Color.RoyalBlue;
+            buttonConfirmarReserva.FlatAppearance.BorderSize = 0;
+            buttonConfirmarReserva.FlatStyle = FlatStyle.Flat;
+            buttonConfirmarReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonConfirmarReserva.ForeColor = Color.White;
+            buttonConfirmarReserva.Location = new Point(393, 396);
+            buttonConfirmarReserva.Name = "buttonConfirmarReserva";
+            buttonConfirmarReserva.Size = new Size(114, 39);
+            buttonConfirmarReserva.TabIndex = 72;
+            buttonConfirmarReserva.Text = "Confirmar reserva";
+            buttonConfirmarReserva.UseVisualStyleBackColor = false;
+            buttonConfirmarReserva.Click += buttonConfirmarReserva_Click;
             // 
             // GestionItinerarios
             // 
@@ -370,23 +370,24 @@
             BackColor = Color.AliceBlue;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(900, 458);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(listView1);
+            Controls.Add(buttonConfirmarReserva);
+            Controls.Add(buttonAgregarVuelo);
+            Controls.Add(buttonAgregarHotel);
+            Controls.Add(listViewItinerarios);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox1);
             Controls.Add(Eliminar);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(buttonVolverAtras);
+            Controls.Add(buttonGenerarReserva);
+            Controls.Add(buttonVerItinerario);
+            Controls.Add(buttonActivaItinerario);
             Controls.Add(ButtonNuevoItinerario);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "GestionItinerarios";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Gestion de Itinerarios";
             Load += GestionItinerarios_Load_1;
             groupBox1.ResumeLayout(false);
@@ -405,13 +406,13 @@
         private TextBox textBox1;
         private TextBox textNombreCliente;
         private Button ButtonNuevoItinerario;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button buttonActivaItinerario;
+        private Button buttonVerItinerario;
+        private Button buttonGenerarReserva;
+        private Button buttonVolverAtras;
         private Button Eliminar;
-        private Button button6;
-        private ListView listView1;
+        private Button buttonBuscar;
+        private ListView listViewItinerarios;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
@@ -420,11 +421,11 @@
         private Label label4;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Label label3;
-        private Button button7;
-        private Button button8;
+        private Label ItinerarioSeleccionado;
+        private Button buttonAgregarHotel;
+        private Button buttonAgregarVuelo;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Button button9;
+        private Button buttonConfirmarReserva;
     }
 }

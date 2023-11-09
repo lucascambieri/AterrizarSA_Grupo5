@@ -11,15 +11,21 @@
     "HabitacionesSelec": [
       {
         "IdHab": "00003",
-        "IdHotel": "00001"
+        "IdHotel": "00001",
+        "FechaDesde": "2023-12-01",
+        "FechaHasta": "2024-01-01"
       },
       {
         "IdHab": "00004",
-        "IdHotel": "00001"
+        "IdHotel": "00001",
+        "FechaDesde": "2023-12-01",
+        "FechaHasta": "2024-01-01"
       },
       {
         "IdHab": "00005",
-        "IdHotel": "00001"
+        "IdHotel": "00001",
+        "FechaDesde": "2023-12-01",
+        "FechaHasta": "2024-01-01"
       }
     ],
     "PasajesSelec": [
@@ -58,15 +64,21 @@
     "HabitacionesSelec": [
       {
         "IdHab": "00001",
-        "IdHotel": "00002"
+        "IdHotel": "00002",
+        "FechaDesde": "2024-02-01",
+        "FechaHasta": "2024-03-01"
       },
       {
         "IdHab": "00002",
-        "IdHotel": "00002"
+        "IdHotel": "00002",
+        "FechaDesde": "2024-02-01",
+        "FechaHasta": "2024-03-01"
       },
       {
         "IdHab": "00003",
-        "IdHotel": "00002"
+        "IdHotel": "00002",
+        "FechaDesde": "2024-02-01",
+        "FechaHasta": "2024-03-01"
       }
     ],
     "PasajesSelec": [
@@ -105,15 +117,21 @@
     "HabitacionesSelec": [
       {
         "IdHab": "00001",
-        "IdHotel": "00008"
+        "IdHotel": "00008",
+        "FechaDesde": "2024-07-29",
+        "FechaHasta": "2024-08-15"
       },
       {
         "IdHab": "00002",
-        "IdHotel": "00008"
+        "IdHotel": "00008",
+        "FechaDesde": "2024-07-29",
+        "FechaHasta": "2024-08-15"
       },
       {
         "IdHab": "00003",
-        "IdHotel": "00008"
+        "IdHotel": "00008",
+        "FechaDesde": "2024-07-29",
+        "FechaHasta": "2024-08-15"
       }
     ],
     "PasajesSelec": [
@@ -136,7 +154,9 @@
     "HabitacionesSelec": [
       {
         "IdHab": "00001",
-        "IdHotel": "0000"
+        "IdHotel": "0001",
+        "FechaDesde": "2024-02-08",
+        "FechaHasta": "2024-02-20"
       }
     ],
     "PasajesSelec": [],

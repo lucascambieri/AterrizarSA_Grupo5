@@ -28,761 +28,733 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader23 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader24 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader25 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader29 = new System.Windows.Forms.ColumnHeader();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader30 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader31 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader32 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader33 = new System.Windows.Forms.ColumnHeader();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.listView9 = new System.Windows.Forms.ListView();
-            this.columnHeader26 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader27 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader28 = new System.Windows.Forms.ColumnHeader();
-            this.listView7 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader35 = new System.Windows.Forms.ColumnHeader();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            button4 = new Button();
+            button5 = new Button();
+            label10 = new Label();
+            label11 = new Label();
+            button7 = new Button();
+            listViewHoteleria = new ListView();
+            idHotel = new ColumnHeader();
+            codigo = new ColumnHeader();
+            hotel = new ColumnHeader();
+            ciudad = new ColumnHeader();
+            direccion = new ColumnHeader();
+            habitacion = new ColumnHeader();
+            tarifa = new ColumnHeader();
+            capacidad = new ColumnHeader();
+            adultosMax = new ColumnHeader();
+            menoresMax = new ColumnHeader();
+            infantesMax = new ColumnHeader();
+            Desde = new ColumnHeader();
+            Hasta = new ColumnHeader();
+            listView2 = new ListView();
+            columnHeader30 = new ColumnHeader();
+            columnHeader31 = new ColumnHeader();
+            columnHeader32 = new ColumnHeader();
+            columnHeader33 = new ColumnHeader();
+            groupBox1 = new GroupBox();
+            label3 = new Label();
+            labelSubTotalHoteles = new Label();
+            label4 = new Label();
+            label18 = new Label();
+            button1 = new Button();
+            label19 = new Label();
+            groupBox2 = new GroupBox();
+            label5 = new Label();
+            label9 = new Label();
+            label16 = new Label();
+            labelSubTotalVuelos = new Label();
+            label17 = new Label();
+            listView9 = new ListView();
+            columnHeader26 = new ColumnHeader();
+            columnHeader27 = new ColumnHeader();
+            columnHeader28 = new ColumnHeader();
+            listViewAereos = new ListView();
+            idVuelo = new ColumnHeader();
+            origen = new ColumnHeader();
+            destino = new ColumnHeader();
+            paradas = new ColumnHeader();
+            fechaSalida = new ColumnHeader();
+            fechaLlegada = new ColumnHeader();
+            tiempoVuelo = new ColumnHeader();
+            aerolinea = new ColumnHeader();
+            clase = new ColumnHeader();
+            tipoPasajero = new ColumnHeader();
+            precioBase = new ColumnHeader();
+            impuestos = new ColumnHeader();
+            comision = new ColumnHeader();
+            disponibilidad = new ColumnHeader();
+            button2 = new Button();
+            label6 = new Label();
+            button3 = new Button();
+            button6 = new Button();
+            label12 = new Label();
+            label13 = new Label();
+            label20 = new Label();
+            panel1 = new Panel();
+            label24 = new Label();
+            label23 = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            button8 = new Button();
+            idPasaje = new ColumnHeader();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(17, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Numero itinerario:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.RoyalBlue;
+            label1.Location = new Point(17, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Numero itinerario:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(411, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha de inicio:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.RoyalBlue;
+            label2.Location = new Point(411, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Fecha de inicio:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 18);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Servicios Hoteleria";
+            label7.AutoSize = true;
+            label7.Location = new Point(8, 32);
+            label7.Name = "label7";
+            label7.Size = new Size(109, 15);
+            label7.TabIndex = 17;
+            label7.Text = "Servicios Hoteleria";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(558, 186);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 18);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Subtotal";
+            label8.AutoSize = true;
+            label8.Location = new Point(558, 186);
+            label8.Name = "label8";
+            label8.Size = new Size(52, 15);
+            label8.TabIndex = 21;
+            label8.Text = "Subtotal";
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(8, 176);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 39);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Editar pasajeros";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.BackColor = Color.CornflowerBlue;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(8, 176);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(153, 39);
+            button4.TabIndex = 20;
+            button4.Text = "Editar pasajeros";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(169, 176);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(153, 39);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Quitar";
-            this.button5.UseVisualStyleBackColor = false;
+            button5.BackColor = Color.LightSteelBlue;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(169, 176);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(153, 39);
+            button5.TabIndex = 19;
+            button5.Text = "Quitar";
+            button5.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(766, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 18);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Servicios Extra";
+            label10.AutoSize = true;
+            label10.Location = new Point(766, 32);
+            label10.Name = "label10";
+            label10.Size = new Size(87, 15);
+            label10.TabIndex = 23;
+            label10.Text = "Servicios Extra";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(1320, 625);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 18);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "TOTAL:";
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(1320, 625);
+            label11.Name = "label11";
+            label11.Size = new Size(53, 15);
+            label11.TabIndex = 28;
+            label11.Text = "TOTAL:";
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(1344, 672);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(153, 39);
-            this.button7.TabIndex = 30;
-            this.button7.Text = "Volver atrás";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_2);
+            button7.BackColor = Color.LightSteelBlue;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(1344, 672);
+            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Name = "button7";
+            button7.Size = new Size(153, 39);
+            button7.TabIndex = 30;
+            button7.Text = "Volver atrás";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click_2;
             // 
-            // listView1
+            // listViewHoteleria
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader4,
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25,
-            this.columnHeader29});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(8, 53);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(715, 116);
-            this.listView1.TabIndex = 52;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            listViewHoteleria.Columns.AddRange(new ColumnHeader[] { idHotel, codigo, hotel, ciudad, direccion, habitacion, tarifa, capacidad, adultosMax, menoresMax, infantesMax, Desde, Hasta });
+            listViewHoteleria.FullRowSelect = true;
+            listViewHoteleria.Location = new Point(8, 53);
+            listViewHoteleria.Margin = new Padding(3, 4, 3, 4);
+            listViewHoteleria.Name = "listViewHoteleria";
+            listViewHoteleria.Size = new Size(715, 116);
+            listViewHoteleria.TabIndex = 52;
+            listViewHoteleria.UseCompatibleStateImageBehavior = false;
+            listViewHoteleria.View = View.Details;
             // 
-            // columnHeader5
+            // idHotel
             // 
-            this.columnHeader5.Text = "Código";
+            idHotel.Text = "IdHotel";
             // 
-            // columnHeader6
+            // codigo
             // 
-            this.columnHeader6.Text = "Hotel";
+            codigo.Text = "Código";
             // 
-            // columnHeader7
+            // hotel
             // 
-            this.columnHeader7.Text = "Ciudad";
+            hotel.Text = "Hotel";
             // 
-            // columnHeader8
+            // ciudad
             // 
-            this.columnHeader8.Text = "Dirección";
+            ciudad.Text = "Ciudad";
             // 
-            // columnHeader4
+            // direccion
             // 
-            this.columnHeader4.Text = "Habitación";
+            direccion.Text = "Dirección";
             // 
-            // columnHeader19
+            // habitacion
             // 
-            this.columnHeader19.Text = "Tarifa";
+            habitacion.Text = "Habitación";
             // 
-            // columnHeader20
+            // tarifa
             // 
-            this.columnHeader20.Text = "Capacidad";
+            tarifa.Text = "Tarifa";
             // 
-            // columnHeader21
+            // capacidad
             // 
-            this.columnHeader21.Text = "Adultos máx.";
+            capacidad.Text = "Capacidad";
             // 
-            // columnHeader22
+            // adultosMax
             // 
-            this.columnHeader22.Text = "Menor máx.";
+            adultosMax.Text = "Adultos máx.";
             // 
-            // columnHeader23
+            // menoresMax
             // 
-            this.columnHeader23.Text = "Infante máx.";
+            menoresMax.Text = "Menores máx.";
             // 
-            // columnHeader24
+            // infantesMax
             // 
-            this.columnHeader24.Text = "Desde";
+            infantesMax.Text = "Infantes máx.";
             // 
-            // columnHeader25
+            // Desde
             // 
-            this.columnHeader25.Text = "Hasta";
+            Desde.Text = "Desde";
             // 
-            // columnHeader29
+            // Hasta
             // 
-            this.columnHeader29.Text = "Disponibilidad";
+            Hasta.Text = "Hasta";
             // 
             // listView2
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader30,
-            this.columnHeader31,
-            this.columnHeader32,
-            this.columnHeader33});
-            this.listView2.FullRowSelect = true;
-            this.listView2.Location = new System.Drawing.Point(766, 53);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(715, 116);
-            this.listView2.TabIndex = 53;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader30, columnHeader31, columnHeader32, columnHeader33 });
+            listView2.FullRowSelect = true;
+            listView2.Location = new Point(766, 53);
+            listView2.Margin = new Padding(3, 4, 3, 4);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(715, 116);
+            listView2.TabIndex = 53;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
             // 
             // columnHeader30
             // 
-            this.columnHeader30.Text = "Código";
-            this.columnHeader30.Width = 100;
+            columnHeader30.Text = "Código";
+            columnHeader30.Width = 100;
             // 
             // columnHeader31
             // 
-            this.columnHeader31.Text = "Descripción";
-            this.columnHeader31.Width = 300;
+            columnHeader31.Text = "Descripción";
+            columnHeader31.Width = 300;
             // 
             // columnHeader32
             // 
-            this.columnHeader32.Text = "Tarifa";
-            this.columnHeader32.Width = 100;
+            columnHeader32.Text = "Tarifa";
+            columnHeader32.Width = 100;
             // 
             // columnHeader33
             // 
-            this.columnHeader33.Text = "¿Por pasajero?";
-            this.columnHeader33.Width = 100;
+            columnHeader33.Text = "¿Por pasajero?";
+            columnHeader33.Width = 100;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.listView2);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(16, 345);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1510, 267);
-            this.groupBox1.TabIndex = 54;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hotelería";
+            groupBox1.BackColor = Color.White;
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(labelSubTotalHoteles);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label18);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(label19);
+            groupBox1.Controls.Add(listViewHoteleria);
+            groupBox1.Controls.Add(listView2);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Location = new Point(16, 345);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(1510, 267);
+            groupBox1.TabIndex = 54;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Hotelería";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightBlue;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(1375, 220);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
-            this.label3.TabIndex = 76;
-            this.label3.Text = "SUBTOTAL";
+            label3.AutoSize = true;
+            label3.BackColor = Color.LightBlue;
+            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(1375, 220);
+            label3.Name = "label3";
+            label3.Size = new Size(77, 15);
+            label3.TabIndex = 76;
+            label3.Text = "SUBTOTAL";
             // 
-            // label15
+            // labelSubTotalHoteles
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.LightBlue;
-            this.label15.Location = new System.Drawing.Point(626, 186);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 18);
-            this.label15.TabIndex = 68;
-            this.label15.Text = "SUBTOTAL";
+            labelSubTotalHoteles.AutoSize = true;
+            labelSubTotalHoteles.BackColor = Color.LightBlue;
+            labelSubTotalHoteles.Location = new Point(626, 186);
+            labelSubTotalHoteles.Name = "labelSubTotalHoteles";
+            labelSubTotalHoteles.Size = new Size(69, 15);
+            labelSubTotalHoteles.TabIndex = 68;
+            labelSubTotalHoteles.Text = "SUBTOTAL";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(1245, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 18);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Total Hotelería:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(1245, 220);
+            label4.Name = "label4";
+            label4.Size = new Size(106, 15);
+            label4.TabIndex = 75;
+            label4.Text = "Total Hotelería:";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.LightBlue;
-            this.label18.Location = new System.Drawing.Point(1383, 182);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(86, 18);
-            this.label18.TabIndex = 74;
-            this.label18.Text = "SUBTOTAL";
+            label18.AutoSize = true;
+            label18.BackColor = Color.LightBlue;
+            label18.Location = new Point(1383, 182);
+            label18.Name = "label18";
+            label18.Size = new Size(69, 15);
+            label18.TabIndex = 74;
+            label18.Text = "SUBTOTAL";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(766, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 39);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Quitar";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.LightSteelBlue;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(766, 176);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 39);
+            button1.TabIndex = 56;
+            button1.Text = "Quitar";
+            button1.UseVisualStyleBackColor = false;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(1315, 182);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 18);
-            this.label19.TabIndex = 73;
-            this.label19.Text = "Subtotal";
+            label19.AutoSize = true;
+            label19.Location = new Point(1315, 182);
+            label19.Name = "label19";
+            label19.Size = new Size(52, 15);
+            label19.TabIndex = 73;
+            label19.Text = "Subtotal";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.listView9);
-            this.groupBox2.Controls.Add(this.listView7);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(16, 57);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1510, 267);
-            this.groupBox2.TabIndex = 62;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vuelos";
+            groupBox2.BackColor = Color.White;
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(label16);
+            groupBox2.Controls.Add(labelSubTotalVuelos);
+            groupBox2.Controls.Add(label17);
+            groupBox2.Controls.Add(listView9);
+            groupBox2.Controls.Add(listViewAereos);
+            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(label12);
+            groupBox2.Controls.Add(label13);
+            groupBox2.Location = new Point(16, 57);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(1510, 267);
+            groupBox2.TabIndex = 62;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Vuelos";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LightBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(1375, 224);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 18);
-            this.label5.TabIndex = 72;
-            this.label5.Text = "SUBTOTAL";
+            label5.AutoSize = true;
+            label5.BackColor = Color.LightBlue;
+            label5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(1375, 224);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 15);
+            label5.TabIndex = 72;
+            label5.Text = "SUBTOTAL";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(1262, 224);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 18);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "Total Vuelos:";
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(1262, 224);
+            label9.Name = "label9";
+            label9.Size = new Size(90, 15);
+            label9.TabIndex = 71;
+            label9.Text = "Total Vuelos:";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.LightBlue;
-            this.label16.Location = new System.Drawing.Point(1383, 186);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 18);
-            this.label16.TabIndex = 70;
-            this.label16.Text = "SUBTOTAL";
+            label16.AutoSize = true;
+            label16.BackColor = Color.LightBlue;
+            label16.Location = new Point(1383, 186);
+            label16.Name = "label16";
+            label16.Size = new Size(69, 15);
+            label16.TabIndex = 70;
+            label16.Text = "SUBTOTAL";
             // 
-            // label14
+            // labelSubTotalVuelos
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.LightBlue;
-            this.label14.Location = new System.Drawing.Point(626, 189);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 18);
-            this.label14.TabIndex = 67;
-            this.label14.Text = "SUBTOTAL";
+            labelSubTotalVuelos.AutoSize = true;
+            labelSubTotalVuelos.BackColor = Color.LightBlue;
+            labelSubTotalVuelos.Location = new Point(626, 189);
+            labelSubTotalVuelos.Name = "labelSubTotalVuelos";
+            labelSubTotalVuelos.Size = new Size(69, 15);
+            labelSubTotalVuelos.TabIndex = 67;
+            labelSubTotalVuelos.Text = "SUBTOTAL";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1315, 186);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 18);
-            this.label17.TabIndex = 69;
-            this.label17.Text = "Subtotal";
+            label17.AutoSize = true;
+            label17.Location = new Point(1315, 186);
+            label17.Name = "label17";
+            label17.Size = new Size(52, 15);
+            label17.TabIndex = 69;
+            label17.Text = "Subtotal";
             // 
             // listView9
             // 
-            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader26,
-            this.columnHeader27,
-            this.columnHeader28});
-            this.listView9.FullRowSelect = true;
-            this.listView9.Location = new System.Drawing.Point(766, 53);
-            this.listView9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(715, 116);
-            this.listView9.TabIndex = 63;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            this.listView9.View = System.Windows.Forms.View.Details;
+            listView9.Columns.AddRange(new ColumnHeader[] { columnHeader26, columnHeader27, columnHeader28 });
+            listView9.FullRowSelect = true;
+            listView9.Location = new Point(766, 53);
+            listView9.Margin = new Padding(3, 4, 3, 4);
+            listView9.Name = "listView9";
+            listView9.Size = new Size(715, 116);
+            listView9.TabIndex = 63;
+            listView9.UseCompatibleStateImageBehavior = false;
+            listView9.View = View.Details;
             // 
             // columnHeader26
             // 
-            this.columnHeader26.Text = "Código";
+            columnHeader26.Text = "Código";
             // 
             // columnHeader27
             // 
-            this.columnHeader27.Text = "Descripción";
-            this.columnHeader27.Width = 400;
+            columnHeader27.Text = "Descripción";
+            columnHeader27.Width = 400;
             // 
             // columnHeader28
             // 
-            this.columnHeader28.Text = "Tarifa";
-            this.columnHeader28.Width = 100;
+            columnHeader28.Text = "Tarifa";
+            columnHeader28.Width = 100;
             // 
-            // listView7
+            // listViewAereos
             // 
-            this.listView7.AllowColumnReorder = true;
-            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader35});
-            this.listView7.FullRowSelect = true;
-            this.listView7.Location = new System.Drawing.Point(8, 53);
-            this.listView7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(715, 116);
-            this.listView7.TabIndex = 62;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            this.listView7.View = System.Windows.Forms.View.Details;
+            listViewAereos.AllowColumnReorder = true;
+            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje });
+            listViewAereos.FullRowSelect = true;
+            listViewAereos.Location = new Point(8, 53);
+            listViewAereos.Margin = new Padding(3, 4, 3, 4);
+            listViewAereos.Name = "listViewAereos";
+            listViewAereos.Size = new Size(715, 116);
+            listViewAereos.TabIndex = 62;
+            listViewAereos.UseCompatibleStateImageBehavior = false;
+            listViewAereos.View = View.Details;
             // 
-            // columnHeader1
+            // idVuelo
             // 
-            this.columnHeader1.Text = "Código";
+            idVuelo.Text = "IdVuelo";
             // 
-            // columnHeader2
+            // origen
             // 
-            this.columnHeader2.Text = "Origen";
+            origen.Text = "Origen";
             // 
-            // columnHeader3
+            // destino
             // 
-            this.columnHeader3.Text = "Destino";
+            destino.Text = "Destino";
             // 
-            // columnHeader9
+            // paradas
             // 
-            this.columnHeader9.Text = "Paradas";
+            paradas.Text = "Paradas";
             // 
-            // columnHeader10
+            // fechaSalida
             // 
-            this.columnHeader10.Text = "Fecha salida";
+            fechaSalida.Text = "Fecha salida";
             // 
-            // columnHeader11
+            // fechaLlegada
             // 
-            this.columnHeader11.Text = "Fecha arribo";
+            fechaLlegada.Text = "Fecha llegada";
             // 
-            // columnHeader12
+            // tiempoVuelo
             // 
-            this.columnHeader12.Text = "Tiempo de vuelo";
+            tiempoVuelo.Text = "Tiempo de vuelo";
             // 
-            // columnHeader13
+            // aerolinea
             // 
-            this.columnHeader13.Text = "Aerolinea";
+            aerolinea.Text = "Aerolinea";
             // 
-            // columnHeader14
+            // clase
             // 
-            this.columnHeader14.Text = "Clase";
+            clase.Text = "Clase";
             // 
-            // columnHeader15
+            // tipoPasajero
             // 
-            this.columnHeader15.Text = "Tipo de pasajero";
+            tipoPasajero.Text = "Tipo de pasajero";
             // 
-            // columnHeader16
+            // precioBase
             // 
-            this.columnHeader16.Text = "Base";
+            precioBase.Text = "Precio base";
             // 
-            // columnHeader17
+            // impuestos
             // 
-            this.columnHeader17.Text = "Impuesto";
+            impuestos.Text = "Impuestos";
             // 
-            // columnHeader18
+            // comision
             // 
-            this.columnHeader18.Text = "Comisión";
+            comision.Text = "Comisión";
             // 
-            // columnHeader35
+            // disponibilidad
             // 
-            this.columnHeader35.Text = "Disponibilidad";
+            disponibilidad.Text = "Disponibilidad";
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(766, 176);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 39);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Quitar";
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.LightSteelBlue;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(766, 176);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(153, 39);
+            button2.TabIndex = 56;
+            button2.Text = "Quitar";
+            button2.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 18);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Servicios Vuelos";
+            label6.AutoSize = true;
+            label6.Location = new Point(8, 32);
+            label6.Name = "label6";
+            label6.Size = new Size(96, 15);
+            label6.TabIndex = 17;
+            label6.Text = "Servicios Vuelos";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(169, 176);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 39);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Quitar";
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.LightSteelBlue;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(169, 176);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(153, 39);
+            button3.TabIndex = 19;
+            button3.Text = "Quitar";
+            button3.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(8, 176);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(153, 39);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Editar pasajeros";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.BackColor = Color.CornflowerBlue;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(8, 176);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(153, 39);
+            button6.TabIndex = 20;
+            button6.Text = "Editar pasajeros";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(558, 189);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 18);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Subtotal";
+            label12.AutoSize = true;
+            label12.Location = new Point(558, 189);
+            label12.Name = "label12";
+            label12.Size = new Size(52, 15);
+            label12.TabIndex = 21;
+            label12.Text = "Subtotal";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(766, 32);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 18);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Servicios Extra";
+            label13.AutoSize = true;
+            label13.Location = new Point(766, 32);
+            label13.Name = "label13";
+            label13.Size = new Size(87, 15);
+            label13.TabIndex = 23;
+            label13.Text = "Servicios Extra";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.LightBlue;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(1391, 625);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(94, 18);
-            this.label20.TabIndex = 77;
-            this.label20.Text = "SUBTOTAL";
+            label20.AutoSize = true;
+            label20.BackColor = Color.LightBlue;
+            label20.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.Location = new Point(1391, 625);
+            label20.Name = "label20";
+            label20.Size = new Size(77, 15);
+            label20.TabIndex = 77;
+            label20.Text = "SUBTOTAL";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, -3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1557, 53);
-            this.panel1.TabIndex = 73;
+            panel1.BackColor = Color.GhostWhite;
+            panel1.Controls.Add(label24);
+            panel1.Controls.Add(label23);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(0, -3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1557, 53);
+            panel1.TabIndex = 73;
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(544, 19);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 18);
-            this.label24.TabIndex = 74;
-            this.label24.Text = "NO SELECCIONADO";
+            label24.AutoSize = true;
+            label24.Location = new Point(544, 19);
+            label24.Name = "label24";
+            label24.Size = new Size(121, 15);
+            label24.TabIndex = 74;
+            label24.Text = "NO SELECCIONADO";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(167, 19);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(153, 18);
-            this.label23.TabIndex = 73;
-            this.label23.Text = "NO SELECCIONADO";
+            label23.AutoSize = true;
+            label23.Location = new Point(167, 19);
+            label23.Name = "label23";
+            label23.Size = new Size(121, 15);
+            label23.TabIndex = 73;
+            label23.Text = "NO SELECCIONADO";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AterrizarSA_Grupo5.Properties.Resources.bg_donut_1;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 312);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(428, 433);
-            this.pictureBox2.TabIndex = 78;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.bg_donut_1;
+            pictureBox2.Location = new Point(0, 312);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(428, 433);
+            pictureBox2.TabIndex = 78;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::AterrizarSA_Grupo5.Properties.Resources.landing_bg_object_2;
-            this.pictureBox3.Location = new System.Drawing.Point(1231, -55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(355, 353);
-            this.pictureBox3.TabIndex = 79;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.Image = Properties.Resources.landing_bg_object_2;
+            pictureBox3.Location = new Point(1231, -55);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(355, 353);
+            pictureBox3.TabIndex = 79;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::AterrizarSA_Grupo5.Properties.Resources.landing_bg_object_2;
-            this.pictureBox4.Location = new System.Drawing.Point(895, 392);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(355, 353);
-            this.pictureBox4.TabIndex = 80;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.Image = Properties.Resources.landing_bg_object_2;
+            pictureBox4.Location = new Point(895, 392);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(355, 353);
+            pictureBox4.TabIndex = 80;
+            pictureBox4.TabStop = false;
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(24, 659);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 52);
-            this.button8.TabIndex = 81;
-            this.button8.Text = "Generar pre-reserva";
-            this.button8.UseVisualStyleBackColor = false;
+            button8.BackColor = Color.CornflowerBlue;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(24, 659);
+            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Name = "button8";
+            button8.Size = new Size(130, 52);
+            button8.TabIndex = 81;
+            button8.Text = "Generar pre-reserva";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // idPasaje
+            // 
+            idPasaje.Text = "IdPasaje";
             // 
             // VerItinerario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1550, 724);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "VerItinerario";
-            this.Text = "VerItinerario";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(1550, 724);
+            Controls.Add(button8);
+            Controls.Add(panel1);
+            Controls.Add(label20);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(button7);
+            Controls.Add(label11);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox4);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "VerItinerario";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "VerItinerario";
+            Load += VerItinerario_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -796,20 +768,20 @@
         private Label label10;
         private Label label11;
         private Button button7;
-        private ListView listView1;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader19;
-        private ColumnHeader columnHeader20;
-        private ColumnHeader columnHeader21;
-        private ColumnHeader columnHeader22;
-        private ColumnHeader columnHeader23;
-        private ColumnHeader columnHeader24;
-        private ColumnHeader columnHeader25;
-        private ColumnHeader columnHeader29;
+        private ListView listViewHoteleria;
+        private ColumnHeader codigo;
+        private ColumnHeader hotel;
+        private ColumnHeader ciudad;
+        private ColumnHeader direccion;
+        private ColumnHeader habitacion;
+        private ColumnHeader tarifa;
+        private ColumnHeader capacidad;
+        private ColumnHeader adultosMax;
+        private ColumnHeader menoresMax;
+        private ColumnHeader infantesMax;
+        private ColumnHeader Desde;
+        private ColumnHeader Hasta;
+        private ColumnHeader idHotel;
         private ListView listView2;
         private ColumnHeader columnHeader30;
         private ColumnHeader columnHeader31;
@@ -824,34 +796,34 @@
         private Button button6;
         private Label label12;
         private Label label13;
-        private ListView listView7;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private ColumnHeader columnHeader11;
-        private ColumnHeader columnHeader12;
-        private ColumnHeader columnHeader13;
-        private ColumnHeader columnHeader14;
-        private ColumnHeader columnHeader15;
-        private ColumnHeader columnHeader16;
-        private ColumnHeader columnHeader17;
-        private ColumnHeader columnHeader18;
-        private ColumnHeader columnHeader35;
+        private ListView listViewAereos;
+        private ColumnHeader idVuelo;
+        private ColumnHeader origen;
+        private ColumnHeader destino;
+        private ColumnHeader paradas;
+        private ColumnHeader fechaSalida;
+        private ColumnHeader fechaLlegada;
+        private ColumnHeader tiempoVuelo;
+        private ColumnHeader aerolinea;
+        private ColumnHeader clase;
+        private ColumnHeader tipoPasajero;
+        private ColumnHeader precioBase;
+        private ColumnHeader impuestos;
+        private ColumnHeader comision;
+        private ColumnHeader disponibilidad;
         private ListView listView9;
         private ColumnHeader columnHeader26;
         private ColumnHeader columnHeader27;
         private ColumnHeader columnHeader28;
         private Label label3;
-        private Label label15;
+        private Label labelSubTotalHoteles;
         private Label label4;
         private Label label18;
         private Label label19;
         private Label label5;
         private Label label9;
         private Label label16;
-        private Label label14;
+        private Label labelSubTotalVuelos;
         private Label label17;
         private Label label20;
         private Panel panel1;
@@ -864,5 +836,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Button button8;
+        private ColumnHeader idPasaje;
     }
 }

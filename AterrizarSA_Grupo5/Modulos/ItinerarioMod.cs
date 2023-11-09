@@ -10,6 +10,10 @@ namespace AterrizarSA_Grupo5.Modulos
 {
     internal static class ItinerarioMod
     {
+        public static List<ItinerarioEnt> ListarItinerarios()
+        {
+            return ItinerarioAlmacen.Itinerarios;
+        }
         public static string AgregarItinerario(ItinerarioEnt nuevoItinerario)
         {
             // validaciones ... (esta es de ejemplo no más, no sirve de mucho)
@@ -26,12 +30,64 @@ namespace AterrizarSA_Grupo5.Modulos
             ItinerarioAlmacen.Itinerarios.Add(nuevoItinerario);
             return null;
         }
-
-        public static ItinerarioEnt BuscarItinerario(int idBuscado)
+        public static int ActivarItinerario(int idItinerarioActivo)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == idBuscado)
+                if (itinerario.Id == idItinerarioActivo)
+                {
+                    itinerario.EsActivo = true;
+                    return 0;
+                }
+                if (itinerario.EsActivo && itinerario.Id  != idItinerarioActivo)
+                {
+                    itinerario.EsActivo = false;
+                }
+            }
+            return -1;
+        }
+        public static int BuscarItinerarioActivo()
+        {
+            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.EsActivo)
+                {
+                    return itinerario.Id;
+                }
+            }
+            return -1;
+        }
+
+        public static int AgregarHabitacion(int itinerarioSeleccionado, HabitacionesSelecEnt habitacionesSelec)
+        {
+            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.Id == itinerarioSeleccionado)
+                {
+                    itinerario.HabitacionesSelec.Add(habitacionesSelec);
+                    return 0;
+                }
+            }
+            return -1;
+        }
+        public static int AgregarPasaje(int itinerarioSeleccionado, PasajesSelecEnt pasajesSelec)
+        {
+            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.Id == itinerarioSeleccionado)
+                {
+                    itinerario.PasajesSelec.Add(pasajesSelec);
+                    return 0;
+                }
+            }
+            return -1;
+        }
+
+        public static ItinerarioEnt InformacionItinerario(int itinerarioBuscado)
+        {
+            foreach (ItinerarioEnt itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.Id == itinerarioBuscado)
                 {
                     return itinerario;
                 }

@@ -19,7 +19,11 @@
           "Disponibilidad": [
             {
               "FechaInicioDisp": "2023-12-01",
-              "FechaFinDisp": "2024-12-01"
+              "FechaFinDisp": "2024-05-01"
+            },
+            {
+              "FechaInicioDisp": "2024-06-01",
+              "FechaFinDisp": "2024-09-01"
             }
           ]
         },

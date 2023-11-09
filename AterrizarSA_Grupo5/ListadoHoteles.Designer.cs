@@ -38,8 +38,8 @@
             label3 = new Label();
             label6 = new Label();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            dTPickerIn = new DateTimePicker();
+            dTPickerOut = new DateTimePicker();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
@@ -48,33 +48,33 @@
             button1 = new Button();
             label11 = new Label();
             label12 = new Label();
-            button2 = new Button();
-            button4 = new Button();
+            buttonGuardarHabitacion = new Button();
+            buttonVolverAtras = new Button();
             listView2 = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             listViewHabitaciones = new ListView();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
-            columnHeader11 = new ColumnHeader();
-            columnHeader12 = new ColumnHeader();
-            columnHeader13 = new ColumnHeader();
-            columnHeader14 = new ColumnHeader();
-            columnHeader15 = new ColumnHeader();
-            columnHeader16 = new ColumnHeader();
-            columnHeader17 = new ColumnHeader();
+            idHotel = new ColumnHeader();
+            codigoHotel = new ColumnHeader();
+            hotel = new ColumnHeader();
+            ciudad = new ColumnHeader();
+            direccion = new ColumnHeader();
+            idHabitacion = new ColumnHeader();
+            tarifa = new ColumnHeader();
+            capacidad = new ColumnHeader();
+            adultosMáx = new ColumnHeader();
+            menoresMax = new ColumnHeader();
+            infantesMax = new ColumnHeader();
+            desde = new ColumnHeader();
+            hasta = new ColumnHeader();
             button3 = new Button();
             label16 = new Label();
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            label13 = new Label();
+            labelItinerarioSel = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -168,19 +168,19 @@
             label7.TabIndex = 10;
             label7.Text = "Check-Out";
             // 
-            // dateTimePicker1
+            // dTPickerIn
             // 
-            dateTimePicker1.Location = new Point(259, 59);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(203, 21);
-            dateTimePicker1.TabIndex = 11;
+            dTPickerIn.Location = new Point(259, 59);
+            dTPickerIn.Name = "dTPickerIn";
+            dTPickerIn.Size = new Size(203, 21);
+            dTPickerIn.TabIndex = 11;
             // 
-            // dateTimePicker2
+            // dTPickerOut
             // 
-            dateTimePicker2.Location = new Point(259, 113);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(203, 21);
-            dateTimePicker2.TabIndex = 12;
+            dTPickerOut.Location = new Point(259, 113);
+            dTPickerOut.Name = "dTPickerOut";
+            dTPickerOut.Size = new Size(203, 21);
+            dTPickerOut.TabIndex = 12;
             // 
             // label8
             // 
@@ -259,34 +259,35 @@
             label12.TabIndex = 21;
             label12.Text = "Seleccion de extras:";
             // 
-            // button2
+            // buttonGuardarHabitacion
             // 
-            button2.BackColor = Color.CornflowerBlue;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(712, 354);
-            button2.Name = "button2";
-            button2.Size = new Size(133, 38);
-            button2.TabIndex = 23;
-            button2.Text = "Guardar selección";
-            button2.UseVisualStyleBackColor = false;
+            buttonGuardarHabitacion.BackColor = Color.CornflowerBlue;
+            buttonGuardarHabitacion.FlatAppearance.BorderSize = 0;
+            buttonGuardarHabitacion.FlatStyle = FlatStyle.Flat;
+            buttonGuardarHabitacion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonGuardarHabitacion.ForeColor = Color.White;
+            buttonGuardarHabitacion.Location = new Point(712, 354);
+            buttonGuardarHabitacion.Name = "buttonGuardarHabitacion";
+            buttonGuardarHabitacion.Size = new Size(133, 38);
+            buttonGuardarHabitacion.TabIndex = 23;
+            buttonGuardarHabitacion.Text = "Guardar selección";
+            buttonGuardarHabitacion.UseVisualStyleBackColor = false;
+            buttonGuardarHabitacion.Click += buttonGuardarHabitacion_Click;
             // 
-            // button4
+            // buttonVolverAtras
             // 
-            button4.BackColor = Color.LightSteelBlue;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(712, 558);
-            button4.Name = "button4";
-            button4.Size = new Size(133, 38);
-            button4.TabIndex = 25;
-            button4.Text = "Volver al menú";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click_1;
+            buttonVolverAtras.BackColor = Color.LightSteelBlue;
+            buttonVolverAtras.FlatAppearance.BorderSize = 0;
+            buttonVolverAtras.FlatStyle = FlatStyle.Flat;
+            buttonVolverAtras.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonVolverAtras.ForeColor = Color.Black;
+            buttonVolverAtras.Location = new Point(712, 558);
+            buttonVolverAtras.Name = "buttonVolverAtras";
+            buttonVolverAtras.Size = new Size(133, 38);
+            buttonVolverAtras.TabIndex = 25;
+            buttonVolverAtras.Text = "Volver al menú";
+            buttonVolverAtras.UseVisualStyleBackColor = false;
+            buttonVolverAtras.Click += buttonVolverAtras_Click;
             // 
             // listView2
             // 
@@ -323,7 +324,7 @@
             // listViewHabitaciones
             // 
             listViewHabitaciones.BackColor = Color.White;
-            listViewHabitaciones.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16, columnHeader17 });
+            listViewHabitaciones.Columns.AddRange(new ColumnHeader[] { idHotel, codigoHotel, hotel, ciudad, direccion, idHabitacion, tarifa, capacidad, adultosMáx, menoresMax, infantesMax, desde, hasta });
             listViewHabitaciones.FullRowSelect = true;
             listViewHabitaciones.Location = new Point(27, 250);
             listViewHabitaciones.Name = "listViewHabitaciones";
@@ -332,57 +333,57 @@
             listViewHabitaciones.UseCompatibleStateImageBehavior = false;
             listViewHabitaciones.View = View.Details;
             // 
-            // columnHeader5
+            // idHotel
             // 
-            columnHeader5.Text = "Código";
+            idHotel.Text = "IdHotel";
             // 
-            // columnHeader6
+            // codigoHotel
             // 
-            columnHeader6.Text = "Hotel";
+            codigoHotel.Text = "Código";
             // 
-            // columnHeader7
+            // hotel
             // 
-            columnHeader7.Text = "Ciudad";
+            hotel.Text = "Hotel";
             // 
-            // columnHeader8
+            // ciudad
             // 
-            columnHeader8.Text = "Dirección";
+            ciudad.Text = "Ciudad";
             // 
-            // columnHeader9
+            // direccion
             // 
-            columnHeader9.Text = "Habitación";
+            direccion.Text = "Dirección";
             // 
-            // columnHeader10
+            // idHabitacion
             // 
-            columnHeader10.Text = "Tarifa";
+            idHabitacion.Text = "Habitación";
             // 
-            // columnHeader11
+            // tarifa
             // 
-            columnHeader11.Text = "Capacidad";
+            tarifa.Text = "Tarifa";
             // 
-            // columnHeader12
+            // capacidad
             // 
-            columnHeader12.Text = "Adultos máx.";
+            capacidad.Text = "Capacidad";
             // 
-            // columnHeader13
+            // adultosMáx
             // 
-            columnHeader13.Text = "Menor máx.";
+            adultosMáx.Text = "Adultos máx.";
             // 
-            // columnHeader14
+            // menoresMax
             // 
-            columnHeader14.Text = "Infante máx.";
+            menoresMax.Text = "Menores máx.";
             // 
-            // columnHeader15
+            // infantesMax
             // 
-            columnHeader15.Text = "Desde";
+            infantesMax.Text = "Infantes max.";
             // 
-            // columnHeader16
+            // desde
             // 
-            columnHeader16.Text = "Hasta";
+            desde.Text = "Desde";
             // 
-            // columnHeader17
+            // hasta
             // 
-            columnHeader17.Text = "Disponibilidad";
+            hasta.Text = "Hasta";
             // 
             // button3
             // 
@@ -420,14 +421,14 @@
             groupBox1.Controls.Add(comboBox2);
             groupBox1.Controls.Add(comboBox3);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(dTPickerIn);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(comboBox5);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(comboBox4);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(dTPickerOut);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -451,7 +452,7 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(label13);
+            panel1.Controls.Add(labelItinerarioSel);
             panel1.Controls.Add(label16);
             panel1.Location = new Point(-1, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
@@ -459,14 +460,14 @@
             panel1.Size = new Size(872, 31);
             panel1.TabIndex = 57;
             // 
-            // label13
+            // labelItinerarioSel
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(127, 8);
-            label13.Name = "label13";
-            label13.Size = new Size(114, 15);
-            label13.TabIndex = 19;
-            label13.Text = "NO SELECCIONADO";
+            labelItinerarioSel.AutoSize = true;
+            labelItinerarioSel.Location = new Point(127, 8);
+            labelItinerarioSel.Name = "labelItinerarioSel";
+            labelItinerarioSel.Size = new Size(114, 15);
+            labelItinerarioSel.TabIndex = 19;
+            labelItinerarioSel.Text = "NO SELECCIONADO";
             // 
             // ListadoHoteles
             // 
@@ -479,13 +480,14 @@
             Controls.Add(button3);
             Controls.Add(listViewHabitaciones);
             Controls.Add(listView2);
-            Controls.Add(button4);
-            Controls.Add(button2);
+            Controls.Add(buttonVolverAtras);
+            Controls.Add(buttonGuardarHabitacion);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "ListadoHoteles";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "ListadoHoteles";
             Load += ListadoHoteles_Load;
             groupBox1.ResumeLayout(false);
@@ -509,8 +511,8 @@
         private Label label3;
         private Label label6;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dTPickerIn;
+        private DateTimePicker dTPickerOut;
         private Label label8;
         private Label label9;
         private Label label10;
@@ -519,8 +521,8 @@
         private Button button1;
         private Label label11;
         private Label label12;
-        private Button button2;
-        private Button button4;
+        private Button buttonGuardarHabitacion;
+        private Button buttonVolverAtras;
         private ListView listView2;
         private ListView listViewHabitaciones;
         private Button button3;
@@ -528,23 +530,23 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private ColumnHeader columnHeader11;
-        private ColumnHeader columnHeader12;
-        private ColumnHeader columnHeader13;
-        private ColumnHeader columnHeader14;
-        private ColumnHeader columnHeader15;
-        private ColumnHeader columnHeader16;
-        private ColumnHeader columnHeader17;
+        private ColumnHeader idHotel;
+        private ColumnHeader codigoHotel;
+        private ColumnHeader hotel;
+        private ColumnHeader ciudad;
+        private ColumnHeader direccion;
+        private ColumnHeader idHabitacion;
+        private ColumnHeader tarifa;
+        private ColumnHeader capacidad;
+        private ColumnHeader adultosMáx;
+        private ColumnHeader menoresMax;
+        private ColumnHeader infantesMax;
+        private ColumnHeader desde;
+        private ColumnHeader hasta;
         private Label label16;
         private GroupBox groupBox1;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Label label13;
+        private Label labelItinerarioSel;
     }
 }
