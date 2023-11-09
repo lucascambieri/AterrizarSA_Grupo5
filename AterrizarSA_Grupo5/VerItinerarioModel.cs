@@ -89,10 +89,9 @@ namespace AterrizarSA_Grupo5
 
         }
 
-        public static List<VerItinerarioModel> ListarHabitacionesSeleccionadas()
+        public List<VerItinerarioModel> ListarHabitacionesSeleccionadas()
         {
-            int itinerarioActivo = ItinerarioMod.BuscarItinerarioActivo();
-            ItinerarioEnt itinerarioCompleto = ItinerarioMod.InformacionItinerario(itinerarioActivo);
+            ItinerarioEnt itinerarioCompleto = ItinerarioMod.ItinerarioActivo;
             List<VerItinerarioModel> listaHabitaciones = new List<VerItinerarioModel>();
             foreach (var seleccion in itinerarioCompleto.HabitacionesSelec)
             {
@@ -112,10 +111,9 @@ namespace AterrizarSA_Grupo5
             return listaHabitaciones;
         }
 
-        public static List<VerItinerarioModel> ListarPasajesSeleccionados()
+        public List<VerItinerarioModel> ListarPasajesSeleccionados()
         {
-            int itinerarioActivo = ItinerarioMod.BuscarItinerarioActivo();
-            ItinerarioEnt itinerarioCompleto = ItinerarioMod.InformacionItinerario(itinerarioActivo);
+            ItinerarioEnt itinerarioCompleto = ItinerarioMod.ItinerarioActivo;
             List<VerItinerarioModel> listaVuelos = new List<VerItinerarioModel>();
             foreach (var seleccion in itinerarioCompleto.PasajesSelec)
             {

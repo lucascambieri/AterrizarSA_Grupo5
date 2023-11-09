@@ -44,7 +44,7 @@ namespace AterrizarSA_Grupo5
         {
 
         }
-        public static List<ListadoVuelosModel> ListarPasajes()
+        public List<ListadoVuelosModel> ListarPasajes()
         {
             List<ListadoVuelosModel> listaVuelos = new List<ListadoVuelosModel>();
             foreach (var vuelo in InventarioMod.ListarVuelos())
@@ -59,10 +59,9 @@ namespace AterrizarSA_Grupo5
             return listaVuelos;
         }
 
-        public static int GuardarPasaje(PasajesSelecEnt pasajesSeleccionados)
+        public int GuardarPasaje(PasajesSelecEnt pasajesSeleccionados)
         {
-            int itinerarioActivo = ItinerarioMod.BuscarItinerarioActivo();
-            int result = ItinerarioMod.AgregarPasaje(itinerarioActivo, pasajesSeleccionados);
+            int result = ItinerarioMod.AgregarPasaje(ItinerarioMod.ItinerarioActivo, pasajesSeleccionados);
             return result;
         }
     }

@@ -24,7 +24,7 @@ namespace AterrizarSA_Grupo5
         {
             model = new ListadoVuelosModel();
 
-            List<ListadoVuelosModel> listaPasajes = ListadoVuelosModel.ListarPasajes();
+            List<ListadoVuelosModel> listaPasajes = model.ListarPasajes();
 
             foreach (var pasaje in listaPasajes)
             {
@@ -73,7 +73,7 @@ namespace AterrizarSA_Grupo5
                     i++;
                 }
             }
-            int result = ListadoVuelosModel.GuardarPasaje(pasajeSeleccionado);
+            int result = model.GuardarPasaje(pasajeSeleccionado);
             if (result == 0)
             {
                 MessageBox.Show("Pasaje agregado exitosamente", "Pasaje agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);

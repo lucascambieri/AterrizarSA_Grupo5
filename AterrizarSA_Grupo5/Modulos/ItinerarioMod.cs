@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace AterrizarSA_Grupo5.Modulos
 {
-    internal static class ItinerarioMod
+    public static class ItinerarioMod
     {
+        public static ItinerarioEnt ItinerarioActivo { get; set; }
         public static List<ItinerarioEnt> ListarItinerarios()
         {
             return ItinerarioAlmacen.Itinerarios;
@@ -30,39 +31,23 @@ namespace AterrizarSA_Grupo5.Modulos
             ItinerarioAlmacen.Itinerarios.Add(nuevoItinerario);
             return null;
         }
-        public static int ActivarItinerario(int idItinerarioActivo)
+        public static ItinerarioEnt BuscarItinerario(int idItinerario)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == idItinerarioActivo)
+                if (itinerario.Id == idItinerario)
                 {
-                    itinerario.EsActivo = true;
-                    return 0;
-                }
-                if (itinerario.EsActivo && itinerario.Id  != idItinerarioActivo)
-                {
-                    itinerario.EsActivo = false;
+                    return itinerario;
                 }
             }
-            return -1;
-        }
-        public static int BuscarItinerarioActivo()
-        {
-            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
-            {
-                if (itinerario.EsActivo)
-                {
-                    return itinerario.Id;
-                }
-            }
-            return -1;
+            return null;
         }
 
-        public static int AgregarHabitacion(int itinerarioSeleccionado, HabitacionesSelecEnt habitacionesSelec)
+        public static int AgregarHabitacion(ItinerarioEnt itinerarioSeleccionado, HabitacionesSelecEnt habitacionesSelec)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == itinerarioSeleccionado)
+                if (itinerario.Id == itinerarioSeleccionado.Id)
                 {
                     itinerario.HabitacionesSelec.Add(habitacionesSelec);
                     return 0;
@@ -70,11 +55,11 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return -1;
         }
-        public static int AgregarPasaje(int itinerarioSeleccionado, PasajesSelecEnt pasajesSelec)
+        public static int AgregarPasaje(ItinerarioEnt itinerarioSeleccionado, PasajesSelecEnt pasajesSelec)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == itinerarioSeleccionado)
+                if (itinerario.Id == itinerarioSeleccionado.Id)
                 {
                     itinerario.PasajesSelec.Add(pasajesSelec);
                     return 0;

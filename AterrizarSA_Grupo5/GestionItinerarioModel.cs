@@ -30,13 +30,29 @@ namespace AterrizarSA_Grupo5
 
         }
 
-        public static List<GestionItinerarioModel> ListarItinerarios()
+        public List<GestionItinerarioModel> ListarItinerarios()
         {
             List<GestionItinerarioModel> listaItinerarios = new List<GestionItinerarioModel>();
 
             foreach(var itinerario in ItinerarioMod.ListarItinerarios())
             {
-                GestionItinerarioModel itinerarioModel = new GestionItinerarioModel(itinerario.Id,itinerario.Cliente,itinerario.FechaCreacion,(itinerario.EsActivo) ? "Activo" : "");
+                string estado;
+                if (ItinerarioMod.ItinerarioActivo == null)
+                {
+                    estado = "";
+                }
+                else
+                {
+                    if (itinerario.Id == ItinerarioMod.ItinerarioActivo.Id) 
+                    {
+                        estado = "Activo";
+                    }
+                    else 
+                    {
+                        estado = ""; 
+                    }
+                }
+                GestionItinerarioModel itinerarioModel = new GestionItinerarioModel(itinerario.Id,itinerario.Cliente,itinerario.FechaCreacion,estado);
                 listaItinerarios.Add(itinerarioModel);
             }
 
@@ -47,7 +63,7 @@ namespace AterrizarSA_Grupo5
             return listaItinerarios;
         }
 
-        public static string CrearItinerario(int id, string nombreCliente, DateTime fecha)
+        public string CrearItinerario(int id, string nombreCliente, DateTime fecha)
         {
             List<HabitacionesSelecEnt> habitacionesSelec = new List<HabitacionesSelecEnt>();
             List<PasajesSelecEnt> pasajesSelec = new List<PasajesSelecEnt>();
@@ -61,11 +77,15 @@ namespace AterrizarSA_Grupo5
             
             return null;
         }
-
-        public static int ActivarItinerario(int idItinerario)
+        public ItinerarioEnt BuscarItinerario(int itinerarioBuscado)
         {
-            int result = ItinerarioMod.ActivarItinerario(idItinerario);
-            return result;
+            return ItinerarioMod.BuscarItinerario(itinerarioBuscado); 
+        }
+
+        public int ActivarItinerario(ItinerarioEnt itinerario)
+        {
+            ItinerarioMod.ItinerarioActivo = itinerario;
+            return 0;
         }
 
     }

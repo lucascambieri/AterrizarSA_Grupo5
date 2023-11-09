@@ -49,7 +49,7 @@ namespace AterrizarSA_Grupo5
         {
 
         }
-        public static List<ListadoHotelesModel> ListarHabitaciones()
+        public List<ListadoHotelesModel> ListarHabitaciones()
         {
             List<ListadoHotelesModel> listaHabitaciones = new List<ListadoHotelesModel>();
             foreach (var hotel in InventarioMod.ListarHoteles())
@@ -67,10 +67,9 @@ namespace AterrizarSA_Grupo5
             return listaHabitaciones;
         }
 
-        public static int GuardarHabitacion(HabitacionesSelecEnt habitacionesSeleccionadas)
+        public int GuardarHabitacion(HabitacionesSelecEnt habitacionesSeleccionadas)
         {
-            int itinerarioActivo = ItinerarioMod.BuscarItinerarioActivo();
-            int result = ItinerarioMod.AgregarHabitacion(itinerarioActivo,habitacionesSeleccionadas);
+            int result = ItinerarioMod.AgregarHabitacion(ItinerarioMod.ItinerarioActivo,habitacionesSeleccionadas);
             return result;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace AterrizarSA_Grupo5
     public partial class GestionItinerarios : Form
     {
         GestionItinerarioModel model;
-        List<GestionItinerarioModel> listaItinerarios = GestionItinerarioModel.ListarItinerarios();
+        List<GestionItinerarioModel> listaItinerarios;
         public GestionItinerarios()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace AterrizarSA_Grupo5
         private void GestionItinerarios_Load_1(object sender, EventArgs e)
         {
             model = new GestionItinerarioModel();
+            listaItinerarios = model.ListarItinerarios();
             foreach (var itinerario in listaItinerarios)
             {
                 ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D5"));
@@ -61,7 +63,7 @@ namespace AterrizarSA_Grupo5
                 string fecha = DateTime.Now.ToString("dd/MM/yyyy");
 
                 // Crea el itinerario
-                if (GestionItinerarioModel.CrearItinerario(codigoUnico, nombreCliente, DateTime.Now) == null)
+                if (model.CrearItinerario(codigoUnico, nombreCliente, DateTime.Now) == null)
                 {
                     // Crear una nueva fila
                     ListViewItem nuevaFila = new ListViewItem(codigo);
@@ -89,8 +91,9 @@ namespace AterrizarSA_Grupo5
                 // Obtener el valor de columnHeader1 del elemento seleccionado
                 string valorColumna1 = listViewItinerarios.SelectedItems[0].SubItems[0].Text;
                 // Actualizo valor en el model
-                int result;
-                result = GestionItinerarioModel.ActivarItinerario(int.Parse(valorColumna1));
+                ItinerarioEnt itinerarioBuscado;
+                itinerarioBuscado = model.BuscarItinerario(int.Parse(valorColumna1));
+                int result = model.ActivarItinerario(itinerarioBuscado);
                 if (result == 0)
                 {
                     foreach (ListViewItem item in listViewItinerarios.Items)
@@ -115,7 +118,7 @@ namespace AterrizarSA_Grupo5
 
         private void buttonVerItinerario_Click(object sender, EventArgs e)
         {
-            if (ItinerarioSeleccionado.Text != "NO SELECCIONADO")
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
                 VerItinerario verItinerario = new VerItinerario();
                 verItinerario.ShowDialog();
@@ -214,7 +217,7 @@ namespace AterrizarSA_Grupo5
 
         private void buttonAgregarHabitacion_Click(object sender, EventArgs e)
         {
-            if (ItinerarioSeleccionado.Text != "NO SELECCIONADO")
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
                 ListadoHoteles listadoHoteles = new ListadoHoteles();
                 listadoHoteles.ShowDialog();
@@ -227,7 +230,7 @@ namespace AterrizarSA_Grupo5
 
         private void buttonAgregarVuelo_Click(object sender, EventArgs e)
         {
-            if (ItinerarioSeleccionado.Text != "NO SELECCIONADO")
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
                 ListadoVuelos listadoVuelos = new ListadoVuelos();
                 listadoVuelos.ShowDialog();

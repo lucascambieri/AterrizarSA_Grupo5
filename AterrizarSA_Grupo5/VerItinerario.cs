@@ -23,8 +23,8 @@ namespace AterrizarSA_Grupo5
         {
             model = new VerItinerarioModel();
 
-            List<VerItinerarioModel> listaHabitacionesSelec = VerItinerarioModel.ListarHabitacionesSeleccionadas();
-            List<VerItinerarioModel> listaPasajesSelec = VerItinerarioModel.ListarPasajesSeleccionados();
+            List<VerItinerarioModel> listaHabitacionesSelec = model.ListarHabitacionesSeleccionadas();
+            List<VerItinerarioModel> listaPasajesSelec = model.ListarPasajesSeleccionados();
 
             foreach (var habitacion in listaHabitacionesSelec)
             {

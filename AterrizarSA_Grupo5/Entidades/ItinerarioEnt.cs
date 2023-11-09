@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AterrizarSA_Grupo5.Entidades
 {
-    internal class ItinerarioEnt
+    public class ItinerarioEnt
     {
         public int Id { get; set; }
         public string Cliente { get; set; }
@@ -19,7 +19,6 @@ namespace AterrizarSA_Grupo5.Entidades
         public List<HabitacionesSelecEnt> HabitacionesSelec { get; set; }
         public List<PasajesSelecEnt> PasajesSelec { get; set; }
         public double TarifaTotal { get; set; }
-        public bool EsActivo {  get; set; }
 
     }
 }

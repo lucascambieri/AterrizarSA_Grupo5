@@ -26,7 +26,7 @@ namespace AterrizarSA_Grupo5
         {
             model = new ListadoHotelesModel();
 
-            List<ListadoHotelesModel> listaHabitaciones = ListadoHotelesModel.ListarHabitaciones();
+            List<ListadoHotelesModel> listaHabitaciones = model.ListarHabitaciones();
 
             foreach (var habitacion in listaHabitaciones)
             {
@@ -75,7 +75,7 @@ namespace AterrizarSA_Grupo5
                 }
 
             }
-            int result = ListadoHotelesModel.GuardarHabitacion(habitacionSeleccionada);
+            int result = model.GuardarHabitacion(habitacionSeleccionada);
             if (result == 0)
             {
                 MessageBox.Show("Habitación agregada exitosamente", "Habitacion agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
