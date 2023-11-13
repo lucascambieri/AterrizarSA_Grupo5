@@ -71,6 +71,7 @@
             impuestos = new ColumnHeader();
             comision = new ColumnHeader();
             disponibilidad = new ColumnHeader();
+            idPasaje = new ColumnHeader();
             listView3 = new ListView();
             columnHeader15 = new ColumnHeader();
             columnHeader16 = new ColumnHeader();
@@ -80,10 +81,9 @@
             comboBox8 = new ComboBox();
             label17 = new Label();
             panel1 = new Panel();
-            labelItinerarioSel = new Label();
+            labelItinerarioSelec = new Label();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
-            idPasaje = new ColumnHeader();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -431,6 +431,10 @@
             // 
             disponibilidad.Text = "Disponibilidad";
             // 
+            // idPasaje
+            // 
+            idPasaje.Text = "IdPasaje";
+            // 
             // listView3
             // 
             listView3.Columns.AddRange(new ColumnHeader[] { columnHeader15, columnHeader16, columnHeader17 });
@@ -527,21 +531,21 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(labelItinerarioSel);
+            panel1.Controls.Add(labelItinerarioSelec);
             panel1.Controls.Add(label16);
             panel1.Location = new Point(-2, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(1238, 50);
             panel1.TabIndex = 54;
             // 
-            // labelItinerarioSel
+            // labelItinerarioSelec
             // 
-            labelItinerarioSel.AutoSize = true;
-            labelItinerarioSel.Location = new Point(146, 15);
-            labelItinerarioSel.Name = "labelItinerarioSel";
-            labelItinerarioSel.Size = new Size(121, 15);
-            labelItinerarioSel.TabIndex = 50;
-            labelItinerarioSel.Text = "NO SELECCIONADO";
+            labelItinerarioSelec.AutoSize = true;
+            labelItinerarioSelec.Location = new Point(146, 15);
+            labelItinerarioSelec.Name = "labelItinerarioSelec";
+            labelItinerarioSelec.Size = new Size(121, 15);
+            labelItinerarioSelec.TabIndex = 50;
+            labelItinerarioSelec.Text = "NO SELECCIONADO";
             // 
             // pictureBox1
             // 
@@ -560,10 +564,6 @@
             pictureBox3.Size = new Size(515, 392);
             pictureBox3.TabIndex = 56;
             pictureBox3.TabStop = false;
-            // 
-            // idPasaje
-            // 
-            idPasaje.Text = "IdPasaje";
             // 
             // ListadoVuelos
             // 
@@ -653,7 +653,7 @@
         private ComboBox comboBox8;
         private Label label17;
         private Panel panel1;
-        private Label labelItinerarioSel;
+        private Label labelItinerarioSelec;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private ColumnHeader idPasaje;

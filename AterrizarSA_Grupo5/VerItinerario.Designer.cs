@@ -32,11 +32,11 @@
             label2 = new Label();
             label7 = new Label();
             label8 = new Label();
-            button4 = new Button();
+            buttonEditarPasajerosHotel = new Button();
             button5 = new Button();
             label10 = new Label();
             label11 = new Label();
-            button7 = new Button();
+            buttonVolverAtras = new Button();
             listViewHoteleria = new ListView();
             idHotel = new ColumnHeader();
             codigo = new ColumnHeader();
@@ -88,21 +88,21 @@
             impuestos = new ColumnHeader();
             comision = new ColumnHeader();
             disponibilidad = new ColumnHeader();
+            idPasaje = new ColumnHeader();
             button2 = new Button();
             label6 = new Label();
-            button3 = new Button();
-            button6 = new Button();
+            buttonQuitarPasaje = new Button();
+            buttonEditarPasajerosPasajes = new Button();
             label12 = new Label();
             label13 = new Label();
             label20 = new Label();
             panel1 = new Panel();
-            label24 = new Label();
-            label23 = new Label();
+            labelFechaInicioItinerario = new Label();
+            labelItinerarioSelec = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
-            button8 = new Button();
-            idPasaje = new ColumnHeader();
+            buttonGenerarPreReserva = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             panel1.SuspendLayout();
@@ -151,20 +151,20 @@
             label8.TabIndex = 21;
             label8.Text = "Subtotal";
             // 
-            // button4
+            // buttonEditarPasajerosHotel
             // 
-            button4.BackColor = Color.CornflowerBlue;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(8, 176);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(153, 39);
-            button4.TabIndex = 20;
-            button4.Text = "Editar pasajeros";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            buttonEditarPasajerosHotel.BackColor = Color.CornflowerBlue;
+            buttonEditarPasajerosHotel.FlatAppearance.BorderSize = 0;
+            buttonEditarPasajerosHotel.FlatStyle = FlatStyle.Flat;
+            buttonEditarPasajerosHotel.ForeColor = Color.White;
+            buttonEditarPasajerosHotel.Location = new Point(8, 176);
+            buttonEditarPasajerosHotel.Margin = new Padding(3, 4, 3, 4);
+            buttonEditarPasajerosHotel.Name = "buttonEditarPasajerosHotel";
+            buttonEditarPasajerosHotel.Size = new Size(153, 39);
+            buttonEditarPasajerosHotel.TabIndex = 20;
+            buttonEditarPasajerosHotel.Text = "Editar pasajeros";
+            buttonEditarPasajerosHotel.UseVisualStyleBackColor = false;
+            buttonEditarPasajerosHotel.Click += buttonEditarPasajerosHotel_Click;
             // 
             // button5
             // 
@@ -198,19 +198,19 @@
             label11.TabIndex = 28;
             label11.Text = "TOTAL:";
             // 
-            // button7
+            // buttonVolverAtras
             // 
-            button7.BackColor = Color.LightSteelBlue;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(1344, 672);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(153, 39);
-            button7.TabIndex = 30;
-            button7.Text = "Volver atrás";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click_2;
+            buttonVolverAtras.BackColor = Color.LightSteelBlue;
+            buttonVolverAtras.FlatAppearance.BorderSize = 0;
+            buttonVolverAtras.FlatStyle = FlatStyle.Flat;
+            buttonVolverAtras.Location = new Point(1344, 672);
+            buttonVolverAtras.Margin = new Padding(3, 4, 3, 4);
+            buttonVolverAtras.Name = "buttonVolverAtras";
+            buttonVolverAtras.Size = new Size(153, 39);
+            buttonVolverAtras.TabIndex = 30;
+            buttonVolverAtras.Text = "Volver atrás";
+            buttonVolverAtras.UseVisualStyleBackColor = false;
+            buttonVolverAtras.Click += buttonVolverAtras_Click;
             // 
             // listViewHoteleria
             // 
@@ -321,7 +321,7 @@
             groupBox1.Controls.Add(listView2);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(button5);
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(buttonEditarPasajerosHotel);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label10);
             groupBox1.Location = new Point(16, 345);
@@ -408,8 +408,8 @@
             groupBox2.Controls.Add(listViewAereos);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(buttonQuitarPasaje);
+            groupBox2.Controls.Add(buttonEditarPasajerosPasajes);
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(label13);
             groupBox2.Location = new Point(16, 57);
@@ -566,6 +566,10 @@
             // 
             disponibilidad.Text = "Disponibilidad";
             // 
+            // idPasaje
+            // 
+            idPasaje.Text = "IdPasaje";
+            // 
             // button2
             // 
             button2.BackColor = Color.LightSteelBlue;
@@ -588,33 +592,34 @@
             label6.TabIndex = 17;
             label6.Text = "Servicios Vuelos";
             // 
-            // button3
+            // buttonQuitarPasaje
             // 
-            button3.BackColor = Color.LightSteelBlue;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(169, 176);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(153, 39);
-            button3.TabIndex = 19;
-            button3.Text = "Quitar";
-            button3.UseVisualStyleBackColor = false;
+            buttonQuitarPasaje.BackColor = Color.LightSteelBlue;
+            buttonQuitarPasaje.FlatAppearance.BorderSize = 0;
+            buttonQuitarPasaje.FlatStyle = FlatStyle.Flat;
+            buttonQuitarPasaje.Location = new Point(169, 176);
+            buttonQuitarPasaje.Margin = new Padding(3, 4, 3, 4);
+            buttonQuitarPasaje.Name = "buttonQuitarPasaje";
+            buttonQuitarPasaje.Size = new Size(153, 39);
+            buttonQuitarPasaje.TabIndex = 19;
+            buttonQuitarPasaje.Text = "Quitar";
+            buttonQuitarPasaje.UseVisualStyleBackColor = false;
+            buttonQuitarPasaje.Click += buttonQuitarPasaje_Click;
             // 
-            // button6
+            // buttonEditarPasajerosPasajes
             // 
-            button6.BackColor = Color.CornflowerBlue;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(8, 176);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(153, 39);
-            button6.TabIndex = 20;
-            button6.Text = "Editar pasajeros";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            buttonEditarPasajerosPasajes.BackColor = Color.CornflowerBlue;
+            buttonEditarPasajerosPasajes.FlatAppearance.BorderSize = 0;
+            buttonEditarPasajerosPasajes.FlatStyle = FlatStyle.Flat;
+            buttonEditarPasajerosPasajes.ForeColor = Color.White;
+            buttonEditarPasajerosPasajes.Location = new Point(8, 176);
+            buttonEditarPasajerosPasajes.Margin = new Padding(3, 4, 3, 4);
+            buttonEditarPasajerosPasajes.Name = "buttonEditarPasajerosPasajes";
+            buttonEditarPasajerosPasajes.Size = new Size(153, 39);
+            buttonEditarPasajerosPasajes.TabIndex = 20;
+            buttonEditarPasajerosPasajes.Text = "Editar pasajeros";
+            buttonEditarPasajerosPasajes.UseVisualStyleBackColor = false;
+            buttonEditarPasajerosPasajes.Click += buttonEditarPasajerosPasajes_Click;
             // 
             // label12
             // 
@@ -648,8 +653,8 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(label24);
-            panel1.Controls.Add(label23);
+            panel1.Controls.Add(labelFechaInicioItinerario);
+            panel1.Controls.Add(labelItinerarioSelec);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, -3);
@@ -657,23 +662,23 @@
             panel1.Size = new Size(1557, 53);
             panel1.TabIndex = 73;
             // 
-            // label24
+            // labelFechaInicioItinerario
             // 
-            label24.AutoSize = true;
-            label24.Location = new Point(544, 19);
-            label24.Name = "label24";
-            label24.Size = new Size(121, 15);
-            label24.TabIndex = 74;
-            label24.Text = "NO SELECCIONADO";
+            labelFechaInicioItinerario.AutoSize = true;
+            labelFechaInicioItinerario.Location = new Point(544, 19);
+            labelFechaInicioItinerario.Name = "labelFechaInicioItinerario";
+            labelFechaInicioItinerario.Size = new Size(121, 15);
+            labelFechaInicioItinerario.TabIndex = 74;
+            labelFechaInicioItinerario.Text = "NO SELECCIONADO";
             // 
-            // label23
+            // labelItinerarioSelec
             // 
-            label23.AutoSize = true;
-            label23.Location = new Point(167, 19);
-            label23.Name = "label23";
-            label23.Size = new Size(121, 15);
-            label23.TabIndex = 73;
-            label23.Text = "NO SELECCIONADO";
+            labelItinerarioSelec.AutoSize = true;
+            labelItinerarioSelec.Location = new Point(167, 19);
+            labelItinerarioSelec.Name = "labelItinerarioSelec";
+            labelItinerarioSelec.Size = new Size(121, 15);
+            labelItinerarioSelec.TabIndex = 73;
+            labelItinerarioSelec.Text = "NO SELECCIONADO";
             // 
             // pictureBox2
             // 
@@ -702,24 +707,21 @@
             pictureBox4.TabIndex = 80;
             pictureBox4.TabStop = false;
             // 
-            // button8
+            // buttonGenerarPreReserva
             // 
-            button8.BackColor = Color.CornflowerBlue;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(24, 659);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(130, 52);
-            button8.TabIndex = 81;
-            button8.Text = "Generar pre-reserva";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // idPasaje
-            // 
-            idPasaje.Text = "IdPasaje";
+            buttonGenerarPreReserva.BackColor = Color.CornflowerBlue;
+            buttonGenerarPreReserva.FlatAppearance.BorderSize = 0;
+            buttonGenerarPreReserva.FlatStyle = FlatStyle.Flat;
+            buttonGenerarPreReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonGenerarPreReserva.ForeColor = Color.White;
+            buttonGenerarPreReserva.Location = new Point(24, 659);
+            buttonGenerarPreReserva.Margin = new Padding(3, 4, 3, 4);
+            buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
+            buttonGenerarPreReserva.Size = new Size(130, 52);
+            buttonGenerarPreReserva.TabIndex = 81;
+            buttonGenerarPreReserva.Text = "Generar pre-reserva";
+            buttonGenerarPreReserva.UseVisualStyleBackColor = false;
+            buttonGenerarPreReserva.Click += buttonGenerarPreReserva_Click;
             // 
             // VerItinerario
             // 
@@ -727,12 +729,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1550, 724);
-            Controls.Add(button8);
+            Controls.Add(buttonGenerarPreReserva);
             Controls.Add(panel1);
             Controls.Add(label20);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(button7);
+            Controls.Add(buttonVolverAtras);
             Controls.Add(label11);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);
@@ -837,5 +839,13 @@
         private PictureBox pictureBox4;
         private Button button8;
         private ColumnHeader idPasaje;
+        private Label itinerarioSelec;
+        private Label labelFechaInicioItinerario;
+        private Label labelItinerarioSelec;
+        private Button buttonEditarPasajerosPasajes;
+        private Button buttonQuitarPasaje;
+        private Button buttonEditarPasajerosHotel;
+        private Button buttonVolverAtras;
+        private Button buttonGenerarPreReserva;
     }
 }

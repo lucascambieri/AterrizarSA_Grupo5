@@ -66,10 +66,32 @@ namespace AterrizarSA_Grupo5
 
             return listaHabitaciones;
         }
-
-        public int GuardarHabitacion(HabitacionesSelecEnt habitacionesSeleccionadas)
+        public int Guardarhabitacion()
         {
-            int result = ItinerarioMod.AgregarHabitacion(ItinerarioMod.ItinerarioActivo,habitacionesSeleccionadas);
+            HotelEnt hotelSeleccionado = new HotelEnt();
+            HabitacionEnt habitacionSeleccionada = new HabitacionEnt();
+            DisponibilidadHabitacionEnt disponibilidadSeleccionada = new DisponibilidadHabitacionEnt();
+
+            hotelSeleccionado.IdHotel = this.IdHotel;
+            hotelSeleccionado.CodHotel = this.CodHotel;
+            hotelSeleccionado.Nombre = this.Nombre;
+            hotelSeleccionado.Ciudad = this.Ciudad;
+            hotelSeleccionado.Calificacion = this.Calificacion;
+            hotelSeleccionado.Direccion = this.Direccion;
+            habitacionSeleccionada.IdHabitacion = this.IdHabitacion;
+            habitacionSeleccionada.Descripcion = this.Descripcion;
+            habitacionSeleccionada.CapacidadMaxima = this.CapacidadMaxima;
+            habitacionSeleccionada.CantidadCamasAdultos = this.CantidadCamasAdultos;
+            habitacionSeleccionada.CantidadCamasMenores = this.CantidadCamasMenores;
+            habitacionSeleccionada.CantidadCamasInfantes = this.CantidadCamasInfantes;
+            habitacionSeleccionada.PrecioNoche = this.PrecioNoche;
+            disponibilidadSeleccionada.FechaInicioDisp = this.FechaInicioDisp;
+            disponibilidadSeleccionada.FechaFinDisp = this.FechaFinDisp;
+            List<DisponibilidadHabitacionEnt> listaDisponibilidadHabitacion = new List<DisponibilidadHabitacionEnt>() { disponibilidadSeleccionada };
+            habitacionSeleccionada.Disponibilidad = listaDisponibilidadHabitacion;
+            List<HabitacionEnt> listaHabitacionAgregar = new List<HabitacionEnt>() { habitacionSeleccionada };
+            hotelSeleccionado.Habitaciones = listaHabitacionAgregar;
+            int result = ItinerarioMod.AgregarHabitacion(hotelSeleccionado);
             return result;
         }
     }

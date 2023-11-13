@@ -17,6 +17,7 @@ namespace AterrizarSA_Grupo5
 
             // ItinerarioAlmacen.Grabar(); //descomentar cuando esté terminado
             // InventarioAlmacen.Grabar(); //descomentar cuando esté terminado
+            // ReservasAlmacen.Grabar(); //descomentar cuando esté terminado
         }
     }
 }

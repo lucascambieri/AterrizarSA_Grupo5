@@ -59,9 +59,25 @@ namespace AterrizarSA_Grupo5
             return listaVuelos;
         }
 
-        public int GuardarPasaje(PasajesSelecEnt pasajesSeleccionados)
+        public int GuardarPasaje()
         {
-            int result = ItinerarioMod.AgregarPasaje(ItinerarioMod.ItinerarioActivo, pasajesSeleccionados);
+            VueloEnt vueloSeleccionado = new VueloEnt();
+            PasajeEnt pasajeSeleccionado = new PasajeEnt();
+            vueloSeleccionado.IdVuelo = this.IdVuelo;
+            vueloSeleccionado.Aerolinea = this.Aerolinea;
+            vueloSeleccionado.Origen = this.Origen;
+            vueloSeleccionado.Destino = this.Destino;
+            vueloSeleccionado.Paradas = this.Paradas;
+            vueloSeleccionado.TiempoViaje = this.TiempoViaje;
+            vueloSeleccionado.FechayHoraPartida = this.FechayHoraPartida;
+            vueloSeleccionado.FechayHoraLlegada = this.FechayHoraLlegada;
+            pasajeSeleccionado.IdPasaje = this.IdPasaje;
+            pasajeSeleccionado.Categoria = this.Categoria;
+            pasajeSeleccionado.Precio = this.Precio;
+            pasajeSeleccionado.TipoPasajero = this.TipoPasajero;
+            List<PasajeEnt> listaPasajeSeleccionado = new List<PasajeEnt>() { pasajeSeleccionado };
+            vueloSeleccionado.Pasajes = listaPasajeSeleccionado;
+            int result = ItinerarioMod.AgregarPasaje(vueloSeleccionado);
             return result;
         }
     }

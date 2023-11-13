@@ -43,11 +43,11 @@ namespace AterrizarSA_Grupo5.Modulos
             return null;
         }
 
-        public static int AgregarHabitacion(ItinerarioEnt itinerarioSeleccionado, HabitacionesSelecEnt habitacionesSelec)
+        public static int AgregarHabitacion(HotelEnt habitacionesSelec)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == itinerarioSeleccionado.Id)
+                if (itinerario.Id == ItinerarioActivo.Id)
                 {
                     itinerario.HabitacionesSelec.Add(habitacionesSelec);
                     return 0;
@@ -55,29 +55,17 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return -1;
         }
-        public static int AgregarPasaje(ItinerarioEnt itinerarioSeleccionado, PasajesSelecEnt pasajesSelec)
+        public static int AgregarPasaje(VueloEnt pasajesSelec)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
-                if (itinerario.Id == itinerarioSeleccionado.Id)
+                if (itinerario.Id == ItinerarioActivo.Id)
                 {
                     itinerario.PasajesSelec.Add(pasajesSelec);
                     return 0;
                 }
             }
             return -1;
-        }
-
-        public static ItinerarioEnt InformacionItinerario(int itinerarioBuscado)
-        {
-            foreach (ItinerarioEnt itinerario in ItinerarioAlmacen.Itinerarios)
-            {
-                if (itinerario.Id == itinerarioBuscado)
-                {
-                    return itinerario;
-                }
-            }
-            return null;
         }
 
     }

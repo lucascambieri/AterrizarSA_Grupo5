@@ -1,4 +1,5 @@
 ﻿using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace AterrizarSA_Grupo5
         private void ListadoVuelos_Load(object sender, EventArgs e)
         {
             model = new ListadoVuelosModel();
+
+            labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
 
             List<ListadoVuelosModel> listaPasajes = model.ListarPasajes();
 
@@ -55,25 +58,22 @@ namespace AterrizarSA_Grupo5
 
         private void buttonGuardarPasaje_Click(object sender, EventArgs e)
         {
-            PasajesSelecEnt pasajeSeleccionado = new PasajesSelecEnt();
-            if (listViewPasajes.SelectedItems.Count > 0)
+            if (listViewPasajes.SelectedItems.Count == 1)
             {
-                int i = 0;
-                // Recorre los subítems (columnas) de la fila seleccionada
-                foreach (ListViewItem.ListViewSubItem subItem in listViewPasajes.SelectedItems[0].SubItems)
-                {
-                    if (i == 0)
-                    {
-                        pasajeSeleccionado.IdVuelo = int.Parse(subItem.Text);
-                    }
-                    if (i == 14)
-                    {
-                        pasajeSeleccionado.IdPasaje = int.Parse(subItem.Text);
-                    }
-                    i++;
-                }
+                model.IdVuelo = int.Parse(listViewPasajes.SelectedItems[0].SubItems[0].Text);
+                model.Origen = listViewPasajes.SelectedItems[0].SubItems[1].Text;
+                model.Destino = listViewPasajes.SelectedItems[0].SubItems[2].Text;
+                model.Paradas = listViewPasajes.SelectedItems[0].SubItems[3].Text;
+                model.FechayHoraPartida = DateTime.Parse(listViewPasajes.SelectedItems[0].SubItems[4].Text);
+                model.FechayHoraLlegada = DateTime.Parse(listViewPasajes.SelectedItems[0].SubItems[5].Text);
+                model.TiempoViaje = listViewPasajes.SelectedItems[0].SubItems[6].Text;
+                model.Aerolinea = listViewPasajes.SelectedItems[0].SubItems[7].Text;
+                model.Categoria = listViewPasajes.SelectedItems[0].SubItems[8].Text;
+                model.TipoPasajero = listViewPasajes.SelectedItems[0].SubItems[9].Text;
+                model.Precio = double.Parse(listViewPasajes.SelectedItems[0].SubItems[10].Text);
+                model.IdPasaje = int.Parse(listViewPasajes.SelectedItems[0].SubItems[14].Text);
             }
-            int result = model.GuardarPasaje(pasajeSeleccionado);
+            int result = model.GuardarPasaje();
             if (result == 0)
             {
                 MessageBox.Show("Pasaje agregado exitosamente", "Pasaje agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);

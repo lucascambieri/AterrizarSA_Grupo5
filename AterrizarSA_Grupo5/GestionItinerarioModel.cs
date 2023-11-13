@@ -65,8 +65,8 @@ namespace AterrizarSA_Grupo5
 
         public string CrearItinerario(int id, string nombreCliente, DateTime fecha)
         {
-            List<HabitacionesSelecEnt> habitacionesSelec = new List<HabitacionesSelecEnt>();
-            List<PasajesSelecEnt> pasajesSelec = new List<PasajesSelecEnt>();
+            List<HotelEnt> habitacionesSelec = new List<HotelEnt>();
+            List<VueloEnt> pasajesSelec = new List<VueloEnt>();
             ItinerarioEnt nuevoItinerario = new ItinerarioEnt();
             nuevoItinerario.Id = id;
             nuevoItinerario.Cliente = nombreCliente;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Modulos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,8 @@ namespace AterrizarSA_Grupo5
     public partial class VerItinerario : Form
     {
         VerItinerarioModel model;
+        List<VerItinerarioModel> listaHabitacionesSelec;
+        List<VerItinerarioModel> listaPasajesSelec;
         public VerItinerario()
         {
             InitializeComponent();
@@ -23,52 +27,64 @@ namespace AterrizarSA_Grupo5
         {
             model = new VerItinerarioModel();
 
-            List<VerItinerarioModel> listaHabitacionesSelec = model.ListarHabitacionesSeleccionadas();
-            List<VerItinerarioModel> listaPasajesSelec = model.ListarPasajesSeleccionados();
+            // Cargo itinerario y fecha de inicio en Form
+            labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
+            labelFechaInicioItinerario.Text = ItinerarioMod.ItinerarioActivo.FechaInicio.ToString("dd/MM/yyyy");
 
-            foreach (var habitacion in listaHabitacionesSelec)
+            // Cargo habitaciones y pasajes seleccionados del vuelo
+            listaHabitacionesSelec = model.ListarHabitacionesSeleccionadas();
+            listaPasajesSelec = model.ListarPasajesSeleccionados();
+            if(listaHabitacionesSelec != null)
             {
-                ListViewItem listViewItem = new ListViewItem(habitacion.IdHotel.ToString("D5"));
-                listViewItem.SubItems.Add(habitacion.CodHotel);
-                listViewItem.SubItems.Add(habitacion.Nombre);
-                listViewItem.SubItems.Add(habitacion.Ciudad);
-                listViewItem.SubItems.Add(habitacion.Direccion);
-                listViewItem.SubItems.Add(habitacion.IdHabitacion.ToString("D5"));
-                listViewItem.SubItems.Add(habitacion.PrecioNoche.ToString());
-                listViewItem.SubItems.Add(habitacion.CapacidadMaxima.ToString());
-                listViewItem.SubItems.Add(habitacion.CantidadCamasAdultos.ToString());
-                listViewItem.SubItems.Add(habitacion.CantidadCamasMenores.ToString());
-                listViewItem.SubItems.Add(habitacion.CantidadCamasInfantes.ToString());
-                listViewItem.SubItems.Add(habitacion.FechaDesde.ToString("dd/MM/yyyy"));
-                listViewItem.SubItems.Add(habitacion.FechaHasta.ToString("dd/MM/yyyy"));
-                listViewHoteleria.Items.Add(listViewItem);
+                foreach (var habitacion in listaHabitacionesSelec)
+                {
+                    ListViewItem listViewItem = new ListViewItem(habitacion.IdHotel.ToString("D5"));
+                    listViewItem.SubItems.Add(habitacion.CodHotel);
+                    listViewItem.SubItems.Add(habitacion.Nombre);
+                    listViewItem.SubItems.Add(habitacion.Ciudad);
+                    listViewItem.SubItems.Add(habitacion.Direccion);
+                    listViewItem.SubItems.Add(habitacion.IdHabitacion.ToString("D5"));
+                    listViewItem.SubItems.Add(habitacion.PrecioNoche.ToString());
+                    listViewItem.SubItems.Add(habitacion.CapacidadMaxima.ToString());
+                    listViewItem.SubItems.Add(habitacion.CantidadCamasAdultos.ToString());
+                    listViewItem.SubItems.Add(habitacion.CantidadCamasMenores.ToString());
+                    listViewItem.SubItems.Add(habitacion.CantidadCamasInfantes.ToString());
+                    listViewItem.SubItems.Add(habitacion.FechaDesde.ToString("dd/MM/yyyy"));
+                    listViewItem.SubItems.Add(habitacion.FechaHasta.ToString("dd/MM/yyyy"));
+                    listViewHoteleria.Items.Add(listViewItem);
+                }
+                // Si existe alguna habitación seleccionada, actualizo el total
+                if (listaHabitacionesSelec.Count > 0)
+                {
+                    labelSubTotalHoteles.Text = listaHabitacionesSelec[0].TarifaTotalHotel.ToString();
+                }
             }
-            foreach (var pasaje in listaPasajesSelec)
+            if (listaPasajesSelec != null)
             {
-                ListViewItem listViewItem = new ListViewItem(pasaje.IdVuelo.ToString("D5"));
-                listViewItem.SubItems.Add(pasaje.Origen);
-                listViewItem.SubItems.Add(pasaje.Destino);
-                listViewItem.SubItems.Add(pasaje.Paradas);
-                listViewItem.SubItems.Add(pasaje.FechayHoraPartida.ToString("dd/MM/yyyy HH:mm:ss"));
-                listViewItem.SubItems.Add(pasaje.FechayHoraLlegada.ToString("dd/MM/yyyy HH:mm:ss"));
-                listViewItem.SubItems.Add(pasaje.TiempoViaje);
-                listViewItem.SubItems.Add(pasaje.Aerolinea);
-                listViewItem.SubItems.Add(pasaje.Categoria);
-                listViewItem.SubItems.Add(pasaje.TipoPasajero);
-                listViewItem.SubItems.Add(pasaje.Precio.ToString());
-                listViewItem.SubItems.Add("");
-                listViewItem.SubItems.Add("");
-                listViewItem.SubItems.Add(pasaje.CantidadElegida.ToString());
-                listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
-                listViewAereos.Items.Add(listViewItem);
-            }
-            if(listaHabitacionesSelec.Count > 0)
-            {
-                labelSubTotalHoteles.Text = listaHabitacionesSelec[0].TarifaTotalHotel.ToString();
-            }
-            if(listaPasajesSelec.Count > 0)
-            {
-                labelSubTotalVuelos.Text = listaPasajesSelec[0].TarifaTotalVuelo.ToString();
+                foreach (var pasaje in listaPasajesSelec)
+                {
+                    ListViewItem listViewItem = new ListViewItem(pasaje.IdVuelo.ToString("D5"));
+                    listViewItem.SubItems.Add(pasaje.Origen);
+                    listViewItem.SubItems.Add(pasaje.Destino);
+                    listViewItem.SubItems.Add(pasaje.Paradas);
+                    listViewItem.SubItems.Add(pasaje.FechayHoraPartida.ToString("dd/MM/yyyy HH:mm:ss"));
+                    listViewItem.SubItems.Add(pasaje.FechayHoraLlegada.ToString("dd/MM/yyyy HH:mm:ss"));
+                    listViewItem.SubItems.Add(pasaje.TiempoViaje);
+                    listViewItem.SubItems.Add(pasaje.Aerolinea);
+                    listViewItem.SubItems.Add(pasaje.Categoria);
+                    listViewItem.SubItems.Add(pasaje.TipoPasajero);
+                    listViewItem.SubItems.Add(pasaje.Precio.ToString());
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add(pasaje.CantidadElegida.ToString());
+                    listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
+                    listViewAereos.Items.Add(listViewItem);
+                }
+                // Si existe algún pasaje seleccionado, actualizo el total
+                if (listaPasajesSelec.Count > 0)
+                {
+                    labelSubTotalVuelos.Text = listaPasajesSelec[0].TarifaTotalVuelo.ToString();
+                }
             }
 
         }
@@ -82,7 +98,7 @@ namespace AterrizarSA_Grupo5
         {
         }
 
-        private void button7_Click_2(object sender, EventArgs e)
+        private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -91,17 +107,40 @@ namespace AterrizarSA_Grupo5
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonEditarPasajerosPasajes_Click(object sender, EventArgs e)
         {
-            NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
-            nuevoPasajeroVuelo.Show();
+            if(listaPasajesSelec.Count > 0) 
+            { 
+                NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
+                nuevoPasajeroVuelo.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonEditarPasajerosHotel_Click(object sender, EventArgs e)
         {
-            NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
-            nuevoPasajeroHotel.Show();
+            if(listaHabitacionesSelec.Count > 0) 
+            { 
+                NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
+                nuevoPasajeroHotel.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("El itinerario no tiene habitaciones cargadas", "Sin habitaciones", MessageBoxButtons.OK);
+            }
         }
 
+        private void buttonQuitarPasaje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

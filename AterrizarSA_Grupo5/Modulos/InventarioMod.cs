@@ -18,17 +18,6 @@ namespace AterrizarSA_Grupo5.Modulos
         {
             return InventarioAlmacen.Vuelos;
         }
-        public static HotelEnt BuscarInformacionHotel(int idHotelBuscado)
-        {
-            foreach (HotelEnt hotel in InventarioAlmacen.Hoteles)
-            {
-                if(hotel.IdHotel == idHotelBuscado)
-                {
-                    return hotel;
-                }
-            }
-            return null;
-        }
         public static VueloEnt BuscarInformacionVuelo(int idVueloBuscado)
         {
             foreach (VueloEnt vuelo in InventarioAlmacen.Vuelos)

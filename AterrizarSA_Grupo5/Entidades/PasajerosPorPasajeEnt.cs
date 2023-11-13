@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AterrizarSA_Grupo5.Entidades
 {
-    public class DisponibilidadHabitacionEnt
+    public class PasajerosPorPasajeEnt
     {
-        public DateTime FechaInicioDisp {  get; set; }
-        public DateTime FechaFinDisp { get; set; }
+        public VueloEnt VueloPasaje { get; set; }
+        public List<PasajeroEnt> Pasajeros { get; set; }
     }
 }

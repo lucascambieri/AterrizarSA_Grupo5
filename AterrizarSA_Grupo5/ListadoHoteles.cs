@@ -1,4 +1,5 @@
 ﻿using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,8 @@ namespace AterrizarSA_Grupo5
         private void ListadoHoteles_Load(object sender, EventArgs e)
         {
             model = new ListadoHotelesModel();
+            // cargo itininerario activo 
+            labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
 
             List<ListadoHotelesModel> listaHabitaciones = model.ListarHabitaciones();
 
@@ -54,31 +57,26 @@ namespace AterrizarSA_Grupo5
 
         private void buttonGuardarHabitacion_Click(object sender, EventArgs e)
         {
-            HabitacionesSelecEnt habitacionSeleccionada = new HabitacionesSelecEnt();
-            if (listViewHabitaciones.SelectedItems.Count > 0)
+            if (listViewHabitaciones.SelectedItems.Count == 1)
             {
-                int i = 0;
-                // Recorre los subítems (columnas) de la fila seleccionada
-                foreach (ListViewItem.ListViewSubItem subItem in listViewHabitaciones.SelectedItems[0].SubItems)
+                model.IdHotel = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[0].Text);
+                model.CodHotel = listViewHabitaciones.SelectedItems[0].SubItems[1].Text;
+                model.Nombre = listViewHabitaciones.SelectedItems[0].SubItems[2].Text;
+                model.Ciudad = listViewHabitaciones.SelectedItems[0].SubItems[3].Text;
+                model.Direccion = listViewHabitaciones.SelectedItems[0].SubItems[4].Text;
+                model.IdHabitacion = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[5].Text);
+                model.PrecioNoche = double.Parse(listViewHabitaciones.SelectedItems[0].SubItems[6].Text);
+                model.CapacidadMaxima = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[7].Text);
+                model.CantidadCamasAdultos = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[8].Text);
+                model.CantidadCamasMenores = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[9].Text);
+                model.CantidadCamasInfantes = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[10].Text);
+                model.FechaInicioDisp = dTPickerIn.Value.Date;
+                model.FechaFinDisp = dTPickerOut.Value.Date;
+                int result = model.Guardarhabitacion();
+                if (result == 0)
                 {
-                    if (i == 0)
-                    {
-                        habitacionSeleccionada.IdHotel = int.Parse(subItem.Text);
-                    }
-                    if (i == 5)
-                    {
-                        habitacionSeleccionada.IdHab = int.Parse(subItem.Text);
-                    }
-                    habitacionSeleccionada.FechaDesde = dTPickerIn.Value;
-                    habitacionSeleccionada.FechaHasta = dTPickerOut.Value;
-                    i++;
+                    MessageBox.Show("Habitación agregada exitosamente", "Habitacion agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-            }
-            int result = model.GuardarHabitacion(habitacionSeleccionada);
-            if (result == 0)
-            {
-                MessageBox.Show("Habitación agregada exitosamente", "Habitacion agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

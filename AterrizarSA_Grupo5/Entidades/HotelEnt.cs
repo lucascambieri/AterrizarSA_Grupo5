@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AterrizarSA_Grupo5.Entidades
 {
-    internal class HotelEnt
+    public class HotelEnt
     {
         public int IdHotel { get; set; }
         public string CodHotel { get; set; }

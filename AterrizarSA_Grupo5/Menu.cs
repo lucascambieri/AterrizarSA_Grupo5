@@ -1,3 +1,5 @@
+using AterrizarSA_Grupo5.Modulos;
+
 namespace AterrizarSA_Grupo5
 {
     public partial class Menu : Form
@@ -9,7 +11,10 @@ namespace AterrizarSA_Grupo5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (ItinerarioMod.ItinerarioActivo != null)
+            {
+                labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
+            }
         }
 
 
@@ -18,22 +23,37 @@ namespace AterrizarSA_Grupo5
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonGestionItinerario_Click(object sender, EventArgs e)
         {
             GestionItinerarios itinerarios = new GestionItinerarios();
             itinerarios.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAgregarVuelo_Click(object sender, EventArgs e)
         {
-            ListadoVuelos vuelos = new ListadoVuelos();
-            vuelos.ShowDialog();
+            if (ItinerarioMod.ItinerarioActivo != null)
+            {
+                ListadoVuelos vuelos = new ListadoVuelos();
+                vuelos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Debe tener un itinerario activo","Falta activar itinerario",MessageBoxButtons.OK);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAgregarHotel_Click(object sender, EventArgs e)
         {
-            ListadoHoteles hoteles = new ListadoHoteles();
-            hoteles.ShowDialog();
+            if (ItinerarioMod.ItinerarioActivo != null)
+            {
+                ListadoHoteles hoteles = new ListadoHoteles();
+                hoteles.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Debe tener un itinerario activo", "Falta activar itinerario", MessageBoxButtons.OK);
+            }
+
         }
     }
 }

@@ -91,44 +91,37 @@ namespace AterrizarSA_Grupo5
 
         public List<VerItinerarioModel> ListarHabitacionesSeleccionadas()
         {
-            ItinerarioEnt itinerarioCompleto = ItinerarioMod.ItinerarioActivo;
             List<VerItinerarioModel> listaHabitaciones = new List<VerItinerarioModel>();
-            foreach (var seleccion in itinerarioCompleto.HabitacionesSelec)
+            if (ItinerarioMod.ItinerarioActivo.HabitacionesSelec != null)
             {
-                HotelEnt hotel = InventarioMod.BuscarInformacionHotel(seleccion.IdHotel);
-                foreach(var habitacion in hotel.Habitaciones)
+                foreach (var seleccion in ItinerarioMod.ItinerarioActivo.HabitacionesSelec)
                 {
-                    if(seleccion.IdHab == habitacion.IdHabitacion)
+                    foreach (var habitacion in seleccion.Habitaciones)
                     {
                         // Falta acomodar que la tarifa sea la suma de los precios de las habitaciones
-                        VerItinerarioModel habitacionModel = new VerItinerarioModel(hotel.IdHotel, hotel.CodHotel, hotel.Nombre, hotel.Ciudad, hotel.Calificacion, hotel.Direccion, habitacion.IdHabitacion, habitacion.Descripcion, habitacion.CapacidadMaxima, habitacion.CantidadCamasAdultos, habitacion.CantidadCamasMenores, habitacion.CantidadCamasInfantes, habitacion.PrecioNoche, seleccion.FechaDesde, seleccion.FechaHasta, itinerarioCompleto.TarifaTotal);
+                        VerItinerarioModel habitacionModel = new VerItinerarioModel(seleccion.IdHotel, seleccion.CodHotel, seleccion.Nombre, seleccion.Ciudad, seleccion.Calificacion, seleccion.Direccion, habitacion.IdHabitacion, habitacion.Descripcion, habitacion.CapacidadMaxima, habitacion.CantidadCamasAdultos, habitacion.CantidadCamasMenores, habitacion.CantidadCamasInfantes, habitacion.PrecioNoche, habitacion.Disponibilidad[0].FechaInicioDisp, habitacion.Disponibilidad[0].FechaFinDisp, ItinerarioMod.ItinerarioActivo.TarifaTotal);
                         listaHabitaciones.Add(habitacionModel);
                     }
-                }
-                
-            }
 
+                }
+            }
             return listaHabitaciones;
         }
-
         public List<VerItinerarioModel> ListarPasajesSeleccionados()
         {
-            ItinerarioEnt itinerarioCompleto = ItinerarioMod.ItinerarioActivo;
             List<VerItinerarioModel> listaVuelos = new List<VerItinerarioModel>();
-            foreach (var seleccion in itinerarioCompleto.PasajesSelec)
+            if(ItinerarioMod.ItinerarioActivo.PasajesSelec != null)
             {
-                VueloEnt vuelo = InventarioMod.BuscarInformacionVuelo(seleccion.IdVuelo);
-                foreach (var pasaje in vuelo.Pasajes)
+                foreach (var vuelo in ItinerarioMod.ItinerarioActivo.PasajesSelec)
                 {
-                    if (seleccion.IdPasaje == pasaje.IdPasaje)
+                    foreach (var pasaje in vuelo.Pasajes)
                     {
                         // Falta acomodar que la tarifa sea la suma de los precios de los pasajes
                         // Falta acomodar cantidad disponible / elegida
-                        VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, itinerarioCompleto.TarifaTotal);
+                        VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, ItinerarioMod.ItinerarioActivo.TarifaTotal);
                         listaVuelos.Add(vueloModel);
                     }
                 }
-
             }
             return listaVuelos;
         }

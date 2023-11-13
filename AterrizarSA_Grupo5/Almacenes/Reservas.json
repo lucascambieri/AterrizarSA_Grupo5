@@ -1,0 +1,53 @@
+[
+  {
+    "IdReserva": "00001",
+    "IdItinerario": "00004",
+    "FechaPreReserva": "2023-11-12",
+    "PasajeroPorHabitacion": [
+      {
+        "HotelHabitacion":
+          {
+            "IdHotel": "00001",
+            "CodHotel": "HIL",
+            "Nombre": "Hilton",
+            "Ciudad": "Mendoza",
+            "Calificacion": "4 estrellas",
+            "Direccion": "Guemes 351",
+            "Habitaciones": [
+              {
+                "IdHabitacion": "00001",
+                "Descripcion": "Suite",
+                "CapacidadMaxima": 6,
+                "CantidadCamasAdultos": 2,
+                "CantidadCamasMenores": 1,
+                "CantidadCamasInfantes": 1,
+                "PrecioNoche": "20000,00",
+                "Disponibilidad": [
+                  {
+                    "FechaInicioDisp": "2024-02-08",
+                    "FechaFinDisp": "2024-02-20"
+                  }
+                ]
+              }
+            ]
+          },
+        "Pasajeros": [
+          {
+            "Nombre": "Juan",
+            "Apellido": "Perez",
+            "DNI": 12505050,
+            "FechaNacimiento": "1999-05-05"
+          },
+          {
+            "Nombre": "Julieta",
+            "Apellido": "Pacheco",
+            "DNI": 12404040,
+            "FechaNacimiento": "1999-06-06"
+          }
+        ]
+      }
+    ],
+    "EstadoPago": "Pendiente",
+    "EstadoReserva": "Pre-reservada"
+  }
+]

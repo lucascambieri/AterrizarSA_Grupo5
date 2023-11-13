@@ -64,9 +64,9 @@
             idHabitacion = new ColumnHeader();
             tarifa = new ColumnHeader();
             capacidad = new ColumnHeader();
-            adultosMáx = new ColumnHeader();
-            menoresMax = new ColumnHeader();
-            infantesMax = new ColumnHeader();
+            camasAdultos = new ColumnHeader();
+            camasMenores = new ColumnHeader();
+            camasInfantes = new ColumnHeader();
             desde = new ColumnHeader();
             hasta = new ColumnHeader();
             button3 = new Button();
@@ -74,7 +74,7 @@
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            labelItinerarioSel = new Label();
+            labelItinerarioSelec = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -83,7 +83,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(535, 23);
+            label1.Location = new Point(535, 58);
             label1.Name = "label1";
             label1.Size = new Size(110, 15);
             label1.TabIndex = 0;
@@ -92,7 +92,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(542, 41);
+            label2.Location = new Point(542, 76);
             label2.Name = "label2";
             label2.Size = new Size(50, 15);
             label2.TabIndex = 1;
@@ -101,7 +101,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(626, 41);
+            label4.Location = new Point(626, 76);
             label4.Name = "label4";
             label4.Size = new Size(59, 15);
             label4.TabIndex = 3;
@@ -110,7 +110,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(716, 41);
+            label5.Location = new Point(716, 76);
             label5.Name = "label5";
             label5.Size = new Size(53, 15);
             label5.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             comboBox1.BackColor = Color.White;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(548, 59);
+            comboBox1.Location = new Point(548, 94);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(39, 23);
             comboBox1.TabIndex = 5;
@@ -128,7 +128,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(637, 59);
+            comboBox2.Location = new Point(637, 94);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(39, 23);
             comboBox2.TabIndex = 6;
@@ -136,7 +136,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(725, 59);
+            comboBox3.Location = new Point(725, 94);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(39, 23);
             comboBox3.TabIndex = 7;
@@ -231,7 +231,7 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(601, 98);
+            button1.Location = new Point(863, 68);
             button1.Name = "button1";
             button1.Size = new Size(123, 42);
             button1.TabIndex = 18;
@@ -266,7 +266,7 @@
             buttonGuardarHabitacion.FlatStyle = FlatStyle.Flat;
             buttonGuardarHabitacion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttonGuardarHabitacion.ForeColor = Color.White;
-            buttonGuardarHabitacion.Location = new Point(712, 354);
+            buttonGuardarHabitacion.Location = new Point(914, 353);
             buttonGuardarHabitacion.Name = "buttonGuardarHabitacion";
             buttonGuardarHabitacion.Size = new Size(133, 38);
             buttonGuardarHabitacion.TabIndex = 23;
@@ -281,7 +281,7 @@
             buttonVolverAtras.FlatStyle = FlatStyle.Flat;
             buttonVolverAtras.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttonVolverAtras.ForeColor = Color.Black;
-            buttonVolverAtras.Location = new Point(712, 558);
+            buttonVolverAtras.Location = new Point(914, 559);
             buttonVolverAtras.Name = "buttonVolverAtras";
             buttonVolverAtras.Size = new Size(133, 38);
             buttonVolverAtras.TabIndex = 25;
@@ -296,7 +296,7 @@
             listView2.FullRowSelect = true;
             listView2.Location = new Point(27, 412);
             listView2.Name = "listView2";
-            listView2.Size = new Size(818, 97);
+            listView2.Size = new Size(1020, 97);
             listView2.TabIndex = 50;
             listView2.UseCompatibleStateImageBehavior = false;
             listView2.View = View.Details;
@@ -324,11 +324,11 @@
             // listViewHabitaciones
             // 
             listViewHabitaciones.BackColor = Color.White;
-            listViewHabitaciones.Columns.AddRange(new ColumnHeader[] { idHotel, codigoHotel, hotel, ciudad, direccion, idHabitacion, tarifa, capacidad, adultosMáx, menoresMax, infantesMax, desde, hasta });
+            listViewHabitaciones.Columns.AddRange(new ColumnHeader[] { idHotel, codigoHotel, hotel, ciudad, direccion, idHabitacion, tarifa, capacidad, camasAdultos, camasMenores, camasInfantes, desde, hasta });
             listViewHabitaciones.FullRowSelect = true;
             listViewHabitaciones.Location = new Point(27, 250);
             listViewHabitaciones.Name = "listViewHabitaciones";
-            listViewHabitaciones.Size = new Size(818, 97);
+            listViewHabitaciones.Size = new Size(1020, 97);
             listViewHabitaciones.TabIndex = 51;
             listViewHabitaciones.UseCompatibleStateImageBehavior = false;
             listViewHabitaciones.View = View.Details;
@@ -348,42 +348,52 @@
             // ciudad
             // 
             ciudad.Text = "Ciudad";
+            ciudad.Width = 97;
             // 
             // direccion
             // 
             direccion.Text = "Dirección";
+            direccion.Width = 65;
             // 
             // idHabitacion
             // 
             idHabitacion.Text = "Habitación";
+            idHabitacion.Width = 70;
             // 
             // tarifa
             // 
             tarifa.Text = "Tarifa";
+            tarifa.Width = 70;
             // 
             // capacidad
             // 
             capacidad.Text = "Capacidad";
+            capacidad.Width = 70;
             // 
-            // adultosMáx
+            // camasAdultos
             // 
-            adultosMáx.Text = "Adultos máx.";
+            camasAdultos.Text = "Camas adultos";
+            camasAdultos.Width = 95;
             // 
-            // menoresMax
+            // camasMenores
             // 
-            menoresMax.Text = "Menores máx.";
+            camasMenores.Text = "Camas menores";
+            camasMenores.Width = 98;
             // 
-            // infantesMax
+            // camasInfantes
             // 
-            infantesMax.Text = "Infantes max.";
+            camasInfantes.Text = "Camas infantes";
+            camasInfantes.Width = 98;
             // 
             // desde
             // 
             desde.Text = "Desde";
+            desde.Width = 88;
             // 
             // hasta
             // 
             hasta.Text = "Hasta";
+            hasta.Width = 88;
             // 
             // button3
             // 
@@ -392,7 +402,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(712, 514);
+            button3.Location = new Point(914, 515);
             button3.Name = "button3";
             button3.Size = new Size(133, 38);
             button3.TabIndex = 52;
@@ -434,7 +444,7 @@
             groupBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 43);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(845, 176);
+            groupBox1.Size = new Size(1035, 176);
             groupBox1.TabIndex = 55;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar hotel";
@@ -452,29 +462,29 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(labelItinerarioSel);
+            panel1.Controls.Add(labelItinerarioSelec);
             panel1.Controls.Add(label16);
             panel1.Location = new Point(-1, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(872, 31);
+            panel1.Size = new Size(1090, 31);
             panel1.TabIndex = 57;
             // 
-            // labelItinerarioSel
+            // labelItinerarioSelec
             // 
-            labelItinerarioSel.AutoSize = true;
-            labelItinerarioSel.Location = new Point(127, 8);
-            labelItinerarioSel.Name = "labelItinerarioSel";
-            labelItinerarioSel.Size = new Size(114, 15);
-            labelItinerarioSel.TabIndex = 19;
-            labelItinerarioSel.Text = "NO SELECCIONADO";
+            labelItinerarioSelec.AutoSize = true;
+            labelItinerarioSelec.Location = new Point(127, 8);
+            labelItinerarioSelec.Name = "labelItinerarioSelec";
+            labelItinerarioSelec.Size = new Size(114, 15);
+            labelItinerarioSelec.TabIndex = 19;
+            labelItinerarioSelec.Text = "NO SELECCIONADO";
             // 
             // ListadoHoteles
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(868, 613);
+            ClientSize = new Size(1080, 613);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
             Controls.Add(button3);
@@ -538,15 +548,15 @@
         private ColumnHeader idHabitacion;
         private ColumnHeader tarifa;
         private ColumnHeader capacidad;
-        private ColumnHeader adultosMáx;
-        private ColumnHeader menoresMax;
-        private ColumnHeader infantesMax;
+        private ColumnHeader camasAdultos;
+        private ColumnHeader camasMenores;
+        private ColumnHeader camasInfantes;
         private ColumnHeader desde;
         private ColumnHeader hasta;
         private Label label16;
         private GroupBox groupBox1;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Label labelItinerarioSel;
+        private Label labelItinerarioSelec;
     }
 }

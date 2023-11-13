@@ -15,14 +15,14 @@ namespace AterrizarSA_Grupo5.Almacenes
 
         static ItinerarioAlmacen()
         {
-            var itinerariosJson = File.ReadAllText("C:\\Users\\sberro\\OneDrive - Prisma Medios de Pago\\Escritorio\\Recibos\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Itinerarios.json");
+            var itinerariosJson = File.ReadAllText("C:\\Users\\stefa\\Desktop\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Itinerarios.json");
             Itinerarios = JsonConvert.DeserializeObject<List<ItinerarioEnt>>(itinerariosJson);
         }
 
         public static void Grabar()
         {
             var itinerariosJson = JsonConvert.SerializeObject(Itinerarios);
-            File.WriteAllText("C:\\Users\\sberro\\OneDrive - Prisma Medios de Pago\\Escritorio\\Recibos\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Itinerarios.json", itinerariosJson);
+            File.WriteAllText("C:\\Users\\stefa\\Desktop\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Itinerarios.json", itinerariosJson);
 
             Itinerarios = null;
         }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            buttonAgregarHotel = new Button();
+            buttonAgregarVuelo = new Button();
+            buttonGestionItinerario = new Button();
             button4 = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            label3 = new Label();
+            labelItinerarioSelec = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -57,50 +57,50 @@
             label1.TabIndex = 0;
             label1.Text = "Seleccione una de las opciones:";
             // 
-            // button1
+            // buttonAgregarHotel
             // 
-            button1.BackColor = Color.CornflowerBlue;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(48, 238);
-            button1.Name = "button1";
-            button1.Size = new Size(297, 51);
-            button1.TabIndex = 1;
-            button1.Text = "Consultar / Agregar hotel";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            buttonAgregarHotel.BackColor = Color.CornflowerBlue;
+            buttonAgregarHotel.FlatAppearance.BorderSize = 0;
+            buttonAgregarHotel.FlatStyle = FlatStyle.Flat;
+            buttonAgregarHotel.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAgregarHotel.ForeColor = Color.White;
+            buttonAgregarHotel.Location = new Point(48, 238);
+            buttonAgregarHotel.Name = "buttonAgregarHotel";
+            buttonAgregarHotel.Size = new Size(297, 51);
+            buttonAgregarHotel.TabIndex = 1;
+            buttonAgregarHotel.Text = "Consultar / Agregar hotel";
+            buttonAgregarHotel.UseVisualStyleBackColor = false;
+            buttonAgregarHotel.Click += buttonAgregarHotel_Click;
             // 
-            // button2
+            // buttonAgregarVuelo
             // 
-            button2.BackColor = Color.CornflowerBlue;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(48, 161);
-            button2.Name = "button2";
-            button2.Size = new Size(297, 51);
-            button2.TabIndex = 2;
-            button2.Text = "Consultar / Agregar vuelo";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            buttonAgregarVuelo.BackColor = Color.CornflowerBlue;
+            buttonAgregarVuelo.FlatAppearance.BorderSize = 0;
+            buttonAgregarVuelo.FlatStyle = FlatStyle.Flat;
+            buttonAgregarVuelo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAgregarVuelo.ForeColor = Color.White;
+            buttonAgregarVuelo.Location = new Point(48, 161);
+            buttonAgregarVuelo.Name = "buttonAgregarVuelo";
+            buttonAgregarVuelo.Size = new Size(297, 51);
+            buttonAgregarVuelo.TabIndex = 2;
+            buttonAgregarVuelo.Text = "Consultar / Agregar vuelo";
+            buttonAgregarVuelo.UseVisualStyleBackColor = false;
+            buttonAgregarVuelo.Click += buttonAgregarVuelo_Click;
             // 
-            // button3
+            // buttonGestionItinerario
             // 
-            button3.BackColor = Color.CornflowerBlue;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(48, 84);
-            button3.Name = "button3";
-            button3.Size = new Size(297, 51);
-            button3.TabIndex = 3;
-            button3.Text = "Gestión de itinerarios";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            buttonGestionItinerario.BackColor = Color.CornflowerBlue;
+            buttonGestionItinerario.FlatAppearance.BorderSize = 0;
+            buttonGestionItinerario.FlatStyle = FlatStyle.Flat;
+            buttonGestionItinerario.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonGestionItinerario.ForeColor = Color.White;
+            buttonGestionItinerario.Location = new Point(48, 84);
+            buttonGestionItinerario.Name = "buttonGestionItinerario";
+            buttonGestionItinerario.Size = new Size(297, 51);
+            buttonGestionItinerario.TabIndex = 3;
+            buttonGestionItinerario.Text = "Gestión de itinerarios";
+            buttonGestionItinerario.UseVisualStyleBackColor = false;
+            buttonGestionItinerario.Click += buttonGestionItinerario_Click;
             // 
             // button4
             // 
@@ -140,20 +140,20 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // label3
+            // labelItinerarioSelec
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(113, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(121, 15);
-            label3.TabIndex = 8;
-            label3.Text = "NO SELECCIONADO";
+            labelItinerarioSelec.AutoSize = true;
+            labelItinerarioSelec.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelItinerarioSelec.Location = new Point(113, 11);
+            labelItinerarioSelec.Name = "labelItinerarioSelec";
+            labelItinerarioSelec.Size = new Size(121, 15);
+            labelItinerarioSelec.TabIndex = 8;
+            labelItinerarioSelec.Text = "NO SELECCIONADO";
             // 
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(labelItinerarioSelec);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(-1, -1);
             panel1.Margin = new Padding(3, 2, 3, 2);
@@ -202,9 +202,9 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(buttonGestionItinerario);
+            Controls.Add(buttonAgregarVuelo);
+            Controls.Add(buttonAgregarHotel);
             Controls.Add(label1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -224,13 +224,13 @@
         #endregion
 
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button buttonAgregarHotel;
+        private Button buttonAgregarVuelo;
+        private Button buttonGestionItinerario;
         private Button button4;
         private Label label2;
         private PictureBox pictureBox1;
-        private Label label3;
+        private Label labelItinerarioSelec;
         private Panel panel1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

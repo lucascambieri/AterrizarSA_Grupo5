@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AterrizarSA_Grupo5.Entidades
 {
-    public class PasajesSelecEnt
+    public class PasajerosPorHabitacionEnt
     {
-        public int IdPasaje {  get; set; }
-        public int IdVuelo { get; set; }
+        public HotelEnt HotelHabitacion { get; set; }
+        public List<PasajeroEnt> Pasajeros { get; set; }
     }
 }

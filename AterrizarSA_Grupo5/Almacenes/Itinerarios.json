@@ -1,165 +1,41 @@
 [
   {
-    "Id": "00001",
-    "Cliente": "Carlos Gomez",
-    "FechaCreacion": "2023-11-01",
-    "FechaInicio": "2023-12-01",
-    "FechaFin": "2024-01-01",
-    "CantAdultos": 3,
-    "CantMenores": 1,
-    "CantInfantes": 1,
-    "HabitacionesSelec": [
-      {
-        "IdHab": "00003",
-        "IdHotel": "00001",
-        "FechaDesde": "2023-12-01",
-        "FechaHasta": "2024-01-01"
-      },
-      {
-        "IdHab": "00004",
-        "IdHotel": "00001",
-        "FechaDesde": "2023-12-01",
-        "FechaHasta": "2024-01-01"
-      },
-      {
-        "IdHab": "00005",
-        "IdHotel": "00001",
-        "FechaDesde": "2023-12-01",
-        "FechaHasta": "2024-01-01"
-      }
-    ],
-    "PasajesSelec": [
-      {
-        "IdPasaje": "00002",
-        "IdVuelo": "00001"
-      },
-      {
-        "IdPasaje": "00003",
-        "IdVuelo": "00001"
-      },
-      {
-        "IdPasaje": "00004",
-        "IdVuelo": "00001"
-      },
-      {
-        "IdPasaje": "00005",
-        "IdVuelo": "00001"
-      },
-      {
-        "IdPasaje": "00006",
-        "IdVuelo": "00001"
-      }
-    ],
-    "TarifaTotal": "50000,00"
-  },
-  {
-    "Id": "00002",
-    "Cliente": "German Puentes",
-    "FechaCreacion": "2023-11-01",
-    "FechaInicio": "2024-02-01",
-    "FechaFin": "2024-03-01",
-    "CantAdultos": 5,
-    "CantMenores": 0,
-    "CantInfantes": 0,
-    "HabitacionesSelec": [
-      {
-        "IdHab": "00001",
-        "IdHotel": "00002",
-        "FechaDesde": "2024-02-01",
-        "FechaHasta": "2024-03-01"
-      },
-      {
-        "IdHab": "00002",
-        "IdHotel": "00002",
-        "FechaDesde": "2024-02-01",
-        "FechaHasta": "2024-03-01"
-      },
-      {
-        "IdHab": "00003",
-        "IdHotel": "00002",
-        "FechaDesde": "2024-02-01",
-        "FechaHasta": "2024-03-01"
-      }
-    ],
-    "PasajesSelec": [
-      {
-        "IdPasaje": "00002",
-        "IdVuelo": "00002"
-      },
-      {
-        "IdPasaje": "00003",
-        "IdVuelo": "00003"
-      },
-      {
-        "IdPasaje": "00004",
-        "IdVuelo": "00004"
-      },
-      {
-        "IdPasaje": "00005",
-        "IdVuelo": "00005"
-      },
-      {
-        "IdPasaje": "00006",
-        "IdVuelo": "00006"
-      }
-    ],
-    "TarifaTotal": "75000,00"
-  },
-  {
-    "Id": "00003",
-    "Cliente": "Lucia Perez",
-    "FechaCreacion": "2023-11-01",
-    "FechaInicio": "2024-07-29",
-    "FechaFin": "2024-08-15",
-    "CantAdultos": 3,
-    "CantMenores": 0,
-    "CantInfantes": 0,
-    "HabitacionesSelec": [
-      {
-        "IdHab": "00001",
-        "IdHotel": "00008",
-        "FechaDesde": "2024-07-29",
-        "FechaHasta": "2024-08-15"
-      },
-      {
-        "IdHab": "00002",
-        "IdHotel": "00008",
-        "FechaDesde": "2024-07-29",
-        "FechaHasta": "2024-08-15"
-      },
-      {
-        "IdHab": "00003",
-        "IdHotel": "00008",
-        "FechaDesde": "2024-07-29",
-        "FechaHasta": "2024-08-15"
-      }
-    ],
-    "PasajesSelec": [
-      {
-        "IdPasaje": "00006",
-        "IdVuelo": "00006"
-      }
-    ],
-    "TarifaTotal": "50000,00"
-  },
-  {
     "Id": "00004",
     "Cliente": "Julieta Pacheco",
     "FechaCreacion": "2023-11-01",
     "FechaInicio": "2024-02-08",
     "FechaFin": "2024-02-20",
-    "CantAdultos": 2,
-    "CantMenores": 0,
-    "CantInfantes": 0,
+    "CantAdultos": 4,
+    "CantMenores": 1,
+    "CantInfantes": 1,
     "HabitacionesSelec": [
       {
-        "IdHab": "00001",
-        "IdHotel": "0001",
-        "FechaDesde": "2024-02-08",
-        "FechaHasta": "2024-02-20"
+        "IdHotel": "00001",
+        "CodHotel": "HIL",
+        "Nombre": "Hilton",
+        "Ciudad": "Mendoza",
+        "Calificacion": "4 estrellas",
+        "Direccion": "Guemes 351",
+        "Habitaciones": [
+          {
+            "IdHabitacion": "00001",
+            "Descripcion": "Suite",
+            "CapacidadMaxima": 6,
+            "CantidadCamasAdultos": 2,
+            "CantidadCamasMenores": 1,
+            "CantidadCamasInfantes": 1,
+            "PrecioNoche": "20000,00",
+            "Disponibilidad": [
+              {
+                "FechaInicioDisp": "2024-02-08",
+                "FechaFinDisp": "2024-02-20"
+              }
+            ]
+          }
+        ],
+        "PasajesSelec": [],
+        "TarifaTotal": "50000,00"
       }
-    ],
-    "PasajesSelec": [],
-    "TarifaTotal": "50000,00"
+    ]
   }
- ]
+]
