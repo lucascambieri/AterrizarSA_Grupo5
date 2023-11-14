@@ -21,8 +21,6 @@ namespace AterrizarSA_Grupo5
             InitializeComponent();
         }
 
-        //List<ListadoHotelesModel> listaHabitaciones = ListadoHotelesModel.ListarHabitaciones();
-
         private void ListadoHoteles_Load(object sender, EventArgs e)
         {
             model = new ListadoHotelesModel();
@@ -49,12 +47,10 @@ namespace AterrizarSA_Grupo5
                 listViewHabitaciones.Items.Add(listViewItem);
             }
         }
-
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void buttonGuardarHabitacion_Click(object sender, EventArgs e)
         {
             if (listViewHabitaciones.SelectedItems.Count == 1)

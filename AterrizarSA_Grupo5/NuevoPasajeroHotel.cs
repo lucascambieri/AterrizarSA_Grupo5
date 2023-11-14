@@ -30,19 +30,19 @@ namespace AterrizarSA_Grupo5
         {
             model = new NuevoPasajeroHotelModel();
             // Reviso si existe reserva, si no la creo
-            model.CrearReserva();
+            //model.CrearReserva();
             // Cargo itinerario activo + habitaciones
             labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
+            labelReservaSelec.Text = ReservaMod.ReservaDelItinerarioActivo.IdReserva.ToString("D5");
             listaHabitacionesSelec = model.ListarHabitacionesDelItinerario();
             foreach (var hotel in listaHabitacionesSelec)
             {
                 foreach (var habitacion in hotel.Habitaciones)
                 {
-                    comboBoxHabitaciones.Items.Add(hotel.IdHotel.ToString("D5") + "-" +  habitacion.IdHabitacion.ToString("D5"));
+                    comboBoxHabitaciones.Items.Add(hotel.IdHotel.ToString("D5") + "-" + habitacion.IdHabitacion.ToString("D5"));
                 }
             }
         }
-
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             if (comboBoxHabitaciones.Text == "")
@@ -78,7 +78,7 @@ namespace AterrizarSA_Grupo5
                     }
                     // Validad capacidades de la habitacion
                     int disponibilidad = model.ValidarDisponibilidad(valorTipoPasajero);
-                    if(disponibilidad == 0)
+                    if (disponibilidad == 0)
                     {
                         if (model.AgregarPasajero() == 0)
                         {
@@ -102,6 +102,7 @@ namespace AterrizarSA_Grupo5
                             model.RestarDisponibilidad(valorTipoPasajero);
 
                             listViewPasajeros.Items.Add(nuevoItem);
+                            listViewPasajeros.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
                             textBoxNombre.Clear();
                             textBoxApellido.Clear();
@@ -115,7 +116,7 @@ namespace AterrizarSA_Grupo5
                     }
                     else
                     {
-                        MessageBox.Show("No hay disponibilidad suficiente","No disponible",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No hay disponibilidad suficiente", "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -124,12 +125,10 @@ namespace AterrizarSA_Grupo5
                 }
             }
         }
-
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void buttonQuitar_Click(object sender, EventArgs e)
         {
             if (listViewPasajeros.SelectedItems.Count == 1)
@@ -138,14 +137,14 @@ namespace AterrizarSA_Grupo5
                 if (result == DialogResult.Yes)
                 {
                     int dniEliminar;
-                    
-                        dniEliminar = int.Parse(listViewPasajeros.SelectedItems[0].SubItems[2].Text);
-                        if(model.QuitarPasajero(dniEliminar) == 0)
-                        {
-                            model.ActualizarDisponibilidad(listViewPasajeros.SelectedItems[0].SubItems[4].Text);
-                            MessageBox.Show("Pasajero eliminado correctamente", "Pasajero eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            listViewPasajeros.Items.Remove(listViewPasajeros.SelectedItems[0]);
-                        }
+
+                    dniEliminar = int.Parse(listViewPasajeros.SelectedItems[0].SubItems[2].Text);
+                    if (model.QuitarPasajero(dniEliminar) == 0)
+                    {
+                        model.ActualizarDisponibilidad(listViewPasajeros.SelectedItems[0].SubItems[4].Text);
+                        MessageBox.Show("Pasajero eliminado correctamente", "Pasajero eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        listViewPasajeros.Items.Remove(listViewPasajeros.SelectedItems[0]);
+                    }
                 }
             }
             else
@@ -153,12 +152,11 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("Elija un (y solo un) pasajero", "Elija pasajero", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void comboBoxHabitaciones_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (var hotel in listaHabitacionesSelec)
             {
-                foreach(var hab in hotel.Habitaciones)
+                foreach (var hab in hotel.Habitaciones)
                 {
                     if (hab.IdHabitacion.ToString("D5") == comboBoxHabitaciones.Text.Substring(6))
                     {
@@ -202,6 +200,7 @@ namespace AterrizarSA_Grupo5
                         break;
                 }
                 listViewPasajeros.Items.Add(nuevoItem);
+                listViewPasajeros.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
             int result = model.CargarDisponibilidades();
         }

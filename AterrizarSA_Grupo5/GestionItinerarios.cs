@@ -25,15 +25,7 @@ namespace AterrizarSA_Grupo5
         private void GestionItinerarios_Load_1(object sender, EventArgs e)
         {
             model = new GestionItinerarioModel();
-            listaItinerarios = model.ListarItinerarios();
-            foreach (var itinerario in listaItinerarios)
-            {
-                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D5"));
-                listViewItem.SubItems.Add(itinerario.NombreCliente);
-                listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
-                listViewItem.SubItems.Add(itinerario.EstadoItinerario);
-                listViewItinerarios.Items.Add(listViewItem);
-            }
+            actualizarListaItinerarios();
         }
 
 
@@ -50,38 +42,9 @@ namespace AterrizarSA_Grupo5
 
         private void buttonNuevoItinerario_Click(object sender, EventArgs e)
         {
-            string nombreCliente = textNombreCliente.Text;
-            if (!string.IsNullOrEmpty(nombreCliente))
-            {
-                int codigoUnico = listaItinerarios[listaItinerarios.Count - 1].NumeroItinerario++;
-                codigoUnico++;
-
-                // Generar un código único de cuatro dígitos
-                string codigo = codigoUnico.ToString("D5");
-
-                // Obtener la fecha actual
-                string fecha = DateTime.Now.ToString("dd/MM/yyyy");
-
-                // Crea el itinerario
-                if (model.CrearItinerario(codigoUnico, nombreCliente, DateTime.Now) == null)
-                {
-                    // Crear una nueva fila
-                    ListViewItem nuevaFila = new ListViewItem(codigo);
-                    nuevaFila.SubItems.Add(nombreCliente); // Columna vacía
-                    nuevaFila.SubItems.Add(fecha);
-                    nuevaFila.SubItems.Add("Itinerario creado");
-
-                    // Agregar la nueva fila a listView1
-                    listViewItinerarios.Items.Add(nuevaFila);
-
-                    // Incrementar el contador de códigos únicos para el próximo elemento
-                    codigoUnico++;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe ingresar un nombre de cliente", "Ingrese nombre", MessageBoxButtons.OK);
-            }
+            PedirNombre pedirNombre = new PedirNombre();
+            pedirNombre.ShowDialog();
+            actualizarListaItinerarios();
         }
 
         private void buttonActivaItinerario_Click_(object sender, EventArgs e)
@@ -254,6 +217,19 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("Selecciona un itinerario en la lista antes de cambiar el estado.");
             }
         }
-
+        private void actualizarListaItinerarios()
+        {
+            listViewItinerarios.Items.Clear();
+            listaItinerarios = model.ListarItinerarios();
+            foreach (var itinerario in listaItinerarios)
+            {
+                ListViewItem listViewItem = new ListViewItem(itinerario.NumeroItinerario.ToString("D5"));
+                listViewItem.SubItems.Add(itinerario.NombreCliente);
+                listViewItem.SubItems.Add(itinerario.FechaCreado.ToString("dd/MM/yyyy"));
+                listViewItem.SubItems.Add(itinerario.EstadoItinerario);
+                listViewItinerarios.Items.Add(listViewItem);
+                listViewItinerarios.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+        }
     }
 }

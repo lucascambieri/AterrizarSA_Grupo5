@@ -14,14 +14,14 @@ namespace AterrizarSA_Grupo5.Almacenes
 
         static ReservasAlmacen()
         {
-            var reservasJson = File.ReadAllText("C:\\Users\\stefa\\Desktop\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Reservas.json");
+            var reservasJson = File.ReadAllText(@"ArchivosAlmacenes\Reservas.json");
             Reservas = JsonConvert.DeserializeObject<List<ReservaEnt>>(reservasJson);
         }
 
         public static void Grabar()
         {
             var reservasJson = JsonConvert.SerializeObject(Reservas);
-            File.WriteAllText("C:\\Users\\stefa\\Desktop\\Facultad\\CAI\\AterrizarSA_Grupo5\\AterrizarSA_Grupo5\\Almacenes\\Reservas.json", reservasJson);
+            File.WriteAllText(@"ArchivosAlmacenes\Reservas.json", reservasJson);
 
             Reservas = null;
         }

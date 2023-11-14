@@ -63,18 +63,18 @@ namespace AterrizarSA_Grupo5
             return listaItinerarios;
         }
 
-        public string CrearItinerario(int id, string nombreCliente, DateTime fecha)
+        public string CrearItinerario()
         {
+            int id = ItinerarioMod.ObtenerUltimoId();
             List<HotelEnt> habitacionesSelec = new List<HotelEnt>();
             List<VueloEnt> pasajesSelec = new List<VueloEnt>();
             ItinerarioEnt nuevoItinerario = new ItinerarioEnt();
             nuevoItinerario.Id = id;
-            nuevoItinerario.Cliente = nombreCliente;
-            nuevoItinerario.FechaCreacion = fecha;
+            nuevoItinerario.Cliente = this.NombreCliente;
+            nuevoItinerario.FechaCreacion = DateTime.Now;
             nuevoItinerario.HabitacionesSelec = habitacionesSelec;
             nuevoItinerario.PasajesSelec = pasajesSelec;
             ItinerarioMod.AgregarItinerario(nuevoItinerario);
-            
             return null;
         }
         public ItinerarioEnt BuscarItinerario(int itinerarioBuscado)

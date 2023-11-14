@@ -42,7 +42,16 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return null;
         }
-
+        public static int ObtenerUltimoId()
+        {
+            int ultimoId = 0;
+            foreach(var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                ultimoId = itinerario.Id;
+            }
+            ultimoId++;
+            return ultimoId;
+        }
         public static int AgregarHabitacion(HotelEnt habitacionesSelec)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)

@@ -93,10 +93,10 @@ namespace AterrizarSA_Grupo5
             }
             return "OK";
         }
-        public void CrearReserva()
-        {
-            ReservaMod.CrearReserva();
-        }
+        //public void CrearReserva()
+        //{
+        //    ReservaMod.CrearReserva();
+        //}
         public List<PasajeroEnt> ListarPasajerosPorHabitacion(int habitacionSelec)
         {
             List<PasajeroEnt> pasajeros = ReservaMod.PasajerosPorHabitacion(habitacionSelec);
@@ -140,7 +140,7 @@ namespace AterrizarSA_Grupo5
             List<HabitacionEnt> listaHabitacionAgregar = new List<HabitacionEnt>() { habitacionAgregar };
             hotelHabitacionAgregar.Habitaciones = listaHabitacionAgregar;
 
-            return ReservaMod.AgregarPasajero(nuevoPasajero, hotelHabitacionAgregar);
+            return ReservaMod.AgregarPasajeroHabitacion(nuevoPasajero, hotelHabitacionAgregar);
         }
         public int QuitarPasajero(int eliminarPasajero)
         {
@@ -167,7 +167,7 @@ namespace AterrizarSA_Grupo5
             habitacionAgregar.Disponibilidad = listaDisponibilidadHabitacion;
             List<HabitacionEnt> listaHabitacionAgregar = new List<HabitacionEnt>() { habitacionAgregar };
             hotelHabitacionAgregar.Habitaciones = listaHabitacionAgregar;
-            return ReservaMod.QuitarPasajero(eliminarPasajero, hotelHabitacionAgregar);
+            return ReservaMod.QuitarPasajeroHabitacion(eliminarPasajero, hotelHabitacionAgregar);
         }
         public int CargarDisponibilidades()
         {

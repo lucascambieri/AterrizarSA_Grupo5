@@ -47,14 +47,8 @@
             comboBox5 = new ComboBox();
             button1 = new Button();
             label11 = new Label();
-            label12 = new Label();
             buttonGuardarHabitacion = new Button();
             buttonVolverAtras = new Button();
-            listView2 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
             listViewHabitaciones = new ListView();
             idHotel = new ColumnHeader();
             codigoHotel = new ColumnHeader();
@@ -69,7 +63,6 @@
             camasInfantes = new ColumnHeader();
             desde = new ColumnHeader();
             hasta = new ColumnHeader();
-            button3 = new Button();
             label16 = new Label();
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
@@ -248,17 +241,6 @@
             label11.TabIndex = 19;
             label11.Text = "Seleccion de habitaciones:";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(27, 394);
-            label12.Name = "label12";
-            label12.Size = new Size(117, 15);
-            label12.TabIndex = 21;
-            label12.Text = "Seleccion de extras:";
-            // 
             // buttonGuardarHabitacion
             // 
             buttonGuardarHabitacion.BackColor = Color.CornflowerBlue;
@@ -281,45 +263,13 @@
             buttonVolverAtras.FlatStyle = FlatStyle.Flat;
             buttonVolverAtras.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttonVolverAtras.ForeColor = Color.Black;
-            buttonVolverAtras.Location = new Point(914, 559);
+            buttonVolverAtras.Location = new Point(914, 419);
             buttonVolverAtras.Name = "buttonVolverAtras";
             buttonVolverAtras.Size = new Size(133, 38);
             buttonVolverAtras.TabIndex = 25;
             buttonVolverAtras.Text = "Volver al menú";
             buttonVolverAtras.UseVisualStyleBackColor = false;
             buttonVolverAtras.Click += buttonVolverAtras_Click;
-            // 
-            // listView2
-            // 
-            listView2.BackColor = Color.White;
-            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView2.FullRowSelect = true;
-            listView2.Location = new Point(27, 412);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(1020, 97);
-            listView2.TabIndex = 50;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Código";
-            columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Descripción";
-            columnHeader2.Width = 300;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Tarifa";
-            columnHeader3.Width = 100;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "¿Por pasajero?";
-            columnHeader4.Width = 200;
             // 
             // listViewHabitaciones
             // 
@@ -395,20 +345,6 @@
             hasta.Text = "Hasta";
             hasta.Width = 88;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.CornflowerBlue;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(914, 515);
-            button3.Name = "button3";
-            button3.Size = new Size(133, 38);
-            button3.TabIndex = 52;
-            button3.Text = "Guardar selección";
-            button3.UseVisualStyleBackColor = false;
-            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -452,7 +388,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bg_donut_1;
-            pictureBox1.Location = new Point(-6, 290);
+            pictureBox1.Location = new Point(-1, 150);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(445, 330);
@@ -484,15 +420,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(1080, 613);
+            ClientSize = new Size(1080, 473);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
-            Controls.Add(button3);
             Controls.Add(listViewHabitaciones);
-            Controls.Add(listView2);
             Controls.Add(buttonVolverAtras);
             Controls.Add(buttonGuardarHabitacion);
-            Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -530,16 +463,9 @@
         private ComboBox comboBox5;
         private Button button1;
         private Label label11;
-        private Label label12;
         private Button buttonGuardarHabitacion;
         private Button buttonVolverAtras;
-        private ListView listView2;
         private ListView listViewHabitaciones;
-        private Button button3;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
         private ColumnHeader idHotel;
         private ColumnHeader codigoHotel;
         private ColumnHeader hotel;

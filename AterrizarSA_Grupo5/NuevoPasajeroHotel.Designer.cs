@@ -57,6 +57,8 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            labelReservaSelec = new Label();
+            label7 = new Label();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -262,6 +264,8 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
+            panel1.Controls.Add(labelReservaSelec);
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(comboBoxHabitaciones);
             panel1.Controls.Add(labelItinerarioSelec);
             panel1.Controls.Add(label2);
@@ -345,6 +349,26 @@
             pictureBox5.TabIndex = 14;
             pictureBox5.TabStop = false;
             // 
+            // labelReservaSelec
+            // 
+            labelReservaSelec.AutoSize = true;
+            labelReservaSelec.Location = new Point(475, 24);
+            labelReservaSelec.Name = "labelReservaSelec";
+            labelReservaSelec.Size = new Size(39, 15);
+            labelReservaSelec.TabIndex = 11;
+            labelReservaSelec.Text = "VACIA";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.RoyalBlue;
+            label7.Location = new Point(345, 24);
+            label7.Name = "label7";
+            label7.Size = new Size(98, 15);
+            label7.TabIndex = 10;
+            label7.Text = "N° de reserva:";
+            // 
             // NuevoPasajeroHotel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -414,5 +438,7 @@
         private Label label9;
         private ComboBox comboBoxHabitaciones;
         private ColumnHeader tipoPasajero;
+        private Label labelReservaSelec;
+        private Label label7;
     }
 }

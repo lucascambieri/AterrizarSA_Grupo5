@@ -11,6 +11,7 @@ namespace AterrizarSA_Grupo5.Modulos
     public static class ReservaMod
     {
         public static ReservaEnt ReservaDelItinerarioActivo {  get; set; }
+        public static PasajerosPorPasajeEnt VueloSeleccionado { get; set; }
         public static void CrearReserva()
         {
             int reservaId = 0;
@@ -31,6 +32,7 @@ namespace AterrizarSA_Grupo5.Modulos
                 nuevaReserva.IdReserva = reservaId + 1;
                 nuevaReserva.IdItinerario = ItinerarioMod.ItinerarioActivo.Id;
                 nuevaReserva.PasajeroPorHabitacion = new List<PasajerosPorHabitacionEnt>();
+                nuevaReserva.PasajeroPorPasaje = new List<PasajerosPorPasajeEnt>();
                 nuevaReserva.EstadoReserva = "Creada";
                 nuevaReserva.EstadoPago = "Pendiente";
                 ReservasAlmacen.Reservas.Add(nuevaReserva);
@@ -58,7 +60,7 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return pasajeros;
         }
-        public static int AgregarPasajero(PasajeroEnt nuevoPasajero, HotelEnt habitacionSelec)
+        public static int AgregarPasajeroHabitacion(PasajeroEnt nuevoPasajero, HotelEnt habitacionSelec)
         {
             PasajerosPorHabitacionEnt pasajeroPorHabitacion = new PasajerosPorHabitacionEnt();
             if (ReservaDelItinerarioActivo.PasajeroPorHabitacion.Count == 0)
@@ -106,7 +108,7 @@ namespace AterrizarSA_Grupo5.Modulos
             ReservaDelItinerarioActivo.PasajeroPorHabitacion.Add(pasajeroPorHabitacion);
             return 0;
         }
-        public static int QuitarPasajero(int eliminarPasajero, HotelEnt habitacionSelec)
+        public static int QuitarPasajeroHabitacion(int eliminarPasajero, HotelEnt habitacionSelec)
         {
             foreach (var hotel in ReservaDelItinerarioActivo.PasajeroPorHabitacion)
             {
@@ -132,6 +134,62 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return -1;
 
+        }
+        public static int AgregarPasajeroVuelo(PasajeroEnt nuevoPasajeo)
+        {
+            PasajerosPorPasajeEnt pasajeroPorPasaje = new PasajerosPorPasajeEnt();
+            pasajeroPorPasaje.VueloPasaje = VueloSeleccionado.VueloPasaje;
+            pasajeroPorPasaje.Pasajero = nuevoPasajeo;
+            if(ReservaDelItinerarioActivo.PasajeroPorPasaje == null)
+            {
+                List<PasajerosPorPasajeEnt> listaPasajeroPorPasaje = new List<PasajerosPorPasajeEnt> { pasajeroPorPasaje };
+                ReservaDelItinerarioActivo.PasajeroPorPasaje = listaPasajeroPorPasaje;
+            }
+            else
+            {
+                ReservaDelItinerarioActivo.PasajeroPorPasaje.Add(pasajeroPorPasaje);
+            }
+            
+            return 0;
+        }
+        public static int RevisarPasajeroCargadoVuelo(int idVuelo, int idPasaje)
+        {
+            if (ReservaDelItinerarioActivo.PasajeroPorPasaje != null)
+            {
+                foreach (var pasajes in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+                {
+                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje)
+                    {
+                        if (pasajes.Pasajero != null)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+        public static int QuitarPasajeroVuelo(int idVuelo, int idPasaje)
+        {
+            if (ReservaDelItinerarioActivo.PasajeroPorPasaje != null)
+            {
+                foreach (var pasajes in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+                {
+                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje)
+                    {
+                        if (pasajes.Pasajero != null)
+                        {
+                            pasajes.Pasajero = null;
+                            return 0;
+                        }
+                    }
+                }
+            }
+            return 1;
         }
     }
 }

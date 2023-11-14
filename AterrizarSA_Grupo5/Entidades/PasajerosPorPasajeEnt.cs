@@ -9,6 +9,6 @@ namespace AterrizarSA_Grupo5.Entidades
     public class PasajerosPorPasajeEnt
     {
         public VueloEnt VueloPasaje { get; set; }
-        public List<PasajeroEnt> Pasajeros { get; set; }
+        public PasajeroEnt Pasajero { get; set; }
     }
 }

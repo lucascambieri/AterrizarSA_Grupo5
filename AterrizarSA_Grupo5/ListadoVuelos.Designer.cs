@@ -51,9 +51,7 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            label15 = new Label();
             buttonGuardarPasaje = new Button();
-            button2 = new Button();
             buttonVolverAtras = new Button();
             button4 = new Button();
             listViewPasajes = new ListView();
@@ -72,10 +70,6 @@
             comision = new ColumnHeader();
             disponibilidad = new ColumnHeader();
             idPasaje = new ColumnHeader();
-            listView3 = new ListView();
-            columnHeader15 = new ColumnHeader();
-            columnHeader16 = new ColumnHeader();
-            columnHeader17 = new ColumnHeader();
             label16 = new Label();
             groupBox1 = new GroupBox();
             comboBox8 = new ComboBox();
@@ -295,15 +289,6 @@
             label14.TabIndex = 41;
             label14.Text = "Seleccion de vuelos:";
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(35, 534);
-            label15.Name = "label15";
-            label15.Size = new Size(117, 15);
-            label15.TabIndex = 43;
-            label15.Text = "Seleccion de extras:";
-            // 
             // buttonGuardarPasaje
             // 
             buttonGuardarPasaje.BackColor = Color.CornflowerBlue;
@@ -319,27 +304,13 @@
             buttonGuardarPasaje.UseVisualStyleBackColor = false;
             buttonGuardarPasaje.Click += buttonGuardarPasaje_Click;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.CornflowerBlue;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(1039, 672);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 51);
-            button2.TabIndex = 45;
-            button2.Text = "Guardar selección";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // buttonVolverAtras
             // 
             buttonVolverAtras.BackColor = Color.LightSteelBlue;
             buttonVolverAtras.FlatAppearance.BorderSize = 0;
             buttonVolverAtras.FlatStyle = FlatStyle.Flat;
             buttonVolverAtras.ForeColor = Color.Black;
-            buttonVolverAtras.Location = new Point(1039, 731);
+            buttonVolverAtras.Location = new Point(1039, 551);
             buttonVolverAtras.Margin = new Padding(3, 4, 3, 4);
             buttonVolverAtras.Name = "buttonVolverAtras";
             buttonVolverAtras.Size = new Size(152, 51);
@@ -435,32 +406,6 @@
             // 
             idPasaje.Text = "IdPasaje";
             // 
-            // listView3
-            // 
-            listView3.Columns.AddRange(new ColumnHeader[] { columnHeader15, columnHeader16, columnHeader17 });
-            listView3.FullRowSelect = true;
-            listView3.Location = new Point(42, 562);
-            listView3.Margin = new Padding(3, 4, 3, 4);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(1149, 102);
-            listView3.TabIndex = 50;
-            listView3.UseCompatibleStateImageBehavior = false;
-            listView3.View = View.Details;
-            // 
-            // columnHeader15
-            // 
-            columnHeader15.Text = "Código";
-            // 
-            // columnHeader16
-            // 
-            columnHeader16.Text = "Descripción";
-            columnHeader16.Width = 400;
-            // 
-            // columnHeader17
-            // 
-            columnHeader17.Text = "Tarifa";
-            columnHeader17.Width = 100;
-            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -550,7 +495,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.landing_bg_object_2;
-            pictureBox1.Location = new Point(-2, 449);
+            pictureBox1.Location = new Point(-2, 267);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(332, 349);
             pictureBox1.TabIndex = 55;
@@ -559,7 +504,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.bg_donut;
-            pictureBox3.Location = new Point(814, 406);
+            pictureBox3.Location = new Point(792, 228);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(515, 392);
             pictureBox3.TabIndex = 56;
@@ -570,15 +515,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(1216, 791);
+            ClientSize = new Size(1216, 610);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
-            Controls.Add(listView3);
             Controls.Add(listViewPasajes);
             Controls.Add(buttonVolverAtras);
-            Controls.Add(button2);
             Controls.Add(buttonGuardarPasaje);
-            Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox3);
@@ -624,13 +566,10 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Label label15;
         private Button buttonGuardarPasaje;
-        private Button button2;
         private Button buttonVolverAtras;
         private Button button4;
         private ListView listViewPasajes;
-        private ListView listView3;
         private ColumnHeader idVuelo;
         private ColumnHeader origen;
         private ColumnHeader destino;
@@ -645,9 +584,6 @@
         private ColumnHeader impuestos;
         private ColumnHeader comision;
         private ColumnHeader disponibilidad;
-        private ColumnHeader columnHeader15;
-        private ColumnHeader columnHeader16;
-        private ColumnHeader columnHeader17;
         private Label label16;
         private GroupBox groupBox1;
         private ComboBox comboBox8;

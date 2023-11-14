@@ -125,6 +125,40 @@ namespace AterrizarSA_Grupo5
             }
             return listaVuelos;
         }
+        public void ActivarPasajeSeleccionado()
+        {
+            VueloEnt vueloSeleccionado = new VueloEnt();
+            PasajeEnt pasajeSeleccionado = new PasajeEnt();
+            PasajerosPorPasajeEnt vueloPasajero = new PasajerosPorPasajeEnt();
+            vueloSeleccionado.IdVuelo = this.IdVuelo;
+            vueloSeleccionado.Origen = this.Origen;
+            vueloSeleccionado.Destino = this.Destino;
+            vueloSeleccionado.Paradas = this.Paradas;
+            vueloSeleccionado.FechayHoraPartida = this.FechayHoraPartida;
+            vueloSeleccionado.FechayHoraLlegada = this.FechayHoraLlegada;
+            vueloSeleccionado.TiempoViaje = this.TiempoViaje;
+            vueloSeleccionado.Aerolinea = this.Aerolinea;
+            pasajeSeleccionado.IdPasaje = this.IdPasaje;
+            pasajeSeleccionado.Categoria = this.Categoria;
+            pasajeSeleccionado.Precio = this.Precio;
+            pasajeSeleccionado.TipoPasajero = this.TipoPasajero;
+            List<PasajeEnt> listaPasajeSeleccionado = new List<PasajeEnt>() { pasajeSeleccionado };
+            vueloSeleccionado.Pasajes = listaPasajeSeleccionado;
+            vueloPasajero.VueloPasaje = vueloSeleccionado;
+            ReservaMod.VueloSeleccionado = vueloPasajero;
+        }
+        public int RevisarPasajeroCargado()
+        {
+            return ReservaMod.RevisarPasajeroCargadoVuelo(this.IdVuelo, this.IdPasaje);
+        }
+        public int QuitarPasajero()
+        {
+            return ReservaMod.QuitarPasajeroVuelo(this.IdVuelo,this.IdPasaje);
+        }
+        public void CrearReserva()
+        {
+            ReservaMod.CrearReserva();
+        }
 
 
     }

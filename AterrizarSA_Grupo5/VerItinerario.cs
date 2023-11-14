@@ -26,7 +26,9 @@ namespace AterrizarSA_Grupo5
         private void VerItinerario_Load(object sender, EventArgs e)
         {
             model = new VerItinerarioModel();
-
+            ReservaMod.ReservaDelItinerarioActivo = null;
+            // Reviso si no existe ningun reserva la creo, sino la cargo en ReservaDelItinierarioActivo
+            model.CrearReserva();
             // Cargo itinerario y fecha de inicio en Form
             labelItinerarioSelec.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
             labelFechaInicioItinerario.Text = ItinerarioMod.ItinerarioActivo.FechaInicio.ToString("dd/MM/yyyy");
@@ -34,7 +36,7 @@ namespace AterrizarSA_Grupo5
             // Cargo habitaciones y pasajes seleccionados del vuelo
             listaHabitacionesSelec = model.ListarHabitacionesSeleccionadas();
             listaPasajesSelec = model.ListarPasajesSeleccionados();
-            if(listaHabitacionesSelec != null)
+            if (listaHabitacionesSelec != null)
             {
                 foreach (var habitacion in listaHabitacionesSelec)
                 {
@@ -52,6 +54,7 @@ namespace AterrizarSA_Grupo5
                     listViewItem.SubItems.Add(habitacion.FechaDesde.ToString("dd/MM/yyyy"));
                     listViewItem.SubItems.Add(habitacion.FechaHasta.ToString("dd/MM/yyyy"));
                     listViewHoteleria.Items.Add(listViewItem);
+                    listViewHoteleria.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
                 // Si existe alguna habitación seleccionada, actualizo el total
                 if (listaHabitacionesSelec.Count > 0)
@@ -79,6 +82,7 @@ namespace AterrizarSA_Grupo5
                     listViewItem.SubItems.Add(pasaje.CantidadElegida.ToString());
                     listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
                     listViewAereos.Items.Add(listViewItem);
+                    listViewAereos.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
                 // Si existe algún pasaje seleccionado, actualizo el total
                 if (listaPasajesSelec.Count > 0)
@@ -88,42 +92,53 @@ namespace AterrizarSA_Grupo5
             }
 
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void listView3_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-        }
-
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonEditarPasajerosPasajes_Click(object sender, EventArgs e)
         {
-            if(listaPasajesSelec.Count > 0) 
-            { 
-                NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
-                nuevoPasajeroVuelo.ShowDialog();
+            if (listaPasajesSelec.Count > 0)
+            {
+                if (listViewAereos.SelectedItems.Count == 1)
+                {
+                    model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
+                    model.Origen = listViewAereos.SelectedItems[0].SubItems[1].Text;
+                    model.Destino = listViewAereos.SelectedItems[0].SubItems[2].Text;
+                    model.Paradas = listViewAereos.SelectedItems[0].SubItems[3].Text;
+                    model.FechayHoraPartida = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[4].Text);
+                    model.FechayHoraLlegada = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[5].Text);
+                    model.TiempoViaje = listViewAereos.SelectedItems[0].SubItems[6].Text;
+                    model.Aerolinea = listViewAereos.SelectedItems[0].SubItems[7].Text;
+                    model.Categoria = listViewAereos.SelectedItems[0].SubItems[8].Text;
+                    model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
+                    model.Precio = double.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
+                    model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                    if (model.RevisarPasajeroCargado() == 0)
+                    {
+                        model.ActivarPasajeSeleccionado();
+                        NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
+                        nuevoPasajeroVuelo.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El pasaje ya tiene un pasajero cargado", "Error al cargar", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
+                }
             }
             else
             {
                 MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
             }
         }
-
         private void buttonEditarPasajerosHotel_Click(object sender, EventArgs e)
         {
-            if(listaHabitacionesSelec.Count > 0) 
-            { 
+            if (listaHabitacionesSelec.Count > 0)
+            {
                 NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
                 nuevoPasajeroHotel.ShowDialog();
             }
@@ -132,13 +147,47 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("El itinerario no tiene habitaciones cargadas", "Sin habitaciones", MessageBoxButtons.OK);
             }
         }
-
-        private void buttonQuitarPasaje_Click(object sender, EventArgs e)
+        private void buttonQuitarPasajero_Click(object sender, EventArgs e)
+        {
+            if (listaPasajesSelec.Count > 0)
+            {
+                if (listViewAereos.SelectedItems.Count == 1)
+                {
+                    model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
+                    model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                    if (model.RevisarPasajeroCargado() != 0)
+                    {
+                        var result = MessageBox.Show("¿Está seguro que desea eliminar al pasajero?", "Eliminar pasajero", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            if(model.QuitarPasajero() == 0)
+                            {
+                                MessageBox.Show("Pasajero eliminado correctamente", "Pasajero eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                            
+                    }
+                    else
+                    {
+                        MessageBox.Show("El pasaje no tiene un pasajero cargado", "Error al eliminar", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
+            }
+        }
+        private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
+        private void buttonQuitarPasaje_Click(object sender, EventArgs e)
         {
 
         }
