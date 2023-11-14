@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AterrizarSA_Grupo5
 {
@@ -190,6 +191,40 @@ namespace AterrizarSA_Grupo5
         private void buttonQuitarPasaje_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonQuitarPasaje_Click_1(object sender, EventArgs e)
+        {
+            if (listViewAereos.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem item in listViewAereos.SelectedItems)
+                {
+                    listViewAereos.Items.Remove(item);
+                }
+            }
+        }
+
+        private void buttonQuitarHabitacion_Click(object sender, EventArgs e)
+        {
+            if (listViewHoteleria.SelectedItems.Count > 0)
+            {
+                // Elimina el elemento seleccionado
+                foreach (ListViewItem item in listViewHoteleria.SelectedItems)
+                {
+                    listViewHoteleria.Items.Remove(item);
+                }
+            }
+        }
+
+        private void buttonQuitarPasajero_Click_1(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listViewAereos.Items)
+            {
+                // Elimina los datos de las columnas 15, 16 y 17
+                item.SubItems[15].Text = ""; 
+                item.SubItems[16].Text = ""; 
+                item.SubItems[17].Text = ""; 
+            }
         }
     }
 }

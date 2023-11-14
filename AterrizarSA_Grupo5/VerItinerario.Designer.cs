@@ -28,521 +28,552 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            buttonEditarPasajerosHotel = new Button();
-            buttonQuitarHabitacion = new Button();
-            label11 = new Label();
-            buttonVolverAtras = new Button();
-            listViewHoteleria = new ListView();
-            idHotel = new ColumnHeader();
-            codigo = new ColumnHeader();
-            hotel = new ColumnHeader();
-            ciudad = new ColumnHeader();
-            direccion = new ColumnHeader();
-            habitacion = new ColumnHeader();
-            tarifa = new ColumnHeader();
-            capacidad = new ColumnHeader();
-            adultosMax = new ColumnHeader();
-            menoresMax = new ColumnHeader();
-            infantesMax = new ColumnHeader();
-            Desde = new ColumnHeader();
-            Hasta = new ColumnHeader();
-            groupBox1 = new GroupBox();
-            labelSubTotalHoteles = new Label();
-            groupBox2 = new GroupBox();
-            labelSubTotalVuelos = new Label();
-            listViewAereos = new ListView();
-            idVuelo = new ColumnHeader();
-            origen = new ColumnHeader();
-            destino = new ColumnHeader();
-            paradas = new ColumnHeader();
-            fechaSalida = new ColumnHeader();
-            fechaLlegada = new ColumnHeader();
-            tiempoVuelo = new ColumnHeader();
-            aerolinea = new ColumnHeader();
-            clase = new ColumnHeader();
-            tipoPasajero = new ColumnHeader();
-            precioBase = new ColumnHeader();
-            impuestos = new ColumnHeader();
-            comision = new ColumnHeader();
-            disponibilidad = new ColumnHeader();
-            idPasaje = new ColumnHeader();
-            label6 = new Label();
-            buttonQuitarPasajero = new Button();
-            buttonEditarPasajerosPasajes = new Button();
-            label12 = new Label();
-            label20 = new Label();
-            panel1 = new Panel();
-            labelFechaInicioItinerario = new Label();
-            labelItinerarioSelec = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            buttonGenerarPreReserva = new Button();
-            buttonQuitarPasaje = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.buttonEditarPasajerosHotel = new System.Windows.Forms.Button();
+            this.buttonQuitarHabitacion = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonVolverAtras = new System.Windows.Forms.Button();
+            this.listViewHoteleria = new System.Windows.Forms.ListView();
+            this.idHotel = new System.Windows.Forms.ColumnHeader();
+            this.codigo = new System.Windows.Forms.ColumnHeader();
+            this.hotel = new System.Windows.Forms.ColumnHeader();
+            this.ciudad = new System.Windows.Forms.ColumnHeader();
+            this.direccion = new System.Windows.Forms.ColumnHeader();
+            this.habitacion = new System.Windows.Forms.ColumnHeader();
+            this.tarifa = new System.Windows.Forms.ColumnHeader();
+            this.capacidad = new System.Windows.Forms.ColumnHeader();
+            this.adultosMax = new System.Windows.Forms.ColumnHeader();
+            this.menoresMax = new System.Windows.Forms.ColumnHeader();
+            this.infantesMax = new System.Windows.Forms.ColumnHeader();
+            this.Desde = new System.Windows.Forms.ColumnHeader();
+            this.Hasta = new System.Windows.Forms.ColumnHeader();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelSubTotalHoteles = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonQuitarPasaje = new System.Windows.Forms.Button();
+            this.labelSubTotalVuelos = new System.Windows.Forms.Label();
+            this.listViewAereos = new System.Windows.Forms.ListView();
+            this.idVuelo = new System.Windows.Forms.ColumnHeader();
+            this.origen = new System.Windows.Forms.ColumnHeader();
+            this.destino = new System.Windows.Forms.ColumnHeader();
+            this.paradas = new System.Windows.Forms.ColumnHeader();
+            this.fechaSalida = new System.Windows.Forms.ColumnHeader();
+            this.fechaLlegada = new System.Windows.Forms.ColumnHeader();
+            this.tiempoVuelo = new System.Windows.Forms.ColumnHeader();
+            this.aerolinea = new System.Windows.Forms.ColumnHeader();
+            this.clase = new System.Windows.Forms.ColumnHeader();
+            this.tipoPasajero = new System.Windows.Forms.ColumnHeader();
+            this.precioBase = new System.Windows.Forms.ColumnHeader();
+            this.impuestos = new System.Windows.Forms.ColumnHeader();
+            this.comision = new System.Windows.Forms.ColumnHeader();
+            this.disponibilidad = new System.Windows.Forms.ColumnHeader();
+            this.idPasaje = new System.Windows.Forms.ColumnHeader();
+            this.NombrePasajero = new System.Windows.Forms.ColumnHeader();
+            this.DNIPasajero = new System.Windows.Forms.ColumnHeader();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonQuitarPasajero = new System.Windows.Forms.Button();
+            this.buttonEditarPasajerosPasajes = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelFechaInicioItinerario = new System.Windows.Forms.Label();
+            this.labelItinerarioSelec = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.buttonGenerarPreReserva = new System.Windows.Forms.Button();
+            this.FechaDeNacimientoPasajero = new System.Windows.Forms.ColumnHeader();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.RoyalBlue;
-            label1.Location = new Point(17, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(124, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Numero itinerario:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(17, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Numero itinerario:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.RoyalBlue;
-            label2.Location = new Point(411, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(109, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Fecha de inicio:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(411, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha de inicio:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(8, 32);
-            label7.Name = "label7";
-            label7.Size = new Size(109, 15);
-            label7.TabIndex = 17;
-            label7.Text = "Servicios Hoteleria";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 18);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Servicios Hoteleria";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(799, 186);
-            label8.Name = "label8";
-            label8.Size = new Size(52, 15);
-            label8.TabIndex = 21;
-            label8.Text = "Subtotal";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(775, 186);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 18);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Subtotal";
             // 
             // buttonEditarPasajerosHotel
             // 
-            buttonEditarPasajerosHotel.BackColor = Color.CornflowerBlue;
-            buttonEditarPasajerosHotel.FlatAppearance.BorderSize = 0;
-            buttonEditarPasajerosHotel.FlatStyle = FlatStyle.Flat;
-            buttonEditarPasajerosHotel.ForeColor = Color.White;
-            buttonEditarPasajerosHotel.Location = new Point(8, 177);
-            buttonEditarPasajerosHotel.Margin = new Padding(3, 4, 3, 4);
-            buttonEditarPasajerosHotel.Name = "buttonEditarPasajerosHotel";
-            buttonEditarPasajerosHotel.Size = new Size(153, 39);
-            buttonEditarPasajerosHotel.TabIndex = 20;
-            buttonEditarPasajerosHotel.Text = "Editar pasajeros";
-            buttonEditarPasajerosHotel.UseVisualStyleBackColor = false;
-            buttonEditarPasajerosHotel.Click += buttonEditarPasajerosHotel_Click;
+            this.buttonEditarPasajerosHotel.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonEditarPasajerosHotel.FlatAppearance.BorderSize = 0;
+            this.buttonEditarPasajerosHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarPasajerosHotel.ForeColor = System.Drawing.Color.White;
+            this.buttonEditarPasajerosHotel.Location = new System.Drawing.Point(8, 177);
+            this.buttonEditarPasajerosHotel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEditarPasajerosHotel.Name = "buttonEditarPasajerosHotel";
+            this.buttonEditarPasajerosHotel.Size = new System.Drawing.Size(153, 39);
+            this.buttonEditarPasajerosHotel.TabIndex = 20;
+            this.buttonEditarPasajerosHotel.Text = "Editar pasajeros";
+            this.buttonEditarPasajerosHotel.UseVisualStyleBackColor = false;
             // 
             // buttonQuitarHabitacion
             // 
-            buttonQuitarHabitacion.BackColor = Color.LightSteelBlue;
-            buttonQuitarHabitacion.FlatAppearance.BorderSize = 0;
-            buttonQuitarHabitacion.FlatStyle = FlatStyle.Flat;
-            buttonQuitarHabitacion.Location = new Point(167, 177);
-            buttonQuitarHabitacion.Margin = new Padding(3, 4, 3, 4);
-            buttonQuitarHabitacion.Name = "buttonQuitarHabitacion";
-            buttonQuitarHabitacion.Size = new Size(153, 39);
-            buttonQuitarHabitacion.TabIndex = 19;
-            buttonQuitarHabitacion.Text = "Quitar habitación";
-            buttonQuitarHabitacion.UseVisualStyleBackColor = false;
+            this.buttonQuitarHabitacion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonQuitarHabitacion.FlatAppearance.BorderSize = 0;
+            this.buttonQuitarHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuitarHabitacion.Location = new System.Drawing.Point(167, 177);
+            this.buttonQuitarHabitacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonQuitarHabitacion.Name = "buttonQuitarHabitacion";
+            this.buttonQuitarHabitacion.Size = new System.Drawing.Size(153, 39);
+            this.buttonQuitarHabitacion.TabIndex = 19;
+            this.buttonQuitarHabitacion.Text = "Quitar habitación";
+            this.buttonQuitarHabitacion.UseVisualStyleBackColor = false;
+            this.buttonQuitarHabitacion.Click += new System.EventHandler(this.buttonQuitarHabitacion_Click);
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(806, 616);
-            label11.Name = "label11";
-            label11.Size = new Size(53, 15);
-            label11.TabIndex = 28;
-            label11.Text = "TOTAL:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(791, 616);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 18);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "TOTAL:";
             // 
             // buttonVolverAtras
             // 
-            buttonVolverAtras.BackColor = Color.LightSteelBlue;
-            buttonVolverAtras.FlatAppearance.BorderSize = 0;
-            buttonVolverAtras.FlatStyle = FlatStyle.Flat;
-            buttonVolverAtras.Location = new Point(806, 666);
-            buttonVolverAtras.Margin = new Padding(3, 4, 3, 4);
-            buttonVolverAtras.Name = "buttonVolverAtras";
-            buttonVolverAtras.Size = new Size(153, 39);
-            buttonVolverAtras.TabIndex = 30;
-            buttonVolverAtras.Text = "Volver atrás";
-            buttonVolverAtras.UseVisualStyleBackColor = false;
-            buttonVolverAtras.Click += buttonVolverAtras_Click;
+            this.buttonVolverAtras.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonVolverAtras.FlatAppearance.BorderSize = 0;
+            this.buttonVolverAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolverAtras.Location = new System.Drawing.Point(806, 666);
+            this.buttonVolverAtras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonVolverAtras.Name = "buttonVolverAtras";
+            this.buttonVolverAtras.Size = new System.Drawing.Size(153, 39);
+            this.buttonVolverAtras.TabIndex = 30;
+            this.buttonVolverAtras.Text = "Volver atrás";
+            this.buttonVolverAtras.UseVisualStyleBackColor = false;
             // 
             // listViewHoteleria
             // 
-            listViewHoteleria.Columns.AddRange(new ColumnHeader[] { idHotel, codigo, hotel, ciudad, direccion, habitacion, tarifa, capacidad, adultosMax, menoresMax, infantesMax, Desde, Hasta });
-            listViewHoteleria.FullRowSelect = true;
-            listViewHoteleria.Location = new Point(8, 53);
-            listViewHoteleria.Margin = new Padding(3, 4, 3, 4);
-            listViewHoteleria.Name = "listViewHoteleria";
-            listViewHoteleria.Size = new Size(929, 116);
-            listViewHoteleria.TabIndex = 52;
-            listViewHoteleria.UseCompatibleStateImageBehavior = false;
-            listViewHoteleria.View = View.Details;
+            this.listViewHoteleria.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idHotel,
+            this.codigo,
+            this.hotel,
+            this.ciudad,
+            this.direccion,
+            this.habitacion,
+            this.tarifa,
+            this.capacidad,
+            this.adultosMax,
+            this.menoresMax,
+            this.infantesMax,
+            this.Desde,
+            this.Hasta});
+            this.listViewHoteleria.FullRowSelect = true;
+            this.listViewHoteleria.Location = new System.Drawing.Point(8, 53);
+            this.listViewHoteleria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listViewHoteleria.Name = "listViewHoteleria";
+            this.listViewHoteleria.Size = new System.Drawing.Size(929, 116);
+            this.listViewHoteleria.TabIndex = 52;
+            this.listViewHoteleria.UseCompatibleStateImageBehavior = false;
+            this.listViewHoteleria.View = System.Windows.Forms.View.Details;
             // 
             // idHotel
             // 
-            idHotel.Text = "IdHotel";
+            this.idHotel.Text = "IdHotel";
             // 
             // codigo
             // 
-            codigo.Text = "Código";
+            this.codigo.Text = "Código";
             // 
             // hotel
             // 
-            hotel.Text = "Hotel";
+            this.hotel.Text = "Hotel";
             // 
             // ciudad
             // 
-            ciudad.Text = "Ciudad";
+            this.ciudad.Text = "Ciudad";
             // 
             // direccion
             // 
-            direccion.Text = "Dirección";
+            this.direccion.Text = "Dirección";
             // 
             // habitacion
             // 
-            habitacion.Text = "Habitación";
+            this.habitacion.Text = "Habitación";
             // 
             // tarifa
             // 
-            tarifa.Text = "Tarifa";
+            this.tarifa.Text = "Tarifa";
             // 
             // capacidad
             // 
-            capacidad.Text = "Capacidad";
+            this.capacidad.Text = "Capacidad";
             // 
             // adultosMax
             // 
-            adultosMax.Text = "Adultos máx.";
+            this.adultosMax.Text = "Adultos máx.";
             // 
             // menoresMax
             // 
-            menoresMax.Text = "Menores máx.";
+            this.menoresMax.Text = "Menores máx.";
             // 
             // infantesMax
             // 
-            infantesMax.Text = "Infantes máx.";
+            this.infantesMax.Text = "Infantes máx.";
             // 
             // Desde
             // 
-            Desde.Text = "Desde";
+            this.Desde.Text = "Desde";
             // 
             // Hasta
             // 
-            Hasta.Text = "Hasta";
+            this.Hasta.Text = "Hasta";
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.White;
-            groupBox1.Controls.Add(labelSubTotalHoteles);
-            groupBox1.Controls.Add(listViewHoteleria);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(buttonQuitarHabitacion);
-            groupBox1.Controls.Add(buttonEditarPasajerosHotel);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Location = new Point(16, 345);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(943, 267);
-            groupBox1.TabIndex = 54;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Hotelería";
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.labelSubTotalHoteles);
+            this.groupBox1.Controls.Add(this.listViewHoteleria);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.buttonQuitarHabitacion);
+            this.groupBox1.Controls.Add(this.buttonEditarPasajerosHotel);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Location = new System.Drawing.Point(16, 345);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(943, 267);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hotelería";
             // 
             // labelSubTotalHoteles
             // 
-            labelSubTotalHoteles.AutoSize = true;
-            labelSubTotalHoteles.BackColor = Color.LightBlue;
-            labelSubTotalHoteles.Location = new Point(857, 186);
-            labelSubTotalHoteles.Name = "labelSubTotalHoteles";
-            labelSubTotalHoteles.Size = new Size(69, 15);
-            labelSubTotalHoteles.TabIndex = 68;
-            labelSubTotalHoteles.Text = "SUBTOTAL";
+            this.labelSubTotalHoteles.AutoSize = true;
+            this.labelSubTotalHoteles.BackColor = System.Drawing.Color.LightBlue;
+            this.labelSubTotalHoteles.Location = new System.Drawing.Point(849, 187);
+            this.labelSubTotalHoteles.Name = "labelSubTotalHoteles";
+            this.labelSubTotalHoteles.Size = new System.Drawing.Size(86, 18);
+            this.labelSubTotalHoteles.TabIndex = 68;
+            this.labelSubTotalHoteles.Text = "SUBTOTAL";
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = Color.White;
-            groupBox2.Controls.Add(buttonQuitarPasaje);
-            groupBox2.Controls.Add(labelSubTotalVuelos);
-            groupBox2.Controls.Add(listViewAereos);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(buttonQuitarPasajero);
-            groupBox2.Controls.Add(buttonEditarPasajerosPasajes);
-            groupBox2.Controls.Add(label12);
-            groupBox2.Location = new Point(16, 57);
-            groupBox2.Margin = new Padding(3, 4, 3, 4);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(943, 267);
-            groupBox2.TabIndex = 62;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Vuelos";
-            // 
-            // labelSubTotalVuelos
-            // 
-            labelSubTotalVuelos.AutoSize = true;
-            labelSubTotalVuelos.BackColor = Color.LightBlue;
-            labelSubTotalVuelos.Location = new Point(857, 189);
-            labelSubTotalVuelos.Name = "labelSubTotalVuelos";
-            labelSubTotalVuelos.Size = new Size(69, 15);
-            labelSubTotalVuelos.TabIndex = 67;
-            labelSubTotalVuelos.Text = "SUBTOTAL";
-            // 
-            // listViewAereos
-            // 
-            listViewAereos.AllowColumnReorder = true;
-            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje });
-            listViewAereos.FullRowSelect = true;
-            listViewAereos.Location = new Point(8, 53);
-            listViewAereos.Margin = new Padding(3, 4, 3, 4);
-            listViewAereos.Name = "listViewAereos";
-            listViewAereos.Size = new Size(929, 116);
-            listViewAereos.TabIndex = 62;
-            listViewAereos.UseCompatibleStateImageBehavior = false;
-            listViewAereos.View = View.Details;
-            // 
-            // idVuelo
-            // 
-            idVuelo.Text = "IdVuelo";
-            // 
-            // origen
-            // 
-            origen.Text = "Origen";
-            // 
-            // destino
-            // 
-            destino.Text = "Destino";
-            // 
-            // paradas
-            // 
-            paradas.Text = "Paradas";
-            // 
-            // fechaSalida
-            // 
-            fechaSalida.Text = "Fecha salida";
-            // 
-            // fechaLlegada
-            // 
-            fechaLlegada.Text = "Fecha llegada";
-            // 
-            // tiempoVuelo
-            // 
-            tiempoVuelo.Text = "Tiempo de vuelo";
-            // 
-            // aerolinea
-            // 
-            aerolinea.Text = "Aerolinea";
-            // 
-            // clase
-            // 
-            clase.Text = "Clase";
-            // 
-            // tipoPasajero
-            // 
-            tipoPasajero.Text = "Tipo de pasajero";
-            // 
-            // precioBase
-            // 
-            precioBase.Text = "Precio base";
-            // 
-            // impuestos
-            // 
-            impuestos.Text = "Impuestos";
-            // 
-            // comision
-            // 
-            comision.Text = "Comisión";
-            // 
-            // disponibilidad
-            // 
-            disponibilidad.Text = "Disponibilidad";
-            // 
-            // idPasaje
-            // 
-            idPasaje.Text = "IdPasaje";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(8, 32);
-            label6.Name = "label6";
-            label6.Size = new Size(96, 15);
-            label6.TabIndex = 17;
-            label6.Text = "Servicios Vuelos";
-            // 
-            // buttonQuitarPasajero
-            // 
-            buttonQuitarPasajero.BackColor = Color.LightSteelBlue;
-            buttonQuitarPasajero.FlatAppearance.BorderSize = 0;
-            buttonQuitarPasajero.FlatStyle = FlatStyle.Flat;
-            buttonQuitarPasajero.Location = new Point(169, 177);
-            buttonQuitarPasajero.Margin = new Padding(3, 4, 3, 4);
-            buttonQuitarPasajero.Name = "buttonQuitarPasajero";
-            buttonQuitarPasajero.Size = new Size(153, 39);
-            buttonQuitarPasajero.TabIndex = 19;
-            buttonQuitarPasajero.Text = "Quitar pasajero";
-            buttonQuitarPasajero.UseVisualStyleBackColor = false;
-            buttonQuitarPasajero.Click += buttonQuitarPasajero_Click;
-            // 
-            // buttonEditarPasajerosPasajes
-            // 
-            buttonEditarPasajerosPasajes.BackColor = Color.CornflowerBlue;
-            buttonEditarPasajerosPasajes.FlatAppearance.BorderSize = 0;
-            buttonEditarPasajerosPasajes.FlatStyle = FlatStyle.Flat;
-            buttonEditarPasajerosPasajes.ForeColor = Color.White;
-            buttonEditarPasajerosPasajes.Location = new Point(8, 177);
-            buttonEditarPasajerosPasajes.Margin = new Padding(3, 4, 3, 4);
-            buttonEditarPasajerosPasajes.Name = "buttonEditarPasajerosPasajes";
-            buttonEditarPasajerosPasajes.Size = new Size(153, 39);
-            buttonEditarPasajerosPasajes.TabIndex = 20;
-            buttonEditarPasajerosPasajes.Text = "Editar pasajeros";
-            buttonEditarPasajerosPasajes.UseVisualStyleBackColor = false;
-            buttonEditarPasajerosPasajes.Click += buttonEditarPasajerosPasajes_Click;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(799, 189);
-            label12.Name = "label12";
-            label12.Size = new Size(52, 15);
-            label12.TabIndex = 21;
-            label12.Text = "Subtotal";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.BackColor = Color.LightBlue;
-            label20.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(865, 616);
-            label20.Name = "label20";
-            label20.Size = new Size(77, 15);
-            label20.TabIndex = 77;
-            label20.Text = "SUBTOTAL";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(labelFechaInicioItinerario);
-            panel1.Controls.Add(labelItinerarioSelec);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(0, -3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1557, 53);
-            panel1.TabIndex = 73;
-            // 
-            // labelFechaInicioItinerario
-            // 
-            labelFechaInicioItinerario.AutoSize = true;
-            labelFechaInicioItinerario.Location = new Point(544, 19);
-            labelFechaInicioItinerario.Name = "labelFechaInicioItinerario";
-            labelFechaInicioItinerario.Size = new Size(121, 15);
-            labelFechaInicioItinerario.TabIndex = 74;
-            labelFechaInicioItinerario.Text = "NO SELECCIONADO";
-            // 
-            // labelItinerarioSelec
-            // 
-            labelItinerarioSelec.AutoSize = true;
-            labelItinerarioSelec.Location = new Point(167, 19);
-            labelItinerarioSelec.Name = "labelItinerarioSelec";
-            labelItinerarioSelec.Size = new Size(121, 15);
-            labelItinerarioSelec.TabIndex = 73;
-            labelItinerarioSelec.Text = "NO SELECCIONADO";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bg_donut_1;
-            pictureBox2.Location = new Point(0, 292);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(533, 433);
-            pictureBox2.TabIndex = 78;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.landing_bg_object_2;
-            pictureBox3.Location = new Point(1231, -55);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(355, 353);
-            pictureBox3.TabIndex = 79;
-            pictureBox3.TabStop = false;
-            // 
-            // buttonGenerarPreReserva
-            // 
-            buttonGenerarPreReserva.BackColor = Color.CornflowerBlue;
-            buttonGenerarPreReserva.FlatAppearance.BorderSize = 0;
-            buttonGenerarPreReserva.FlatStyle = FlatStyle.Flat;
-            buttonGenerarPreReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonGenerarPreReserva.ForeColor = Color.White;
-            buttonGenerarPreReserva.Location = new Point(24, 666);
-            buttonGenerarPreReserva.Margin = new Padding(3, 4, 3, 4);
-            buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
-            buttonGenerarPreReserva.Size = new Size(143, 39);
-            buttonGenerarPreReserva.TabIndex = 81;
-            buttonGenerarPreReserva.Text = "Generar pre-reserva";
-            buttonGenerarPreReserva.UseVisualStyleBackColor = false;
-            buttonGenerarPreReserva.Click += buttonGenerarPreReserva_Click;
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.buttonQuitarPasaje);
+            this.groupBox2.Controls.Add(this.labelSubTotalVuelos);
+            this.groupBox2.Controls.Add(this.listViewAereos);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.buttonQuitarPasajero);
+            this.groupBox2.Controls.Add(this.buttonEditarPasajerosPasajes);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(16, 57);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(943, 267);
+            this.groupBox2.TabIndex = 62;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Vuelos";
             // 
             // buttonQuitarPasaje
             // 
-            buttonQuitarPasaje.BackColor = Color.LightSteelBlue;
-            buttonQuitarPasaje.FlatAppearance.BorderSize = 0;
-            buttonQuitarPasaje.FlatStyle = FlatStyle.Flat;
-            buttonQuitarPasaje.Location = new Point(328, 177);
-            buttonQuitarPasaje.Margin = new Padding(3, 4, 3, 4);
-            buttonQuitarPasaje.Name = "buttonQuitarPasaje";
-            buttonQuitarPasaje.Size = new Size(153, 39);
-            buttonQuitarPasaje.TabIndex = 68;
-            buttonQuitarPasaje.Text = "Quitar pasaje";
-            buttonQuitarPasaje.UseVisualStyleBackColor = false;
-            buttonQuitarPasaje.Click += buttonQuitarPasaje_Click;
+            this.buttonQuitarPasaje.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonQuitarPasaje.FlatAppearance.BorderSize = 0;
+            this.buttonQuitarPasaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuitarPasaje.Location = new System.Drawing.Point(328, 177);
+            this.buttonQuitarPasaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonQuitarPasaje.Name = "buttonQuitarPasaje";
+            this.buttonQuitarPasaje.Size = new System.Drawing.Size(153, 39);
+            this.buttonQuitarPasaje.TabIndex = 68;
+            this.buttonQuitarPasaje.Text = "Quitar pasaje";
+            this.buttonQuitarPasaje.UseVisualStyleBackColor = false;
+            this.buttonQuitarPasaje.Click += new System.EventHandler(this.buttonQuitarPasaje_Click_1);
+            // 
+            // labelSubTotalVuelos
+            // 
+            this.labelSubTotalVuelos.AutoSize = true;
+            this.labelSubTotalVuelos.BackColor = System.Drawing.Color.LightBlue;
+            this.labelSubTotalVuelos.Location = new System.Drawing.Point(843, 189);
+            this.labelSubTotalVuelos.Name = "labelSubTotalVuelos";
+            this.labelSubTotalVuelos.Size = new System.Drawing.Size(86, 18);
+            this.labelSubTotalVuelos.TabIndex = 67;
+            this.labelSubTotalVuelos.Text = "SUBTOTAL";
+            // 
+            // listViewAereos
+            // 
+            this.listViewAereos.AllowColumnReorder = true;
+            this.listViewAereos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idVuelo,
+            this.origen,
+            this.destino,
+            this.paradas,
+            this.fechaSalida,
+            this.fechaLlegada,
+            this.tiempoVuelo,
+            this.aerolinea,
+            this.clase,
+            this.tipoPasajero,
+            this.precioBase,
+            this.impuestos,
+            this.comision,
+            this.disponibilidad,
+            this.idPasaje,
+            this.NombrePasajero,
+            this.DNIPasajero,
+            this.FechaDeNacimientoPasajero});
+            this.listViewAereos.FullRowSelect = true;
+            this.listViewAereos.Location = new System.Drawing.Point(8, 53);
+            this.listViewAereos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listViewAereos.Name = "listViewAereos";
+            this.listViewAereos.Size = new System.Drawing.Size(929, 116);
+            this.listViewAereos.TabIndex = 62;
+            this.listViewAereos.UseCompatibleStateImageBehavior = false;
+            this.listViewAereos.View = System.Windows.Forms.View.Details;
+            // 
+            // idVuelo
+            // 
+            this.idVuelo.Text = "IdVuelo";
+            // 
+            // origen
+            // 
+            this.origen.Text = "Origen";
+            // 
+            // destino
+            // 
+            this.destino.Text = "Destino";
+            // 
+            // paradas
+            // 
+            this.paradas.Text = "Paradas";
+            // 
+            // fechaSalida
+            // 
+            this.fechaSalida.Text = "Fecha salida";
+            // 
+            // fechaLlegada
+            // 
+            this.fechaLlegada.Text = "Fecha llegada";
+            // 
+            // tiempoVuelo
+            // 
+            this.tiempoVuelo.Text = "Tiempo de vuelo";
+            // 
+            // aerolinea
+            // 
+            this.aerolinea.Text = "Aerolinea";
+            // 
+            // clase
+            // 
+            this.clase.Text = "Clase";
+            // 
+            // tipoPasajero
+            // 
+            this.tipoPasajero.Text = "Tipo de pasajero";
+            // 
+            // precioBase
+            // 
+            this.precioBase.Text = "Precio base";
+            // 
+            // impuestos
+            // 
+            this.impuestos.Text = "Impuestos";
+            // 
+            // comision
+            // 
+            this.comision.Text = "Comisión";
+            // 
+            // disponibilidad
+            // 
+            this.disponibilidad.Text = "Disponibilidad";
+            // 
+            // idPasaje
+            // 
+            this.idPasaje.Text = "IdPasaje";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Servicios Vuelos";
+            // 
+            // buttonQuitarPasajero
+            // 
+            this.buttonQuitarPasajero.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonQuitarPasajero.FlatAppearance.BorderSize = 0;
+            this.buttonQuitarPasajero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuitarPasajero.Location = new System.Drawing.Point(169, 177);
+            this.buttonQuitarPasajero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonQuitarPasajero.Name = "buttonQuitarPasajero";
+            this.buttonQuitarPasajero.Size = new System.Drawing.Size(153, 39);
+            this.buttonQuitarPasajero.TabIndex = 19;
+            this.buttonQuitarPasajero.Text = "Quitar pasajero";
+            this.buttonQuitarPasajero.UseVisualStyleBackColor = false;
+            this.buttonQuitarPasajero.Click += new System.EventHandler(this.buttonQuitarPasajero_Click_1);
+            // 
+            // buttonEditarPasajerosPasajes
+            // 
+            this.buttonEditarPasajerosPasajes.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonEditarPasajerosPasajes.FlatAppearance.BorderSize = 0;
+            this.buttonEditarPasajerosPasajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarPasajerosPasajes.ForeColor = System.Drawing.Color.White;
+            this.buttonEditarPasajerosPasajes.Location = new System.Drawing.Point(8, 177);
+            this.buttonEditarPasajerosPasajes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEditarPasajerosPasajes.Name = "buttonEditarPasajerosPasajes";
+            this.buttonEditarPasajerosPasajes.Size = new System.Drawing.Size(153, 39);
+            this.buttonEditarPasajerosPasajes.TabIndex = 20;
+            this.buttonEditarPasajerosPasajes.Text = "Editar pasajeros";
+            this.buttonEditarPasajerosPasajes.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(775, 189);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 18);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Subtotal";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.LightBlue;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(862, 616);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(94, 18);
+            this.label20.TabIndex = 77;
+            this.label20.Text = "SUBTOTAL";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Controls.Add(this.labelFechaInicioItinerario);
+            this.panel1.Controls.Add(this.labelItinerarioSelec);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(0, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1557, 53);
+            this.panel1.TabIndex = 73;
+            // 
+            // labelFechaInicioItinerario
+            // 
+            this.labelFechaInicioItinerario.AutoSize = true;
+            this.labelFechaInicioItinerario.Location = new System.Drawing.Point(544, 19);
+            this.labelFechaInicioItinerario.Name = "labelFechaInicioItinerario";
+            this.labelFechaInicioItinerario.Size = new System.Drawing.Size(153, 18);
+            this.labelFechaInicioItinerario.TabIndex = 74;
+            this.labelFechaInicioItinerario.Text = "NO SELECCIONADO";
+            // 
+            // labelItinerarioSelec
+            // 
+            this.labelItinerarioSelec.AutoSize = true;
+            this.labelItinerarioSelec.Location = new System.Drawing.Point(167, 19);
+            this.labelItinerarioSelec.Name = "labelItinerarioSelec";
+            this.labelItinerarioSelec.Size = new System.Drawing.Size(153, 18);
+            this.labelItinerarioSelec.TabIndex = 73;
+            this.labelItinerarioSelec.Text = "NO SELECCIONADO";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AterrizarSA_Grupo5.Properties.Resources.bg_donut_1;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 292);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(533, 433);
+            this.pictureBox2.TabIndex = 78;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AterrizarSA_Grupo5.Properties.Resources.landing_bg_object_2;
+            this.pictureBox3.Location = new System.Drawing.Point(1231, -55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(355, 353);
+            this.pictureBox3.TabIndex = 79;
+            this.pictureBox3.TabStop = false;
+            // 
+            // buttonGenerarPreReserva
+            // 
+            this.buttonGenerarPreReserva.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonGenerarPreReserva.FlatAppearance.BorderSize = 0;
+            this.buttonGenerarPreReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenerarPreReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGenerarPreReserva.ForeColor = System.Drawing.Color.White;
+            this.buttonGenerarPreReserva.Location = new System.Drawing.Point(24, 666);
+            this.buttonGenerarPreReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
+            this.buttonGenerarPreReserva.Size = new System.Drawing.Size(143, 39);
+            this.buttonGenerarPreReserva.TabIndex = 81;
+            this.buttonGenerarPreReserva.Text = "Generar pre-reserva";
+            this.buttonGenerarPreReserva.UseVisualStyleBackColor = false;
             // 
             // VerItinerario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            ClientSize = new Size(974, 724);
-            Controls.Add(groupBox1);
-            Controls.Add(buttonGenerarPreReserva);
-            Controls.Add(panel1);
-            Controls.Add(label20);
-            Controls.Add(groupBox2);
-            Controls.Add(buttonVolverAtras);
-            Controls.Add(label11);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox3);
-            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "VerItinerario";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "VerItinerario";
-            Load += VerItinerario_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(974, 724);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonGenerarPreReserva);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.buttonVolverAtras);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "VerItinerario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "VerItinerario";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -612,5 +643,8 @@
         private Button buttonVolverAtras;
         private Button buttonGenerarPreReserva;
         private Button buttonQuitarPasaje;
+        private ColumnHeader NombrePasajero;
+        private ColumnHeader DNIPasajero;
+        private ColumnHeader FechaDeNacimientoPasajero;
     }
 }

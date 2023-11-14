@@ -28,88 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox2 = new PictureBox();
-            label1 = new Label();
-            textBoxNombre = new TextBox();
-            buttonConfirmarNombre = new Button();
-            buttonVolverAtras = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.buttonConfirmarNombre = new System.Windows.Forms.Button();
+            this.buttonVolverAtras = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.landing_bg_object_2;
-            pictureBox2.Location = new Point(-9, -19);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(372, 302);
-            pictureBox2.TabIndex = 71;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Image = global::AterrizarSA_Grupo5.Properties.Resources.landing_bg_object_2;
+            this.pictureBox2.Location = new System.Drawing.Point(-35, -13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(353, 263);
+            this.pictureBox2.TabIndex = 71;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 45);
-            label1.Name = "label1";
-            label1.Size = new Size(350, 20);
-            label1.TabIndex = 74;
-            label1.Text = "Por favor, ingrese un nombre para crear el itinerario";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(21, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(350, 18);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Por favor, ingrese un nombre para crear el itinerario:";
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(87, 78);
-            textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(190, 23);
-            textBoxNombre.TabIndex = 75;
+            this.textBoxNombre.Location = new System.Drawing.Point(101, 78);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(217, 27);
+            this.textBoxNombre.TabIndex = 75;
             // 
             // buttonConfirmarNombre
             // 
-            buttonConfirmarNombre.BackColor = Color.RoyalBlue;
-            buttonConfirmarNombre.FlatAppearance.BorderSize = 0;
-            buttonConfirmarNombre.FlatStyle = FlatStyle.Flat;
-            buttonConfirmarNombre.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonConfirmarNombre.ForeColor = Color.White;
-            buttonConfirmarNombre.Location = new Point(47, 129);
-            buttonConfirmarNombre.Name = "buttonConfirmarNombre";
-            buttonConfirmarNombre.Size = new Size(114, 39);
-            buttonConfirmarNombre.TabIndex = 77;
-            buttonConfirmarNombre.Text = "Confirmar";
-            buttonConfirmarNombre.UseVisualStyleBackColor = false;
-            buttonConfirmarNombre.Click += buttonConfirmarNombre_Click;
+            this.buttonConfirmarNombre.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonConfirmarNombre.FlatAppearance.BorderSize = 0;
+            this.buttonConfirmarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirmarNombre.ForeColor = System.Drawing.Color.White;
+            this.buttonConfirmarNombre.Location = new System.Drawing.Point(32, 145);
+            this.buttonConfirmarNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonConfirmarNombre.Name = "buttonConfirmarNombre";
+            this.buttonConfirmarNombre.Size = new System.Drawing.Size(130, 52);
+            this.buttonConfirmarNombre.TabIndex = 77;
+            this.buttonConfirmarNombre.Text = "Confirmar";
+            this.buttonConfirmarNombre.UseVisualStyleBackColor = false;
             // 
             // buttonVolverAtras
             // 
-            buttonVolverAtras.BackColor = Color.LightSteelBlue;
-            buttonVolverAtras.FlatAppearance.BorderSize = 0;
-            buttonVolverAtras.FlatStyle = FlatStyle.Flat;
-            buttonVolverAtras.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonVolverAtras.Location = new Point(225, 130);
-            buttonVolverAtras.Name = "buttonVolverAtras";
-            buttonVolverAtras.Size = new Size(114, 38);
-            buttonVolverAtras.TabIndex = 76;
-            buttonVolverAtras.Text = "Volver atrás";
-            buttonVolverAtras.UseVisualStyleBackColor = false;
-            buttonVolverAtras.Click += buttonVolverAtras_Click;
+            this.buttonVolverAtras.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonVolverAtras.FlatAppearance.BorderSize = 0;
+            this.buttonVolverAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonVolverAtras.Location = new System.Drawing.Point(256, 145);
+            this.buttonVolverAtras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonVolverAtras.Name = "buttonVolverAtras";
+            this.buttonVolverAtras.Size = new System.Drawing.Size(130, 51);
+            this.buttonVolverAtras.TabIndex = 76;
+            this.buttonVolverAtras.Text = "Volver atrás";
+            this.buttonVolverAtras.UseVisualStyleBackColor = false;
             // 
             // PedirNombre
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            ClientSize = new Size(372, 194);
-            Controls.Add(buttonConfirmarNombre);
-            Controls.Add(buttonVolverAtras);
-            Controls.Add(textBoxNombre);
-            Controls.Add(label1);
-            Controls.Add(pictureBox2);
-            Name = "PedirNombre";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "PedirNombre";
-            Load += PedirNombre_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(425, 231);
+            this.Controls.Add(this.buttonConfirmarNombre);
+            this.Controls.Add(this.buttonVolverAtras);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "PedirNombre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "PedirNombre";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
