@@ -226,5 +226,10 @@ namespace AterrizarSA_Grupo5
                 item.SubItems[17].Text = ""; 
             }
         }
+
+        private void buttonVolverAtras_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -73,6 +73,7 @@
             this.idPasaje = new System.Windows.Forms.ColumnHeader();
             this.NombrePasajero = new System.Windows.Forms.ColumnHeader();
             this.DNIPasajero = new System.Windows.Forms.ColumnHeader();
+            this.FechaDeNacimientoPasajero = new System.Windows.Forms.ColumnHeader();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonQuitarPasajero = new System.Windows.Forms.Button();
             this.buttonEditarPasajerosPasajes = new System.Windows.Forms.Button();
@@ -84,7 +85,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonGenerarPreReserva = new System.Windows.Forms.Button();
-            this.FechaDeNacimientoPasajero = new System.Windows.Forms.ColumnHeader();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,7 +164,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(791, 616);
+            this.label11.Location = new System.Drawing.Point(791, 629);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 18);
             this.label11.TabIndex = 28;
@@ -182,6 +182,7 @@
             this.buttonVolverAtras.TabIndex = 30;
             this.buttonVolverAtras.Text = "Volver atrás";
             this.buttonVolverAtras.UseVisualStyleBackColor = false;
+            this.buttonVolverAtras.Click += new System.EventHandler(this.buttonVolverAtras_Click_1);
             // 
             // listViewHoteleria
             // 
@@ -473,7 +474,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.LightBlue;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(862, 616);
+            this.label20.Location = new System.Drawing.Point(862, 629);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(94, 18);
             this.label20.TabIndex = 77;
@@ -537,7 +538,7 @@
             this.buttonGenerarPreReserva.Location = new System.Drawing.Point(24, 666);
             this.buttonGenerarPreReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
-            this.buttonGenerarPreReserva.Size = new System.Drawing.Size(143, 39);
+            this.buttonGenerarPreReserva.Size = new System.Drawing.Size(153, 39);
             this.buttonGenerarPreReserva.TabIndex = 81;
             this.buttonGenerarPreReserva.Text = "Generar pre-reserva";
             this.buttonGenerarPreReserva.UseVisualStyleBackColor = false;
