@@ -230,7 +230,6 @@ namespace AterrizarSA_Grupo5
         }
         private void buttonQuitarHabitacion_Click(object sender, EventArgs e)
         {
-            /*
             if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
                 MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
@@ -260,7 +259,7 @@ namespace AterrizarSA_Grupo5
                             if (model.QuitarHabitacion() == "OK")
                             {
                                 MessageBox.Show("La habitación fue eliminada correctamente", "Habitación eliminada", MessageBoxButtons.OK);
-                                this.Close();
+                                ActualizarListas();
                             }
                         }
                     }
@@ -274,7 +273,7 @@ namespace AterrizarSA_Grupo5
                     MessageBox.Show("El itinerario no tiene habitaciones cargadas", "Sin habitaciones", MessageBoxButtons.OK);
                 }
                 
-            }*/
+            }
         }
         private void ActualizarListas()
         {

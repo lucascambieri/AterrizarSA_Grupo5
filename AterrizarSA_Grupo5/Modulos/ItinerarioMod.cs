@@ -69,15 +69,13 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             foreach (var item in listaHotelHabitacion)
             {
-                foreach (var hotel in ItinerarioActivo.HabitacionesSelec)
+                foreach (var hab in habitacionesSelec.Habitaciones)
                 {
-                    foreach (var habitacion in hotel.Habitaciones)
+                    if (item.IdHotel == habitacionesSelec.IdHotel && item.IdHabitacion == hab.IdHabitacion)
                     {
-                        if (item.IdHotel == hotel.IdHotel && item.IdHabitacion == habitacion.IdHabitacion)
-                            // Ya tiene esta habitación asignada
-                            return -2;
+                        // Ya tiene esta habitación asignada
+                        return -2;
                     }
-
                 }
             }
             
@@ -139,20 +137,25 @@ namespace AterrizarSA_Grupo5.Modulos
             {
                 if (itinerario.Id == ItinerarioActivo.Id)
                 {
-                    itinerario.PasajesSelec.Remove(pasajeEliminar);
-                    switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                    foreach (var pasaje in itinerario.PasajesSelec)
                     {
-                        case "Adulto":
-                            itinerario.CantAdultos--;
-                            break;
-                        case "Menor":
-                            itinerario.CantMenores--;
-                            break;
-                        case "Infante":
-                            itinerario.CantInfantes--;
-                            break;
+                        //if(pasaje.)
+                        itinerario.PasajesSelec.Remove(pasajeEliminar);
+                        switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                        {
+                            case "Adulto":
+                                itinerario.CantAdultos--;
+                                break;
+                            case "Menor":
+                                itinerario.CantMenores--;
+                                break;
+                            case "Infante":
+                                itinerario.CantInfantes--;
+                                break;
+                        }
+                        return 0;
                     }
-                    return 0;
+                    
                 }
             }
             return -1;
@@ -163,11 +166,17 @@ namespace AterrizarSA_Grupo5.Modulos
             {
                 if (itinerario.Id == ItinerarioActivo.Id)
                 {
-                    itinerario.HabitacionesSelec.Remove(habitacionEliminar);
-                    itinerario.CantAdultos -= cantAdultos;
-                    itinerario.CantMenores -= cantMenores;
-                    itinerario.CantInfantes -= cantInfantes;
-                    return 0;
+                    foreach (var hot in itinerario.HabitacionesSelec)
+                    {
+                        if (hot == habitacionEliminar)
+                        {
+                            itinerario.HabitacionesSelec.Remove(hot);
+                            itinerario.CantAdultos -= cantAdultos;
+                            itinerario.CantMenores -= cantMenores;
+                            itinerario.CantInfantes -= cantInfantes;
+                            return 0;
+                        }
+                    }
                 }
             }
             return -1;
