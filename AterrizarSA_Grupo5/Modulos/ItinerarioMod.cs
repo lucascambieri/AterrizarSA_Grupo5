@@ -52,13 +52,16 @@ namespace AterrizarSA_Grupo5.Modulos
             ultimoId++;
             return ultimoId;
         }
-        public static int AgregarHabitacion(HotelEnt habitacionesSelec)
+        public static int AgregarHabitacion(HotelEnt habitacionesSelec,int cantAdultos, int cantMenores, int cantInfantes)
         {
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
                 if (itinerario.Id == ItinerarioActivo.Id)
                 {
                     itinerario.HabitacionesSelec.Add(habitacionesSelec);
+                    itinerario.CantAdultos += cantAdultos;
+                    itinerario.CantMenores += cantMenores;
+                    itinerario.CantInfantes += cantInfantes;
                     return 0;
                 }
             }
@@ -71,6 +74,18 @@ namespace AterrizarSA_Grupo5.Modulos
                 if (itinerario.Id == ItinerarioActivo.Id)
                 {
                     itinerario.PasajesSelec.Add(pasajesSelec);
+                    switch (pasajesSelec.Pasajes[0].TipoPasajero)
+                    {
+                        case "Adulto":
+                            itinerario.CantAdultos++;
+                            break;
+                        case "Menor":
+                            itinerario.CantMenores++;
+                            break;
+                        case "Infante":
+                            itinerario.CantInfantes++;
+                            break;
+                    }
                     return 0;
                 }
             }

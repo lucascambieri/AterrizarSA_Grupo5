@@ -53,6 +53,7 @@
             groupBox1 = new GroupBox();
             labelSubTotalHoteles = new Label();
             groupBox2 = new GroupBox();
+            buttonQuitarPasaje = new Button();
             labelSubTotalVuelos = new Label();
             listViewAereos = new ListView();
             idVuelo = new ColumnHeader();
@@ -81,7 +82,7 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             buttonGenerarPreReserva = new Button();
-            buttonQuitarPasaje = new Button();
+            idPasajeroPasaje = new ColumnHeader();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             panel1.SuspendLayout();
@@ -292,6 +293,20 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Vuelos";
             // 
+            // buttonQuitarPasaje
+            // 
+            buttonQuitarPasaje.BackColor = Color.LightSteelBlue;
+            buttonQuitarPasaje.FlatAppearance.BorderSize = 0;
+            buttonQuitarPasaje.FlatStyle = FlatStyle.Flat;
+            buttonQuitarPasaje.Location = new Point(328, 177);
+            buttonQuitarPasaje.Margin = new Padding(3, 4, 3, 4);
+            buttonQuitarPasaje.Name = "buttonQuitarPasaje";
+            buttonQuitarPasaje.Size = new Size(153, 39);
+            buttonQuitarPasaje.TabIndex = 68;
+            buttonQuitarPasaje.Text = "Quitar pasaje";
+            buttonQuitarPasaje.UseVisualStyleBackColor = false;
+            buttonQuitarPasaje.Click += buttonQuitarPasaje_Click;
+            // 
             // labelSubTotalVuelos
             // 
             labelSubTotalVuelos.AutoSize = true;
@@ -305,7 +320,7 @@
             // listViewAereos
             // 
             listViewAereos.AllowColumnReorder = true;
-            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje });
+            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje, idPasajeroPasaje });
             listViewAereos.FullRowSelect = true;
             listViewAereos.Location = new Point(8, 53);
             listViewAereos.Margin = new Padding(3, 4, 3, 4);
@@ -497,19 +512,9 @@
             buttonGenerarPreReserva.UseVisualStyleBackColor = false;
             buttonGenerarPreReserva.Click += buttonGenerarPreReserva_Click;
             // 
-            // buttonQuitarPasaje
+            // idPasajeroPasaje
             // 
-            buttonQuitarPasaje.BackColor = Color.LightSteelBlue;
-            buttonQuitarPasaje.FlatAppearance.BorderSize = 0;
-            buttonQuitarPasaje.FlatStyle = FlatStyle.Flat;
-            buttonQuitarPasaje.Location = new Point(328, 177);
-            buttonQuitarPasaje.Margin = new Padding(3, 4, 3, 4);
-            buttonQuitarPasaje.Name = "buttonQuitarPasaje";
-            buttonQuitarPasaje.Size = new Size(153, 39);
-            buttonQuitarPasaje.TabIndex = 68;
-            buttonQuitarPasaje.Text = "Quitar pasaje";
-            buttonQuitarPasaje.UseVisualStyleBackColor = false;
-            buttonQuitarPasaje.Click += buttonQuitarPasaje_Click;
+            idPasajeroPasaje.Text = "IdPasajeroPasaje";
             // 
             // VerItinerario
             // 
@@ -612,5 +617,6 @@
         private Button buttonVolverAtras;
         private Button buttonGenerarPreReserva;
         private Button buttonQuitarPasaje;
+        private ColumnHeader idPasajeroPasaje;
     }
 }

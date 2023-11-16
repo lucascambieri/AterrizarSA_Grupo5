@@ -61,6 +61,11 @@ namespace AterrizarSA_Grupo5
 
         public int GuardarPasaje()
         {
+            // Valido si la fecha elegida es menor a la que tiene el itinerario, la guardo.
+            if (this.FechayHoraPartida < ItinerarioMod.ItinerarioActivo.FechaInicio)
+            {
+                ItinerarioMod.ItinerarioActivo.FechaInicio = this.FechayHoraPartida;
+            }
             VueloEnt vueloSeleccionado = new VueloEnt();
             PasajeEnt pasajeSeleccionado = new PasajeEnt();
             vueloSeleccionado.IdVuelo = this.IdVuelo;
@@ -77,8 +82,39 @@ namespace AterrizarSA_Grupo5
             pasajeSeleccionado.TipoPasajero = this.TipoPasajero;
             List<PasajeEnt> listaPasajeSeleccionado = new List<PasajeEnt>() { pasajeSeleccionado };
             vueloSeleccionado.Pasajes = listaPasajeSeleccionado;
-            int result = ItinerarioMod.AgregarPasaje(vueloSeleccionado);
-            return result;
+            if(this.CantidadDisponible > 0)
+            {
+                return ItinerarioMod.AgregarPasaje(vueloSeleccionado);
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public string ValidarDatosBusqueda(string cantAdultos, string cantMenores, string cantInfantes, DateTime fechaIda, DateTime fechaVuelta, string origen, string destino)
+        {
+            if (cantAdultos == "0" && cantMenores == "0" && cantInfantes == "0")
+            {
+                return "Seleccione al menos un pasajero";
+            }
+            if (cantInfantes != "0" && cantAdultos == "0")
+            {
+                return "Los infantes deben viajar con un adulto";
+            }
+            if (fechaVuelta < fechaIda)
+            {
+                return "La fecha de vuelta no puede ser inferior a la de partida";
+            }
+            if (fechaIda.Date < DateTime.Today)
+            {
+                return "La fecha de ida no puede ser anterior a hoy";
+            }
+                if (origen == "" || destino == "")
+            {
+                return "Seleccione origen y destino buscados";
+            }
+
+            return "OK";
         }
     }
 }

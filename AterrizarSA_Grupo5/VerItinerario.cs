@@ -81,6 +81,7 @@ namespace AterrizarSA_Grupo5
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add(pasaje.CantidadElegida.ToString());
                     listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
+                    listViewItem.SubItems.Add(pasaje.IdPasajeroPasaje.ToString("D5"));
                     listViewAereos.Items.Add(listViewItem);
                     listViewAereos.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
@@ -114,6 +115,7 @@ namespace AterrizarSA_Grupo5
                     model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
                     model.Precio = double.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
                     model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                    model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[15].Text);
                     if (model.RevisarPasajeroCargado() == 0)
                     {
                         model.ActivarPasajeSeleccionado();
@@ -184,9 +186,15 @@ namespace AterrizarSA_Grupo5
         }
         private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
         {
-
+            if (!(listaHabitacionesSelec.Count == 0 && listaPasajesSelec.Count == 0))
+            {
+                model.ValidarPasajerosCargados();
+            }
+            else
+            {
+                MessageBox.Show("El itinerario no tiene ningún producto cargado aún.\nNo se puede pre-reservar","Faltan productos",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
-
         private void buttonQuitarPasaje_Click(object sender, EventArgs e)
         {
 

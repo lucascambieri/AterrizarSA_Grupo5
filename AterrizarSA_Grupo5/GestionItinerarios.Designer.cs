@@ -35,7 +35,7 @@
             ButtonNuevoItinerario = new Button();
             buttonActivaItinerario = new Button();
             buttonVerItinerario = new Button();
-            buttonGenerarReserva = new Button();
+            buttonGenerarPreReserva = new Button();
             buttonVolverAtras = new Button();
             Eliminar = new Button();
             buttonBuscar = new Button();
@@ -138,20 +138,20 @@
             buttonVerItinerario.UseVisualStyleBackColor = false;
             buttonVerItinerario.Click += buttonVerItinerario_Click;
             // 
-            // buttonGenerarReserva
+            // buttonGenerarPreReserva
             // 
-            buttonGenerarReserva.BackColor = Color.CornflowerBlue;
-            buttonGenerarReserva.FlatAppearance.BorderSize = 0;
-            buttonGenerarReserva.FlatStyle = FlatStyle.Flat;
-            buttonGenerarReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonGenerarReserva.ForeColor = Color.White;
-            buttonGenerarReserva.Location = new Point(564, 332);
-            buttonGenerarReserva.Name = "buttonGenerarReserva";
-            buttonGenerarReserva.Size = new Size(114, 39);
-            buttonGenerarReserva.TabIndex = 60;
-            buttonGenerarReserva.Text = "Generar pre-reserva";
-            buttonGenerarReserva.UseVisualStyleBackColor = false;
-            buttonGenerarReserva.Click += buttonGenerarReserva_Click;
+            buttonGenerarPreReserva.BackColor = Color.CornflowerBlue;
+            buttonGenerarPreReserva.FlatAppearance.BorderSize = 0;
+            buttonGenerarPreReserva.FlatStyle = FlatStyle.Flat;
+            buttonGenerarPreReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonGenerarPreReserva.ForeColor = Color.White;
+            buttonGenerarPreReserva.Location = new Point(564, 332);
+            buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
+            buttonGenerarPreReserva.Size = new Size(114, 39);
+            buttonGenerarPreReserva.TabIndex = 60;
+            buttonGenerarPreReserva.Text = "Generar pre-reserva";
+            buttonGenerarPreReserva.UseVisualStyleBackColor = false;
+            buttonGenerarPreReserva.Click += buttonGenerarPreReserva_Click;
             // 
             // buttonVolverAtras
             // 
@@ -379,7 +379,7 @@
             Controls.Add(groupBox1);
             Controls.Add(Eliminar);
             Controls.Add(buttonVolverAtras);
-            Controls.Add(buttonGenerarReserva);
+            Controls.Add(buttonGenerarPreReserva);
             Controls.Add(buttonVerItinerario);
             Controls.Add(buttonActivaItinerario);
             Controls.Add(ButtonNuevoItinerario);
@@ -408,7 +408,7 @@
         private Button ButtonNuevoItinerario;
         private Button buttonActivaItinerario;
         private Button buttonVerItinerario;
-        private Button buttonGenerarReserva;
+        private Button buttonGenerarPreReserva;
         private Button buttonVolverAtras;
         private Button Eliminar;
         private Button buttonBuscar;

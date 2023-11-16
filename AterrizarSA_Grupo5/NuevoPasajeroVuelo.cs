@@ -60,7 +60,7 @@ namespace AterrizarSA_Grupo5
                         valorTipoPasajero = "Error";
                         break;
                 }
-                // Validad capacidades de la habitacion
+                // Validar pasajero cargado == del pasaje
                 int disponibilidad = model.ValidarDisponibilidad(valorTipoPasajero);
                 if (disponibilidad == 0)
                 {

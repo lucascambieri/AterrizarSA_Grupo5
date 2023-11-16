@@ -28,32 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox5 = new ComboBox();
-            comboBox4 = new ComboBox();
+            comboBoxOrigen = new ComboBox();
             label10 = new Label();
-            label9 = new Label();
             label8 = new Label();
             dTPickerVuelta = new DateTimePicker();
             dTPickerIda = new DateTimePicker();
             label7 = new Label();
             label6 = new Label();
             label3 = new Label();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            comboBoxInfantes = new ComboBox();
+            comboBoxMenores = new ComboBox();
+            comboBoxAdultos = new ComboBox();
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
-            comboBox6 = new ComboBox();
-            comboBox7 = new ComboBox();
+            comboBoxDestino = new ComboBox();
             label11 = new Label();
-            label12 = new Label();
             label13 = new Label();
-            label14 = new Label();
             buttonGuardarPasaje = new Button();
             buttonVolverAtras = new Button();
-            button4 = new Button();
+            buttonBuscarPasajes = new Button();
             listViewPasajes = new ListView();
             idVuelo = new ColumnHeader();
             origen = new ColumnHeader();
@@ -71,59 +66,42 @@
             disponibilidad = new ColumnHeader();
             idPasaje = new ColumnHeader();
             label16 = new Label();
-            groupBox1 = new GroupBox();
-            comboBox8 = new ComboBox();
+            groupBoxBusqueda = new GroupBox();
+            comboBoxCategorias = new ComboBox();
             label17 = new Label();
             panel1 = new Panel();
             labelItinerarioSelec = new Label();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
-            groupBox1.SuspendLayout();
+            groupBoxVuelos = new GroupBox();
+            groupBoxBusqueda.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
-            // comboBox5
+            // comboBoxOrigen
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(465, 232);
-            comboBox5.Margin = new Padding(3, 4, 3, 4);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(165, 23);
-            comboBox5.TabIndex = 34;
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(465, 177);
-            comboBox4.Margin = new Padding(3, 4, 3, 4);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(165, 23);
-            comboBox4.TabIndex = 33;
+            comboBoxOrigen.FormattingEnabled = true;
+            comboBoxOrigen.Location = new Point(409, 68);
+            comboBoxOrigen.Margin = new Padding(3, 4, 3, 4);
+            comboBoxOrigen.Name = "comboBoxOrigen";
+            comboBoxOrigen.Size = new Size(165, 23);
+            comboBoxOrigen.TabIndex = 34;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(465, 213);
+            label10.Location = new Point(409, 49);
             label10.Name = "label10";
             label10.Size = new Size(49, 15);
             label10.TabIndex = 32;
             label10.Text = "Ciudad:";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(465, 155);
-            label9.Name = "label9";
-            label9.Size = new Size(34, 15);
-            label9.TabIndex = 31;
-            label9.Text = "Pais:";
-            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(459, 127);
+            label8.Location = new Point(409, 22);
             label8.Name = "label8";
             label8.Size = new Size(122, 15);
             label8.TabIndex = 30;
@@ -172,37 +150,40 @@
             label3.TabIndex = 25;
             label3.Text = "Seleccione las fechas:";
             // 
-            // comboBox3
+            // comboBoxInfantes
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(291, 68);
-            comboBox3.Margin = new Padding(3, 4, 3, 4);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(49, 23);
-            comboBox3.TabIndex = 24;
+            comboBoxInfantes.FormattingEnabled = true;
+            comboBoxInfantes.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxInfantes.Location = new Point(276, 68);
+            comboBoxInfantes.Margin = new Padding(3, 4, 3, 4);
+            comboBoxInfantes.Name = "comboBoxInfantes";
+            comboBoxInfantes.Size = new Size(49, 23);
+            comboBoxInfantes.TabIndex = 24;
             // 
-            // comboBox2
+            // comboBoxMenores
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(174, 68);
-            comboBox2.Margin = new Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(49, 23);
-            comboBox2.TabIndex = 23;
+            comboBoxMenores.FormattingEnabled = true;
+            comboBoxMenores.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxMenores.Location = new Point(163, 68);
+            comboBoxMenores.Margin = new Padding(3, 4, 3, 4);
+            comboBoxMenores.Name = "comboBoxMenores";
+            comboBoxMenores.Size = new Size(49, 23);
+            comboBoxMenores.TabIndex = 23;
             // 
-            // comboBox1
+            // comboBoxAdultos
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(51, 68);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(49, 23);
-            comboBox1.TabIndex = 22;
+            comboBoxAdultos.FormattingEnabled = true;
+            comboBoxAdultos.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxAdultos.Location = new Point(51, 68);
+            comboBoxAdultos.Margin = new Padding(3, 4, 3, 4);
+            comboBoxAdultos.Name = "comboBoxAdultos";
+            comboBoxAdultos.Size = new Size(49, 23);
+            comboBoxAdultos.TabIndex = 22;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(284, 46);
+            label5.Location = new Point(276, 49);
             label5.Name = "label5";
             label5.Size = new Size(53, 15);
             label5.TabIndex = 21;
@@ -211,7 +192,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(163, 46);
+            label4.Location = new Point(163, 49);
             label4.Name = "label4";
             label4.Size = new Size(59, 15);
             label4.TabIndex = 20;
@@ -220,7 +201,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(47, 46);
+            label2.Location = new Point(51, 49);
             label2.Name = "label2";
             label2.Size = new Size(50, 15);
             label2.TabIndex = 19;
@@ -235,59 +216,32 @@
             label1.TabIndex = 18;
             label1.Text = "Disponibilidad para:";
             // 
-            // comboBox6
+            // comboBoxDestino
             // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(692, 232);
-            comboBox6.Margin = new Padding(3, 4, 3, 4);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(165, 23);
-            comboBox6.TabIndex = 39;
-            // 
-            // comboBox7
-            // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Location = new Point(691, 177);
-            comboBox7.Margin = new Padding(3, 4, 3, 4);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(165, 23);
-            comboBox7.TabIndex = 38;
+            comboBoxDestino.FormattingEnabled = true;
+            comboBoxDestino.Location = new Point(636, 68);
+            comboBoxDestino.Margin = new Padding(3, 4, 3, 4);
+            comboBoxDestino.Name = "comboBoxDestino";
+            comboBoxDestino.Size = new Size(165, 23);
+            comboBoxDestino.TabIndex = 39;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(692, 213);
+            label11.Location = new Point(636, 49);
             label11.Name = "label11";
             label11.Size = new Size(49, 15);
             label11.TabIndex = 37;
             label11.Text = "Ciudad:";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(692, 155);
-            label12.Name = "label12";
-            label12.Size = new Size(34, 15);
-            label12.TabIndex = 36;
-            label12.Text = "Pais:";
-            // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(691, 127);
+            label13.Location = new Point(636, 22);
             label13.Name = "label13";
             label13.Size = new Size(127, 15);
             label13.TabIndex = 35;
             label13.Text = "Seleccione el destino:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(35, 348);
-            label14.Name = "label14";
-            label14.Size = new Size(119, 15);
-            label14.TabIndex = 41;
-            label14.Text = "Seleccion de vuelos:";
             // 
             // buttonGuardarPasaje
             // 
@@ -319,19 +273,20 @@
             buttonVolverAtras.UseVisualStyleBackColor = false;
             buttonVolverAtras.Click += buttonVolverAtras_Click;
             // 
-            // button4
+            // buttonBuscarPasajes
             // 
-            button4.BackColor = Color.RoyalBlue;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(979, 127);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(147, 67);
-            button4.TabIndex = 47;
-            button4.Text = "BUSCAR";
-            button4.UseVisualStyleBackColor = false;
+            buttonBuscarPasajes.BackColor = Color.RoyalBlue;
+            buttonBuscarPasajes.FlatAppearance.BorderSize = 0;
+            buttonBuscarPasajes.FlatStyle = FlatStyle.Flat;
+            buttonBuscarPasajes.ForeColor = Color.White;
+            buttonBuscarPasajes.Location = new Point(1023, 225);
+            buttonBuscarPasajes.Margin = new Padding(3, 4, 3, 4);
+            buttonBuscarPasajes.Name = "buttonBuscarPasajes";
+            buttonBuscarPasajes.Size = new Size(152, 42);
+            buttonBuscarPasajes.TabIndex = 47;
+            buttonBuscarPasajes.Text = "BUSCAR";
+            buttonBuscarPasajes.UseVisualStyleBackColor = false;
+            buttonBuscarPasajes.Click += buttonBuscarPasajes_Click;
             // 
             // listViewPasajes
             // 
@@ -417,57 +372,52 @@
             label16.TabIndex = 51;
             label16.Text = "N° de itinerario:";
             // 
-            // groupBox1
+            // groupBoxBusqueda
             // 
-            groupBox1.BackColor = Color.White;
-            groupBox1.Controls.Add(comboBox8);
-            groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(dTPickerIda);
-            groupBox1.Controls.Add(comboBox6);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(comboBox7);
-            groupBox1.Controls.Add(comboBox5);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(dTPickerVuelta);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(comboBox4);
-            groupBox1.Location = new Point(16, 55);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(1182, 282);
-            groupBox1.TabIndex = 53;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Buscar vuelo:";
+            groupBoxBusqueda.BackColor = Color.White;
+            groupBoxBusqueda.Controls.Add(comboBoxCategorias);
+            groupBoxBusqueda.Controls.Add(label17);
+            groupBoxBusqueda.Controls.Add(label1);
+            groupBoxBusqueda.Controls.Add(comboBoxInfantes);
+            groupBoxBusqueda.Controls.Add(label2);
+            groupBoxBusqueda.Controls.Add(label4);
+            groupBoxBusqueda.Controls.Add(label5);
+            groupBoxBusqueda.Controls.Add(buttonBuscarPasajes);
+            groupBoxBusqueda.Controls.Add(comboBoxAdultos);
+            groupBoxBusqueda.Controls.Add(comboBoxMenores);
+            groupBoxBusqueda.Controls.Add(label3);
+            groupBoxBusqueda.Controls.Add(dTPickerIda);
+            groupBoxBusqueda.Controls.Add(comboBoxDestino);
+            groupBoxBusqueda.Controls.Add(label6);
+            groupBoxBusqueda.Controls.Add(label11);
+            groupBoxBusqueda.Controls.Add(comboBoxOrigen);
+            groupBoxBusqueda.Controls.Add(label8);
+            groupBoxBusqueda.Controls.Add(label10);
+            groupBoxBusqueda.Controls.Add(dTPickerVuelta);
+            groupBoxBusqueda.Controls.Add(label7);
+            groupBoxBusqueda.Controls.Add(label13);
+            groupBoxBusqueda.Location = new Point(16, 55);
+            groupBoxBusqueda.Margin = new Padding(3, 4, 3, 4);
+            groupBoxBusqueda.Name = "groupBoxBusqueda";
+            groupBoxBusqueda.Padding = new Padding(3, 4, 3, 4);
+            groupBoxBusqueda.Size = new Size(1182, 282);
+            groupBoxBusqueda.TabIndex = 53;
+            groupBoxBusqueda.TabStop = false;
+            groupBoxBusqueda.Text = "Buscar vuelo:";
             // 
-            // comboBox8
+            // comboBoxCategorias
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "E: Economy", "P: Premium", "B: Bussiness", "F: First" });
-            comboBox8.Location = new Point(465, 46);
-            comboBox8.Margin = new Padding(3, 4, 3, 4);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(142, 23);
-            comboBox8.TabIndex = 49;
+            comboBoxCategorias.FormattingEnabled = true;
+            comboBoxCategorias.Location = new Point(409, 146);
+            comboBoxCategorias.Margin = new Padding(3, 4, 3, 4);
+            comboBoxCategorias.Name = "comboBoxCategorias";
+            comboBoxCategorias.Size = new Size(142, 23);
+            comboBoxCategorias.TabIndex = 49;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(459, 22);
+            label17.Location = new Point(409, 127);
             label17.Name = "label17";
             label17.Size = new Size(116, 15);
             label17.TabIndex = 48;
@@ -510,65 +460,70 @@
             pictureBox3.TabIndex = 56;
             pictureBox3.TabStop = false;
             // 
+            // groupBoxVuelos
+            // 
+            groupBoxVuelos.BackColor = Color.White;
+            groupBoxVuelos.Location = new Point(17, 344);
+            groupBoxVuelos.Name = "groupBoxVuelos";
+            groupBoxVuelos.Size = new Size(1181, 202);
+            groupBoxVuelos.TabIndex = 57;
+            groupBoxVuelos.TabStop = false;
+            groupBoxVuelos.Text = "Seleccion de vuelos:";
+            // 
             // ListadoVuelos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1216, 610);
-            Controls.Add(panel1);
-            Controls.Add(groupBox1);
-            Controls.Add(listViewPasajes);
-            Controls.Add(buttonVolverAtras);
             Controls.Add(buttonGuardarPasaje);
-            Controls.Add(label14);
-            Controls.Add(pictureBox1);
+            Controls.Add(listViewPasajes);
+            Controls.Add(groupBoxVuelos);
+            Controls.Add(panel1);
+            Controls.Add(groupBoxBusqueda);
+            Controls.Add(buttonVolverAtras);
             Controls.Add(pictureBox3);
+            Controls.Add(pictureBox1);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(3, 4, 3, 4);
             Name = "ListadoVuelos";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ListadoVuelos";
+            TransparencyKey = Color.Red;
             Load += ListadoVuelos_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            groupBoxBusqueda.ResumeLayout(false);
+            groupBoxBusqueda.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox5;
-        private ComboBox comboBox4;
+        private ComboBox comboBoxOrigen;
         private Label label10;
-        private Label label9;
         private Label label8;
         private DateTimePicker dTPickerVuelta;
         private DateTimePicker dTPickerIda;
         private Label label7;
         private Label label6;
         private Label label3;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxInfantes;
+        private ComboBox comboBoxMenores;
+        private ComboBox comboBoxAdultos;
         private Label label5;
         private Label label4;
         private Label label2;
         private Label label1;
-        private ComboBox comboBox6;
-        private ComboBox comboBox7;
+        private ComboBox comboBoxDestino;
         private Label label11;
-        private Label label12;
         private Label label13;
-        private Label label14;
         private Button buttonGuardarPasaje;
         private Button buttonVolverAtras;
-        private Button button4;
+        private Button buttonBuscarPasajes;
         private ListView listViewPasajes;
         private ColumnHeader idVuelo;
         private ColumnHeader origen;
@@ -585,13 +540,14 @@
         private ColumnHeader comision;
         private ColumnHeader disponibilidad;
         private Label label16;
-        private GroupBox groupBox1;
-        private ComboBox comboBox8;
+        private GroupBox groupBoxBusqueda;
+        private ComboBox comboBoxCategorias;
         private Label label17;
         private Panel panel1;
         private Label labelItinerarioSelec;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private ColumnHeader idPasaje;
+        private GroupBox groupBoxVuelos;
     }
 }

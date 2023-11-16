@@ -135,12 +135,12 @@ namespace AterrizarSA_Grupo5.Modulos
             return -1;
 
         }
-        public static int AgregarPasajeroVuelo(PasajeroEnt nuevoPasajeo)
+        public static int CrearPasajeroVuelo(int idPasajeroPasaje, VueloEnt vueloPasaje)
         {
             PasajerosPorPasajeEnt pasajeroPorPasaje = new PasajerosPorPasajeEnt();
-            pasajeroPorPasaje.VueloPasaje = VueloSeleccionado.VueloPasaje;
-            pasajeroPorPasaje.Pasajero = nuevoPasajeo;
-            if(ReservaDelItinerarioActivo.PasajeroPorPasaje == null)
+            pasajeroPorPasaje.IdPasajeroPasaje = idPasajeroPasaje;
+            pasajeroPorPasaje.VueloPasaje = vueloPasaje;
+            if (ReservaDelItinerarioActivo.PasajeroPorPasaje == null)
             {
                 List<PasajerosPorPasajeEnt> listaPasajeroPorPasaje = new List<PasajerosPorPasajeEnt> { pasajeroPorPasaje };
                 ReservaDelItinerarioActivo.PasajeroPorPasaje = listaPasajeroPorPasaje;
@@ -149,16 +149,27 @@ namespace AterrizarSA_Grupo5.Modulos
             {
                 ReservaDelItinerarioActivo.PasajeroPorPasaje.Add(pasajeroPorPasaje);
             }
-            
+
             return 0;
         }
-        public static int RevisarPasajeroCargadoVuelo(int idVuelo, int idPasaje)
+        public static int AgregarPasajeroVuelo(PasajeroEnt nuevoPasajero)
+        {
+            foreach (var pasajeVuelo in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+            {
+                if(pasajeVuelo.IdPasajeroPasaje == VueloSeleccionado.IdPasajeroPasaje)
+                {
+                    pasajeVuelo.Pasajero = nuevoPasajero;
+                }
+            }
+            return 0;
+        }
+        public static int RevisarPasajeroCargadoVuelo(int idVuelo, int idPasaje, int idPasajeroPasaje)
         {
             if (ReservaDelItinerarioActivo.PasajeroPorPasaje != null)
             {
                 foreach (var pasajes in ReservaDelItinerarioActivo.PasajeroPorPasaje)
                 {
-                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje)
+                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje && pasajes.IdPasajeroPasaje == idPasajeroPasaje)
                     {
                         if (pasajes.Pasajero != null)
                         {
@@ -190,6 +201,40 @@ namespace AterrizarSA_Grupo5.Modulos
                 }
             }
             return 1;
+        }
+        public static int ObtenerUltimoIdPasajeroPasaje()
+        {
+            int ultimoId = 0;
+            foreach (var pasajePasajero in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+            {
+                if(pasajePasajero.Pasajero != null)
+                {
+                    ultimoId = pasajePasajero.IdPasajeroPasaje;
+                    ultimoId++;
+                }
+            }
+            return ultimoId;
+        }
+        public static int ValidarPasajerosCargados()
+        {
+            if(ReservaDelItinerarioActivo == null)
+            {
+                return -1;
+            }
+            else
+            {
+                foreach (var habitacion in ItinerarioMod.ItinerarioActivo.HabitacionesSelec)
+                {
+                    foreach (var pasajeroHabitacion in ReservaDelItinerarioActivo.PasajeroPorHabitacion)
+                    {
+                        if (habitacion == pasajeroHabitacion.HotelHabitacion)
+                        {
+                            return 0;
+                        }
+                    }
+                }
+            }
+            return 0;
         }
     }
 }

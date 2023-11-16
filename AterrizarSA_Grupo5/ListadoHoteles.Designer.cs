@@ -32,20 +32,18 @@
             label2 = new Label();
             label4 = new Label();
             label5 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            comboBoxAdultos = new ComboBox();
+            comboBoxMenores = new ComboBox();
+            comboBoxInfantes = new ComboBox();
             label3 = new Label();
             label6 = new Label();
             label7 = new Label();
             dTPickerIn = new DateTimePicker();
             dTPickerOut = new DateTimePicker();
             label8 = new Label();
-            label9 = new Label();
             label10 = new Label();
-            comboBox4 = new ComboBox();
-            comboBox5 = new ComboBox();
-            button1 = new Button();
+            comboBoxDestino = new ComboBox();
+            buttonBuscarHabitacion = new Button();
             label11 = new Label();
             buttonGuardarHabitacion = new Button();
             buttonVolverAtras = new Button();
@@ -109,30 +107,33 @@
             label5.TabIndex = 4;
             label5.Text = "Infantes:";
             // 
-            // comboBox1
+            // comboBoxAdultos
             // 
-            comboBox1.BackColor = Color.White;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(548, 94);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(39, 23);
-            comboBox1.TabIndex = 5;
+            comboBoxAdultos.BackColor = Color.White;
+            comboBoxAdultos.FormattingEnabled = true;
+            comboBoxAdultos.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxAdultos.Location = new Point(548, 94);
+            comboBoxAdultos.Name = "comboBoxAdultos";
+            comboBoxAdultos.Size = new Size(39, 23);
+            comboBoxAdultos.TabIndex = 5;
             // 
-            // comboBox2
+            // comboBoxMenores
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(637, 94);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(39, 23);
-            comboBox2.TabIndex = 6;
+            comboBoxMenores.FormattingEnabled = true;
+            comboBoxMenores.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxMenores.Location = new Point(637, 94);
+            comboBoxMenores.Name = "comboBoxMenores";
+            comboBoxMenores.Size = new Size(39, 23);
+            comboBoxMenores.TabIndex = 6;
             // 
-            // comboBox3
+            // comboBoxInfantes
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(725, 94);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(39, 23);
-            comboBox3.TabIndex = 7;
+            comboBoxInfantes.FormattingEnabled = true;
+            comboBoxInfantes.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" });
+            comboBoxInfantes.Location = new Point(725, 94);
+            comboBoxInfantes.Name = "comboBoxInfantes";
+            comboBoxInfantes.Size = new Size(39, 23);
+            comboBoxInfantes.TabIndex = 7;
             // 
             // label3
             // 
@@ -184,52 +185,36 @@
             label8.TabIndex = 13;
             label8.Text = "Seleccione el destino:";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(18, 38);
-            label9.Name = "label9";
-            label9.Size = new Size(34, 15);
-            label9.TabIndex = 14;
-            label9.Text = "Pais:";
-            // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(18, 90);
+            label10.Location = new Point(18, 41);
             label10.Name = "label10";
             label10.Size = new Size(49, 15);
             label10.TabIndex = 15;
             label10.Text = "Ciudad:";
             // 
-            // comboBox4
+            // comboBoxDestino
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(18, 56);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(129, 23);
-            comboBox4.TabIndex = 16;
+            comboBoxDestino.FormattingEnabled = true;
+            comboBoxDestino.Location = new Point(18, 59);
+            comboBoxDestino.Name = "comboBoxDestino";
+            comboBoxDestino.Size = new Size(129, 23);
+            comboBoxDestino.TabIndex = 17;
             // 
-            // comboBox5
+            // buttonBuscarHabitacion
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(18, 108);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(129, 23);
-            comboBox5.TabIndex = 17;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(863, 68);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 42);
-            button1.TabIndex = 18;
-            button1.Text = "BUSCAR";
-            button1.UseVisualStyleBackColor = false;
+            buttonBuscarHabitacion.BackColor = Color.RoyalBlue;
+            buttonBuscarHabitacion.FlatAppearance.BorderSize = 0;
+            buttonBuscarHabitacion.FlatStyle = FlatStyle.Flat;
+            buttonBuscarHabitacion.ForeColor = Color.White;
+            buttonBuscarHabitacion.Location = new Point(863, 68);
+            buttonBuscarHabitacion.Name = "buttonBuscarHabitacion";
+            buttonBuscarHabitacion.Size = new Size(123, 42);
+            buttonBuscarHabitacion.TabIndex = 18;
+            buttonBuscarHabitacion.Text = "BUSCAR";
+            buttonBuscarHabitacion.UseVisualStyleBackColor = false;
+            buttonBuscarHabitacion.Click += buttonBuscarHabitacion_Click;
             // 
             // label11
             // 
@@ -363,19 +348,17 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(comboBoxAdultos);
+            groupBox1.Controls.Add(comboBoxMenores);
+            groupBox1.Controls.Add(comboBoxInfantes);
+            groupBox1.Controls.Add(buttonBuscarHabitacion);
             groupBox1.Controls.Add(dTPickerIn);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(comboBox5);
+            groupBox1.Controls.Add(comboBoxDestino);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox4);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(dTPickerOut);
-            groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 43);
@@ -448,20 +431,18 @@
         private Label label2;
         private Label label4;
         private Label label5;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxAdultos;
+        private ComboBox comboBoxMenores;
+        private ComboBox comboBoxInfantes;
         private Label label3;
         private Label label6;
         private Label label7;
         private DateTimePicker dTPickerIn;
         private DateTimePicker dTPickerOut;
         private Label label8;
-        private Label label9;
         private Label label10;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
-        private Button button1;
+        private ComboBox comboBoxDestino;
+        private Button buttonBuscarHabitacion;
         private Label label11;
         private Button buttonGuardarHabitacion;
         private Button buttonVolverAtras;

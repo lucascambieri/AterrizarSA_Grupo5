@@ -15,9 +15,9 @@ namespace AterrizarSA_Grupo5
             ApplicationConfiguration.Initialize();
             Application.Run(new Menu());
 
-            // ItinerarioAlmacen.Grabar(); //descomentar cuando esté terminado
-            // InventarioAlmacen.Grabar(); //descomentar cuando esté terminado
-            // ReservasAlmacen.Grabar(); //descomentar cuando esté terminado
+            //ItinerarioAlmacen.Grabar(); //descomentar cuando esté terminado
+            //InventarioAlmacen.Grabar(); //descomentar cuando esté terminado
+            //ReservasAlmacen.Grabar(); //descomentar cuando esté terminado
         }
     }
 }

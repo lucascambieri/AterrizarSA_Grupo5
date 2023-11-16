@@ -26,6 +26,10 @@ namespace AterrizarSA_Grupo5
         public double PrecioNoche { get; set; }
         public DateTime FechaInicioDisp {  get; set; }
         public DateTime FechaFinDisp { get; set; }
+        public int CantidadAdultosSelec {  get; set; }
+        public int CantidadMenoresSelec {  get; set; }
+        public int CantidadInfantesSelec { get; set; }
+
         public ListadoHotelesModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, int camasAdultos, int camasMenores, int camasInfantes, double precioNoche, DateTime fechaInic, DateTime fechaFin)
         {
             this.IdHotel = idHotel;
@@ -68,6 +72,11 @@ namespace AterrizarSA_Grupo5
         }
         public int Guardarhabitacion()
         {
+            // Valido si la fecha elegida es menor a la que tiene el itinerario, la guardo.
+            if(this.FechaInicioDisp < ItinerarioMod.ItinerarioActivo.FechaInicio)
+            {
+                ItinerarioMod.ItinerarioActivo.FechaInicio = this.FechaInicioDisp;
+            }
             HotelEnt hotelSeleccionado = new HotelEnt();
             HabitacionEnt habitacionSeleccionada = new HabitacionEnt();
             DisponibilidadHabitacionEnt disponibilidadSeleccionada = new DisponibilidadHabitacionEnt();
@@ -91,8 +100,32 @@ namespace AterrizarSA_Grupo5
             habitacionSeleccionada.Disponibilidad = listaDisponibilidadHabitacion;
             List<HabitacionEnt> listaHabitacionAgregar = new List<HabitacionEnt>() { habitacionSeleccionada };
             hotelSeleccionado.Habitaciones = listaHabitacionAgregar;
-            int result = ItinerarioMod.AgregarHabitacion(hotelSeleccionado);
+            int result = ItinerarioMod.AgregarHabitacion(hotelSeleccionado,this.CantidadAdultosSelec,this.CantidadMenoresSelec,this.CantidadInfantesSelec);
             return result;
+        }
+        public string ValidarDatosBusqueda(string cantAdultos, string cantMenores, string cantInfantes, DateTime fechaEntrada, DateTime fechaSalida, string destino)
+        {
+            if (cantAdultos == "0" && cantMenores == "0" && cantInfantes == "0")
+            {
+                return "Seleccione al menos un pasajero";
+            }
+            if (cantInfantes != "0" && cantAdultos == "0")
+            {
+                return "Los infantes deben viajar con un adulto";
+            }
+            if (fechaSalida < fechaEntrada)
+            {
+                return "La fecha de salida no puede ser inferior a la de entrada";
+            }
+            if (fechaEntrada.Date < DateTime.Today)
+            {
+                return "La fecha de entrada no puede ser anterior a hoy";
+            }
+            if (destino == "")
+            {
+                return "Seleccione destino buscado";
+            }
+            return "OK";
         }
     }
 }

@@ -27,26 +27,12 @@ namespace AterrizarSA_Grupo5
             model = new GestionItinerarioModel();
             actualizarListaItinerarios();
         }
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonNuevoItinerario_Click(object sender, EventArgs e)
         {
             PedirNombre pedirNombre = new PedirNombre();
             pedirNombre.ShowDialog();
             actualizarListaItinerarios();
         }
-
         private void buttonActivaItinerario_Click_(object sender, EventArgs e)
         {
             if (listViewItinerarios.SelectedItems.Count > 0)
@@ -88,27 +74,35 @@ namespace AterrizarSA_Grupo5
             }
             else
             {
-                MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void buttonGenerarReserva_Click(object sender, EventArgs e)
+        private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
         {
-            if (listViewItinerarios.SelectedItems.Count > 0)
+            // Validar si existe itinerario activo
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
-                // Verificar si se ha seleccionado un elemento
-                ListViewItem selectedItem = listViewItinerarios.SelectedItems[0]; // Obtener el elemento seleccionado
+                if (listViewItinerarios.SelectedItems.Count > 0)
+                {
+                    // Verificar si se ha seleccionado un elemento
+                    ListViewItem selectedItem = listViewItinerarios.SelectedItems[0]; // Obtener el elemento seleccionado
 
-                // Modificar la ColumnHeader4 (indice 3) del elemento seleccionado
-                selectedItem.SubItems[3].Text = "Pre-Reservado";
+                    // Modificar la ColumnHeader4 (indice 3) del elemento seleccionado
+                    selectedItem.SubItems[3].Text = "Pre-Reservado";
 
-                MessageBox.Show("Revisar y agregar los pasajeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                VerItinerario verItinerario = new VerItinerario();
-                verItinerario.ShowDialog();
+                    MessageBox.Show("Revisar y agregar los pasajeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    VerItinerario verItinerario = new VerItinerario();
+                    verItinerario.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
+                }
             }
             else
             {
-                MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -187,7 +181,7 @@ namespace AterrizarSA_Grupo5
             }
             else
             {
-                MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -200,7 +194,7 @@ namespace AterrizarSA_Grupo5
             }
             else
             {
-                MessageBox.Show("Seleccionar un itinerario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

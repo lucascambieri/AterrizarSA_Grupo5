@@ -141,7 +141,55 @@
           "IdPasaje": "00004",
           "Categoria": "E",
           "Precio": "35000,00",
-          "TipoPasajero": "Menores",
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00005",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 4
+        }
+
+      ]
+    },
+    {
+      "IdVuelo": "00002",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Buenos Aires",
+      "Paradas": "0",
+      "TiempoViaje": "2.45",
+      "FechayHoraPartida": "2023-12-07 08:00:00.000",
+      "FechayHoraLlegada": "2023-12-07 10:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00001",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00002",
+          "Categoria": "B",
+          "Precio": "55000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 13
+        },
+        {
+          "IdPasaje": "00003",
+          "Categoria": "P",
+          "Precio": "85000,00",
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 5
+        },
+        {
+          "IdPasaje": "00004",
+          "Categoria": "E",
+          "Precio": "35000,00",
+          "TipoPasajero": "Menor",
           "CantidadDisponible": 15
         },
         {
