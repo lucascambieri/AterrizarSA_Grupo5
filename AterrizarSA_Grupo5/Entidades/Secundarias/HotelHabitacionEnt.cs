@@ -12,5 +12,6 @@ namespace AterrizarSA_Grupo5.Entidades.Secundarias
         public int IdHabitacion { get; set; }
         public DateTime FechaChekIn { get; set; }
         public DateTime FechaChekOut { get; set; }
+        public HotelEnt HotelEntidad { get; set; }
     }
 }

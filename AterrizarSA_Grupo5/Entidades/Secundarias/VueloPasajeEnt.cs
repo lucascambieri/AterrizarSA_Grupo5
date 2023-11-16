@@ -11,5 +11,6 @@ namespace AterrizarSA_Grupo5.Entidades.Secundarias
         public int IdVuelo { get; set; }
         public int IdPasaje { get; set; }
         public int CantidadElegida { get; set; }
+        public VueloEnt VueloEntidad { get; set; }
     }
 }

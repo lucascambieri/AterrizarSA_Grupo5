@@ -133,49 +133,63 @@ namespace AterrizarSA_Grupo5.Modulos
         }
         public static int QuitarPasaje(VueloEnt pasajeEliminar)
         {
-            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            List<VueloPasajeEnt> listaVueloPasaje = new List<VueloPasajeEnt>();
+            foreach (var vuelo in ItinerarioActivo.PasajesSelec)
             {
-                if (itinerario.Id == ItinerarioActivo.Id)
+                foreach (var pasaje in vuelo.Pasajes)
                 {
-                    foreach (var pasaje in itinerario.PasajesSelec)
-                    {
-                        //if(pasaje.)
-                        itinerario.PasajesSelec.Remove(pasajeEliminar);
-                        switch (pasajeEliminar.Pasajes[0].TipoPasajero)
-                        {
-                            case "Adulto":
-                                itinerario.CantAdultos--;
-                                break;
-                            case "Menor":
-                                itinerario.CantMenores--;
-                                break;
-                            case "Infante":
-                                itinerario.CantInfantes--;
-                                break;
-                        }
-                        return 0;
-                    }
-                    
+                    VueloPasajeEnt vueloPasaje = new VueloPasajeEnt();
+                    vueloPasaje.IdVuelo = vuelo.IdVuelo;
+                    vueloPasaje.IdPasaje = pasaje.IdPasaje;
+                    vueloPasaje.VueloEntidad = vuelo;
+                    listaVueloPasaje.Add(vueloPasaje);
                 }
+            }
+            foreach (var vuelo in ItinerarioActivo.PasajesSelec)
+            {
+                //if(pasaje.)
+                ItinerarioActivo.PasajesSelec.Remove(pasajeEliminar);
+                switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                {
+                    case "Adulto":
+                        ItinerarioActivo.CantAdultos--;
+                        break;
+                    case "Menor":
+                        ItinerarioActivo.CantMenores--;
+                        break;
+                    case "Infante":
+                        ItinerarioActivo.CantInfantes--;
+                        break;
+                }
+                return 0;
             }
             return -1;
         }
         public static int QuitarHabitacion(HotelEnt habitacionEliminar, int cantAdultos, int cantMenores, int cantInfantes)
         {
-            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            List<HotelHabitacionEnt> listaHotelHabitacion = new List<HotelHabitacionEnt>();
+            foreach (var hotel in ItinerarioActivo.HabitacionesSelec)
             {
-                if (itinerario.Id == ItinerarioActivo.Id)
+                foreach (var habitacion in hotel.Habitaciones)
                 {
-                    foreach (var hot in itinerario.HabitacionesSelec)
+                    HotelHabitacionEnt hotelHabitacion = new HotelHabitacionEnt();
+                    hotelHabitacion.IdHotel = hotel.IdHotel;
+                    hotelHabitacion.IdHabitacion = habitacion.IdHabitacion;
+                    hotelHabitacion.HotelEntidad = hotel;
+                    listaHotelHabitacion.Add(hotelHabitacion);
+                }
+            }
+            foreach (var item in listaHotelHabitacion)
+            {
+                foreach (var hab in habitacionEliminar.Habitaciones)
+                {
+                    if (item.IdHotel == habitacionEliminar.IdHotel && item.IdHabitacion == hab.IdHabitacion)
                     {
-                        if (hot == habitacionEliminar)
-                        {
-                            itinerario.HabitacionesSelec.Remove(hot);
-                            itinerario.CantAdultos -= cantAdultos;
-                            itinerario.CantMenores -= cantMenores;
-                            itinerario.CantInfantes -= cantInfantes;
-                            return 0;
-                        }
+                        ItinerarioActivo.HabitacionesSelec.Remove(item.HotelEntidad);
+                        ItinerarioActivo.CantAdultos -= cantAdultos;
+                        ItinerarioActivo.CantMenores -= cantMenores;
+                        ItinerarioActivo.CantInfantes -= cantInfantes;
+                        return 0;
                     }
                 }
             }
