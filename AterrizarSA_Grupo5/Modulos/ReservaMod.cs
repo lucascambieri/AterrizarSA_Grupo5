@@ -203,12 +203,24 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return 1;
         }
+        public static List<PasajerosPorPasajeEnt> PasajerosPorPasajes()
+        {
+            List<PasajerosPorPasajeEnt> pasajeros = new List<PasajerosPorPasajeEnt>();
+            if (ReservaDelItinerarioActivo != null)
+            {
+                foreach (var vuelo in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+                {
+                    pasajeros.Add(vuelo);
+                }
+            }
+            return pasajeros;
+        }
         public static int ObtenerUltimoIdPasajeroPasaje()
         {
             int ultimoId = 0;
             foreach (var pasajePasajero in ReservaDelItinerarioActivo.PasajeroPorPasaje)
             {
-                if(pasajePasajero.Pasajero != null)
+                if(pasajePasajero.VueloPasaje != null)
                 {
                     ultimoId = pasajePasajero.IdPasajeroPasaje;
                     ultimoId++;
@@ -341,6 +353,7 @@ namespace AterrizarSA_Grupo5.Modulos
         {
             /*
              -1 no existe reserva activa
+             -2 no se pudo confirmar la reserva
              */
             if (ReservaDelItinerarioActivo == null)
             {
@@ -348,9 +361,68 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             else
             {
-                ReservaDelItinerarioActivo.EstadoReserva = "Confirmada";
-                return 0;
+                if(ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada")
+                {
+                    ReservaDelItinerarioActivo.EstadoReserva = "Confirmada";
+                }
+                else
+                {
+                    if(ItinerarioMod.ItinerarioActivo.HabitacionesSelec.Count >= 1 && ItinerarioMod.ItinerarioActivo.PasajesSelec.Count >= 1)
+                    {
+                        if (ValidarPasajerosCargadosHotel() == 0 && ValidarPasajerosCargadosVuelo() == 0)
+                        {
+                            if (GenerarPreReserva() == 0)
+                            {
+                                ReservaDelItinerarioActivo.EstadoReserva = "Confirmada";
+                                return 0;
+                            }
+                        }
+                    }
+                }
+                return -2;
             }
+        }
+        public static int QuitarPasaje()
+        {
+            foreach (var pasajeVuelo in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+            {
+                if (pasajeVuelo.IdPasajeroPasaje == VueloSeleccionado.IdPasajeroPasaje)
+                {
+                    ReservaDelItinerarioActivo.PasajeroPorPasaje.Remove(pasajeVuelo);
+                    return 0;
+                }
+            }
+            return 0;
+        }
+        public static int QuitarHabitacion(HotelEnt hotelHabEliminado)
+        {
+            foreach (var hotel in ReservaDelItinerarioActivo.PasajeroPorHabitacion)
+            {
+                if (hotel.HotelHabitacion.IdHotel == hotelHabEliminado.IdHotel)
+                {
+                    foreach (var hab in hotel.HotelHabitacion.Habitaciones)
+                    {
+                        if (hab.IdHabitacion == hotelHabEliminado.Habitaciones[0].IdHabitacion)
+                        {
+                            ReservaDelItinerarioActivo.PasajeroPorHabitacion.Remove(hotel);
+                            return 0;
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
+        public static int EliminarReserva(int idItinerarioEliminado)
+        {
+            foreach (var reserva in ReservasAlmacen.Reservas)
+            {
+                if (reserva.IdItinerario == idItinerarioEliminado)
+                {
+                    ReservasAlmacen.Reservas.Remove(reserva);
+                    return 0;
+                }
+            }
+            return -1;
         }
     }
 }

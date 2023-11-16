@@ -10,7 +10,7 @@ namespace AterrizarSA_Grupo5.Entidades
     {
         public int IdPasaje {  get; set; }
         public string Categoria { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
         public string TipoPasajero { get; set; }
         public int CantidadDisponible { get; set; }
 

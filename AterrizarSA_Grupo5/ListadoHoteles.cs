@@ -74,7 +74,7 @@ namespace AterrizarSA_Grupo5
                 model.Ciudad = listViewHabitaciones.SelectedItems[0].SubItems[3].Text;
                 model.Direccion = listViewHabitaciones.SelectedItems[0].SubItems[4].Text;
                 model.IdHabitacion = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[5].Text);
-                model.PrecioNoche = double.Parse(listViewHabitaciones.SelectedItems[0].SubItems[6].Text);
+                model.PrecioNoche = decimal.Parse(listViewHabitaciones.SelectedItems[0].SubItems[6].Text);
                 model.CapacidadMaxima = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[7].Text);
                 model.CantidadCamasAdultos = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[8].Text);
                 model.CantidadCamasMenores = int.Parse(listViewHabitaciones.SelectedItems[0].SubItems[9].Text);

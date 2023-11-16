@@ -76,7 +76,7 @@
             buttonQuitarPasajero = new Button();
             buttonEditarPasajerosPasajes = new Button();
             label12 = new Label();
-            label20 = new Label();
+            labelTotal = new Label();
             panel1 = new Panel();
             labelFechaInicioItinerario = new Label();
             labelItinerarioSelec = new Label();
@@ -442,16 +442,16 @@
             label12.TabIndex = 21;
             label12.Text = "Subtotal";
             // 
-            // label20
+            // labelTotal
             // 
-            label20.AutoSize = true;
-            label20.BackColor = Color.LightBlue;
-            label20.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(865, 616);
-            label20.Name = "label20";
-            label20.Size = new Size(77, 15);
-            label20.TabIndex = 77;
-            label20.Text = "SUBTOTAL";
+            labelTotal.AutoSize = true;
+            labelTotal.BackColor = Color.LightBlue;
+            labelTotal.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTotal.Location = new Point(865, 616);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(77, 15);
+            labelTotal.TabIndex = 77;
+            labelTotal.Text = "SUBTOTAL";
             // 
             // panel1
             // 
@@ -526,7 +526,7 @@
             Controls.Add(groupBox1);
             Controls.Add(buttonGenerarPreReserva);
             Controls.Add(panel1);
-            Controls.Add(label20);
+            Controls.Add(labelTotal);
             Controls.Add(groupBox2);
             Controls.Add(buttonVolverAtras);
             Controls.Add(label11);
@@ -598,7 +598,7 @@
         private ColumnHeader disponibilidad;
         private Label labelSubTotalHoteles;
         private Label labelSubTotalVuelos;
-        private Label label20;
+        private Label labelTotal;
         private Panel panel1;
         private Label label22;
         private Label label21;

@@ -133,6 +133,58 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return "No hay reserva";
         }
+        public static int QuitarPasaje(VueloEnt pasajeEliminar)
+        {
+            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.Id == ItinerarioActivo.Id)
+                {
+                    itinerario.PasajesSelec.Remove(pasajeEliminar);
+                    switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                    {
+                        case "Adulto":
+                            itinerario.CantAdultos--;
+                            break;
+                        case "Menor":
+                            itinerario.CantMenores--;
+                            break;
+                        case "Infante":
+                            itinerario.CantInfantes--;
+                            break;
+                    }
+                    return 0;
+                }
+            }
+            return -1;
+        }
+        public static int QuitarHabitacion(HotelEnt habitacionEliminar, int cantAdultos, int cantMenores, int cantInfantes)
+        {
+            foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if (itinerario.Id == ItinerarioActivo.Id)
+                {
+                    itinerario.HabitacionesSelec.Remove(habitacionEliminar);
+                    itinerario.CantAdultos -= cantAdultos;
+                    itinerario.CantMenores -= cantMenores;
+                    itinerario.CantInfantes -= cantInfantes;
+                    return 0;
+                }
+            }
+            return -1;
+        }
+        public static int EliminarItinerario()
+        {
+            foreach(var itinerario in ItinerarioAlmacen.Itinerarios)
+            {
+                if(itinerario.Id == ItinerarioActivo.Id)
+                {
+                    int idEliminado = itinerario.Id;
+                    ItinerarioAlmacen.Itinerarios.Remove(itinerario);
+                    return idEliminado;
+                }
+            }
+            return -1;
+        }
 
     }
 }

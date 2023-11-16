@@ -69,20 +69,31 @@ namespace AterrizarSA_Grupo5
         }
         private void Eliminar_Click_1(object sender, EventArgs e)
         {
-            // Verificar si se ha seleccionado un elemento en listView1
-            if (listViewItinerarios.SelectedItems.Count > 0)
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
-                // Obtén el elemento seleccionado
-                ListViewItem itemSeleccionado = listViewItinerarios.SelectedItems[0];
-
-                // Verifica si el texto de columnHeader1 del elemento seleccionado coincide con el texto actual de label1
-                if (ItinerarioSeleccionado.Text == itemSeleccionado.SubItems[0].Text)
+                string estado = model.ValidarEstadoReserva();
+                if (estado == "Pre-reservada" || estado == "Confirmada")
                 {
-                    ItinerarioSeleccionado.Text = "NO SELECCIONADO";
+                    MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
                 }
-
-                // Eliminar el elemento seleccionado
-                listViewItinerarios.Items.Remove(itemSeleccionado);
+                else
+                {
+                    var result = MessageBox.Show("¿Está seguro que desea eliminar el itinerario?", "Eliminar itinerario", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        int res = model.EliminarItinerario();
+                        if(res == 0)
+                        {
+                            MessageBox.Show("Itinerario eliminado exitosamente","Itinerario eliminado");
+                            ItinerarioSeleccionado.Text = "NO SELECCIONADO";
+                            ActualizarListaItinerarios();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void buttonBuscar_Click(object sender, EventArgs e)

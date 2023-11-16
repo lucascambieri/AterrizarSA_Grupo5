@@ -18,7 +18,7 @@ namespace AterrizarSA_Grupo5.Entidades
         public int CantInfantes { get; set; }
         public List<HotelEnt> HabitacionesSelec { get; set; }
         public List<VueloEnt> PasajesSelec { get; set; }
-        public double TarifaTotal { get; set; }
+        public decimal TarifaTotal { get; set; }
 
     }
 }

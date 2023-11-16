@@ -131,5 +131,16 @@ namespace AterrizarSA_Grupo5
         {
             return ReservaMod.GenerarReserva();
         }
+        public int EliminarItinerario()
+        {
+            int idEliminado = ItinerarioMod.EliminarItinerario();
+            if (idEliminado != -1)
+            {
+                ReservaMod.EliminarReserva(idEliminado);
+            }
+            ItinerarioMod.ItinerarioActivo = null;
+            ReservaMod.ReservaDelItinerarioActivo = null;
+            return 0;
+        }
     }
     }

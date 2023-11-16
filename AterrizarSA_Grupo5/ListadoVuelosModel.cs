@@ -20,10 +20,10 @@ namespace AterrizarSA_Grupo5
         public string Aerolinea { get; set; }
         public int IdPasaje { get; set; }
         public string Categoria { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
         public string TipoPasajero { get; set; }
         public int CantidadDisponible { get; set; }
-        public ListadoVuelosModel(int idVuelo, string origen, string destino, string paradas, DateTime fechaPartida, DateTime fechaLlegada, string timepoViaje, string aerolinea, int idPasaje, string categoria, double precio, string tipoPasajero, int cantidadDisponible)
+        public ListadoVuelosModel(int idVuelo, string origen, string destino, string paradas, DateTime fechaPartida, DateTime fechaLlegada, string timepoViaje, string aerolinea, int idPasaje, string categoria, decimal precio, string tipoPasajero, int cantidadDisponible)
         {
             this.IdVuelo = idVuelo;
             this.Origen = origen;

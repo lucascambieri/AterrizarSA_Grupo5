@@ -14,7 +14,7 @@ namespace AterrizarSA_Grupo5.Entidades
         public int CantidadCamasAdultos { get; set; }
         public int CantidadCamasMenores { get; set; }
         public int CantidadCamasInfantes { get; set; }
-        public double PrecioNoche { get; set; }
+        public decimal PrecioNoche { get; set; }
         public List<DisponibilidadHabitacionEnt> Disponibilidad { get; set; }
     }
 }

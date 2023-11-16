@@ -99,7 +99,7 @@ namespace AterrizarSA_Grupo5
                 model.Aerolinea = listViewPasajes.SelectedItems[0].SubItems[7].Text;
                 model.Categoria = listViewPasajes.SelectedItems[0].SubItems[8].Text;
                 model.TipoPasajero = listViewPasajes.SelectedItems[0].SubItems[9].Text;
-                model.Precio = double.Parse(listViewPasajes.SelectedItems[0].SubItems[10].Text);
+                model.Precio = decimal.Parse(listViewPasajes.SelectedItems[0].SubItems[10].Text);
                 model.CantidadDisponible = int.Parse(listViewPasajes.SelectedItems[0].SubItems[13].Text);
                 model.IdPasaje = int.Parse(listViewPasajes.SelectedItems[0].SubItems[14].Text);
             }

@@ -4,6 +4,7 @@ using AterrizarSA_Grupo5.Modulos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,10 +25,10 @@ namespace AterrizarSA_Grupo5
         public int CantidadCamasAdultos { get; set; }
         public int CantidadCamasMenores { get; set; }
         public int CantidadCamasInfantes { get; set; }
-        public double PrecioNoche { get; set; }
+        public decimal PrecioNoche { get; set; }
         public DateTime FechaDesde { get; set; }
         public DateTime FechaHasta { get; set; }
-        public double TarifaTotalHotel { get; set; }
+        public decimal TarifaTotalHotel { get; set; }
 
         // Pasajes
         public int IdVuelo { get; set; }
@@ -41,13 +42,13 @@ namespace AterrizarSA_Grupo5
         public int IdPasaje { get; set; }
         public int IdPasajeroPasaje { get; set; }
         public string Categoria { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
         public string TipoPasajero { get; set; }
         public int CantidadElegida { get; set; }
-        public double TarifaTotalVuelo { get; set; }
+        public decimal TarifaTotalVuelo { get; set; }
 
         // Model Habitacion
-        public VerItinerarioModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, int camasAdultos, int camasMenores, int camasInfantes, double precioNoche, DateTime fechaInic, DateTime fechaFin, double tarifaTotalHotel)
+        public VerItinerarioModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, int camasAdultos, int camasMenores, int camasInfantes, decimal precioNoche, DateTime fechaInic, DateTime fechaFin)
         {
             this.IdHotel = idHotel;
             this.CodHotel = codHotel;
@@ -64,11 +65,10 @@ namespace AterrizarSA_Grupo5
             this.PrecioNoche = precioNoche;
             this.FechaDesde = fechaInic;
             this.FechaHasta = fechaFin;
-            this.TarifaTotalHotel = tarifaTotalHotel;
         }
         
         // Model Pasaje
-        public VerItinerarioModel(int idVuelo, string origen, string destino, string paradas, DateTime fechaPartida, DateTime fechaLlegada, string timepoViaje, string aerolinea, int idPasaje, string categoria, double precio, string tipoPasajero, int cantidadElegida, double tarifaTotalVuelo, int idPasajeroPasaje)
+        public VerItinerarioModel(int idVuelo, string origen, string destino, string paradas, DateTime fechaPartida, DateTime fechaLlegada, string timepoViaje, string aerolinea, int idPasaje, string categoria, decimal precio, string tipoPasajero, int cantidadElegida, int idPasajeroPasaje)
         {
             this.IdVuelo = idVuelo;
             this.Origen = origen;
@@ -83,7 +83,6 @@ namespace AterrizarSA_Grupo5
             this.Precio = precio;
             this.TipoPasajero = tipoPasajero;
             this.CantidadElegida = cantidadElegida;
-            this.TarifaTotalVuelo = tarifaTotalVuelo;
             this.IdPasajeroPasaje = idPasajeroPasaje;
         }
         public VerItinerarioModel()
@@ -100,8 +99,7 @@ namespace AterrizarSA_Grupo5
                 {
                     foreach (var habitacion in seleccion.Habitaciones)
                     {
-                        // Falta acomodar que la tarifa sea la suma de los precios de las habitaciones
-                        VerItinerarioModel habitacionModel = new VerItinerarioModel(seleccion.IdHotel, seleccion.CodHotel, seleccion.Nombre, seleccion.Ciudad, seleccion.Calificacion, seleccion.Direccion, habitacion.IdHabitacion, habitacion.Descripcion, habitacion.CapacidadMaxima, habitacion.CantidadCamasAdultos, habitacion.CantidadCamasMenores, habitacion.CantidadCamasInfantes, habitacion.PrecioNoche, habitacion.Disponibilidad[0].FechaInicioDisp, habitacion.Disponibilidad[0].FechaFinDisp, ItinerarioMod.ItinerarioActivo.TarifaTotal);
+                        VerItinerarioModel habitacionModel = new VerItinerarioModel(seleccion.IdHotel, seleccion.CodHotel, seleccion.Nombre, seleccion.Ciudad, seleccion.Calificacion, seleccion.Direccion, habitacion.IdHabitacion, habitacion.Descripcion, habitacion.CapacidadMaxima, habitacion.CantidadCamasAdultos, habitacion.CantidadCamasMenores, habitacion.CantidadCamasInfantes, habitacion.PrecioNoche, habitacion.Disponibilidad[0].FechaInicioDisp, habitacion.Disponibilidad[0].FechaFinDisp);
                         listaHabitaciones.Add(habitacionModel);
                     }
 
@@ -116,17 +114,17 @@ namespace AterrizarSA_Grupo5
             {
                 int idPasajeroPasaje = 0;
                 int j = 0;
+                List<PasajerosPorPasajeEnt> listaPasajerosPasajes = ReservaMod.PasajerosPorPasajes();
                 foreach (var vuelo in ItinerarioMod.ItinerarioActivo.PasajesSelec)
                 {
                     foreach (var pasaje in vuelo.Pasajes)
                     {
-                        // Falta acomodar que la tarifa sea la suma de los precios de los pasajes
-                        // Falta acomodar cantidad disponible / elegida
-                        int ultimoid = ReservaMod.ObtenerUltimoIdPasajeroPasaje();
-                        if (ultimoid == 0)
+                        //int ultimoid = ReservaMod.ObtenerUltimoIdPasajeroPasaje();
+                        if(listaPasajerosPasajes.Count == 0)
+                        //if (ultimoid == 0)
                         {
                             idPasajeroPasaje++;
-                            VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, ItinerarioMod.ItinerarioActivo.TarifaTotal, idPasajeroPasaje);
+                            VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, idPasajeroPasaje);
                             listaVuelos.Add(vueloModel);
                             VueloEnt vueloPasaje = new VueloEnt();
                             PasajeEnt pasajeTemp = new PasajeEnt();
@@ -148,8 +146,8 @@ namespace AterrizarSA_Grupo5
                         }
                         else
                         {
-                            PasajerosPorPasajeEnt pasajeroPasaje = ReservaMod.ReservaDelItinerarioActivo.PasajeroPorPasaje[j];
-                            VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, ItinerarioMod.ItinerarioActivo.TarifaTotal, pasajeroPasaje.IdPasajeroPasaje);
+                            PasajerosPorPasajeEnt pasajeroPasaje = listaPasajerosPasajes[j];
+                            VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, pasajeroPasaje.IdPasajeroPasaje);
                             listaVuelos.Add(vueloModel);
                         }
                     }
@@ -225,6 +223,88 @@ namespace AterrizarSA_Grupo5
             }
             return "Error";
         }
+        public string QuitarPasaje()
+        {
+            VueloEnt vueloSeleccionado = new VueloEnt();
+            PasajeEnt pasajeSeleccionado = new PasajeEnt();
+            vueloSeleccionado.IdVuelo = this.IdVuelo;
+            vueloSeleccionado.Aerolinea = this.Aerolinea;
+            vueloSeleccionado.Origen = this.Origen;
+            vueloSeleccionado.Destino = this.Destino;
+            vueloSeleccionado.Paradas = this.Paradas;
+            vueloSeleccionado.TiempoViaje = this.TiempoViaje;
+            vueloSeleccionado.FechayHoraPartida = this.FechayHoraPartida;
+            vueloSeleccionado.FechayHoraLlegada = this.FechayHoraLlegada;
+            pasajeSeleccionado.IdPasaje = this.IdPasaje;
+            pasajeSeleccionado.Categoria = this.Categoria;
+            pasajeSeleccionado.Precio = this.Precio;
+            pasajeSeleccionado.TipoPasajero = this.TipoPasajero;
+            List<PasajeEnt> listaPasajeSeleccionado = new List<PasajeEnt>() { pasajeSeleccionado };
+            vueloSeleccionado.Pasajes = listaPasajeSeleccionado;
+            ItinerarioMod.QuitarPasaje(vueloSeleccionado);
+            ActivarPasajeSeleccionado();
+            ReservaMod.QuitarPasaje();
+            return "OK";
+        }
+        public string QuitarHabitacion()
+        {
+            HotelEnt hotelEliminar = new HotelEnt();
+            HabitacionEnt habitacionSeleccionada = new HabitacionEnt();
+            DisponibilidadHabitacionEnt disponibilidadSeleccionada = new DisponibilidadHabitacionEnt();
 
+            hotelEliminar.IdHotel = this.IdHotel;
+            hotelEliminar.CodHotel = this.CodHotel;
+            hotelEliminar.Nombre = this.Nombre;
+            hotelEliminar.Ciudad = this.Ciudad;
+            hotelEliminar.Calificacion = this.Calificacion;
+            hotelEliminar.Direccion = this.Direccion;
+            habitacionSeleccionada.IdHabitacion = this.IdHabitacion;
+            habitacionSeleccionada.Descripcion = this.Descripcion;
+            habitacionSeleccionada.CapacidadMaxima = this.CapacidadMaxima;
+            habitacionSeleccionada.CantidadCamasAdultos = this.CantidadCamasAdultos;
+            habitacionSeleccionada.CantidadCamasMenores = this.CantidadCamasMenores;
+            habitacionSeleccionada.CantidadCamasInfantes = this.CantidadCamasInfantes;
+            habitacionSeleccionada.PrecioNoche = this.PrecioNoche;
+            disponibilidadSeleccionada.FechaInicioDisp = this.FechaDesde;
+            disponibilidadSeleccionada.FechaFinDisp = this.FechaHasta;
+            List<DisponibilidadHabitacionEnt> listaDisponibilidadHabitacion = new List<DisponibilidadHabitacionEnt>() { disponibilidadSeleccionada };
+            habitacionSeleccionada.Disponibilidad = listaDisponibilidadHabitacion;
+            List<HabitacionEnt> listaHabitacionAgregar = new List<HabitacionEnt>() { habitacionSeleccionada };
+            hotelEliminar.Habitaciones = listaHabitacionAgregar;
+            int cantidadAdultosSelec = 0;
+            int cantidadMenoresSelec = 0;
+            int cantidadInfantesSelec = 0;
+            foreach (var hotel in ReservaMod.ReservaDelItinerarioActivo.PasajeroPorHabitacion)
+            {
+                if (hotel.HotelHabitacion.IdHotel == this.IdHotel)
+                {
+                    foreach (var hab in hotel.HotelHabitacion.Habitaciones)
+                    {
+                        if (hab.IdHabitacion == this.IdHabitacion)
+                        {
+                            foreach (var pasajero in hotel.Pasajeros)
+                            {
+                                var edad = DateTime.Today.Year - pasajero.FechaNacimiento.Year;
+                                switch (edad)
+                                {
+                                    case >= 18:
+                                        cantidadAdultosSelec++;
+                                        break;
+                                    case >= 2:
+                                        cantidadMenoresSelec++;
+                                        break;
+                                    case >= 0:
+                                        cantidadInfantesSelec++;
+                                        break;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+            ItinerarioMod.QuitarHabitacion(hotelEliminar, cantidadAdultosSelec, cantidadMenoresSelec, cantidadInfantesSelec);
+            ReservaMod.QuitarHabitacion(hotelEliminar);
+            return "OK";
+        }
     }
 }

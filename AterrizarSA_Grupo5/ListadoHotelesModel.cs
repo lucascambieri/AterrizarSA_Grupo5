@@ -23,14 +23,14 @@ namespace AterrizarSA_Grupo5
         public int CantidadCamasAdultos { get; set; }
         public int CantidadCamasMenores { get; set; }
         public int CantidadCamasInfantes { get; set; }
-        public double PrecioNoche { get; set; }
+        public decimal PrecioNoche { get; set; }
         public DateTime FechaInicioDisp {  get; set; }
         public DateTime FechaFinDisp { get; set; }
         public int CantidadAdultosSelec {  get; set; }
         public int CantidadMenoresSelec {  get; set; }
         public int CantidadInfantesSelec { get; set; }
 
-        public ListadoHotelesModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, int camasAdultos, int camasMenores, int camasInfantes, double precioNoche, DateTime fechaInic, DateTime fechaFin)
+        public ListadoHotelesModel(int idHotel, string codHotel, string nombre, string ciudad, string calificacion, string direccion, int idHabitacion, string descripcion, int capacidadMaxima, int camasAdultos, int camasMenores, int camasInfantes, decimal precioNoche, DateTime fechaInic, DateTime fechaFin)
         {
             this.IdHotel = idHotel;
             this.CodHotel = codHotel;
