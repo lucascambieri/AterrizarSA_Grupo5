@@ -85,9 +85,17 @@ namespace AterrizarSA_Grupo5
                 model.CantidadMenoresSelec = int.Parse(comboBoxMenores.Text);
                 model.CantidadInfantesSelec = int.Parse(comboBoxInfantes.Text);
                 int result = model.Guardarhabitacion();
-                if (result == 0)
+                switch (result)
                 {
-                    MessageBox.Show("Habitación agregada exitosamente", "Habitacion agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    case 0:
+                        MessageBox.Show("Habitación agregada exitosamente", "Habitacion agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    case -1:
+                        MessageBox.Show("Error al agregar la habitación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case -2:
+                        MessageBox.Show("La habitación seleccionada ya existe en el itinerario", "Ya existe habitación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
                 }
             }
         }

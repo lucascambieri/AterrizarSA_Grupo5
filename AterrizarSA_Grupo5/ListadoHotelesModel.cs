@@ -73,7 +73,7 @@ namespace AterrizarSA_Grupo5
         public int Guardarhabitacion()
         {
             // Valido si la fecha elegida es menor a la que tiene el itinerario, la guardo.
-            if(this.FechaInicioDisp < ItinerarioMod.ItinerarioActivo.FechaInicio)
+            if(this.FechaInicioDisp < ItinerarioMod.ItinerarioActivo.FechaInicio || ItinerarioMod.ItinerarioActivo.FechaInicio.Date == DateTime.Parse("0001-01-01"))
             {
                 ItinerarioMod.ItinerarioActivo.FechaInicio = this.FechaInicioDisp;
             }

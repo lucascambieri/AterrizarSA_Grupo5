@@ -25,13 +25,13 @@ namespace AterrizarSA_Grupo5
         private void GestionItinerarios_Load_1(object sender, EventArgs e)
         {
             model = new GestionItinerarioModel();
-            actualizarListaItinerarios();
+            ActualizarListaItinerarios();
         }
         private void buttonNuevoItinerario_Click(object sender, EventArgs e)
         {
             PedirNombre pedirNombre = new PedirNombre();
             pedirNombre.ShowDialog();
-            actualizarListaItinerarios();
+            ActualizarListaItinerarios();
         }
         private void buttonActivaItinerario_Click_(object sender, EventArgs e)
         {
@@ -45,18 +45,9 @@ namespace AterrizarSA_Grupo5
                 int result = model.ActivarItinerario(itinerarioBuscado);
                 if (result == 0)
                 {
-                    foreach (ListViewItem item in listViewItinerarios.Items)
-                    {
-                        if (item.SubItems[3].Text == "Activo")
-                        {
-                            // Cambiar el estado del elemento activo anterior a "Itinerario creado"
-                            item.SubItems[3].Text = "Itinerario creado";
-                        }
-                    }
                     // Copiar el valor al textBox para mostra el Itinerario seleccionado
                     ItinerarioSeleccionado.Text = valorColumna1;
-                    ListViewItem selectedItem = listViewItinerarios.SelectedItems[0];
-                    selectedItem.SubItems[3].Text = "Activo";
+                    ActualizarListaItinerarios();
                 }
             }
             else
@@ -64,7 +55,6 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
             }
         }
-
         private void buttonVerItinerario_Click(object sender, EventArgs e)
         {
             if (ItinerarioMod.ItinerarioActivo != null)
@@ -77,35 +67,6 @@ namespace AterrizarSA_Grupo5
                 MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
-        {
-            // Validar si existe itinerario activo
-            if (ItinerarioMod.ItinerarioActivo != null)
-            {
-                if (listViewItinerarios.SelectedItems.Count > 0)
-                {
-                    // Verificar si se ha seleccionado un elemento
-                    ListViewItem selectedItem = listViewItinerarios.SelectedItems[0]; // Obtener el elemento seleccionado
-
-                    // Modificar la ColumnHeader4 (indice 3) del elemento seleccionado
-                    selectedItem.SubItems[3].Text = "Pre-Reservado";
-
-                    MessageBox.Show("Revisar y agregar los pasajeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    VerItinerario verItinerario = new VerItinerario();
-                    verItinerario.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Selecciona un elemento en la lista antes de cambiar el estado.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void Eliminar_Click_1(object sender, EventArgs e)
         {
             // Verificar si se ha seleccionado un elemento en listView1
@@ -124,7 +85,6 @@ namespace AterrizarSA_Grupo5
                 listViewItinerarios.Items.Remove(itemSeleccionado);
             }
         }
-
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
@@ -143,8 +103,6 @@ namespace AterrizarSA_Grupo5
                     }
 
                 }
-
-
             }
 
             string buscarNumeroItinerario = textBox1.Text;
@@ -166,52 +124,85 @@ namespace AterrizarSA_Grupo5
                 }
             }
         }
-
         private void buttonVolverAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void buttonAgregarHabitacion_Click(object sender, EventArgs e)
         {
             if (ItinerarioMod.ItinerarioActivo != null)
             {
-                ListadoHoteles listadoHoteles = new ListadoHoteles();
-                listadoHoteles.ShowDialog();
+                string estado = model.ValidarEstadoReserva();
+                if (estado == "Pre-reservada" || estado == "Confirmada")
+                {
+                    MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    ListadoHoteles listadoHoteles = new ListadoHoteles();
+                    listadoHoteles.ShowDialog();
+                }
             }
             else
             {
                 MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void buttonAgregarVuelo_Click(object sender, EventArgs e)
         {
             if (ItinerarioMod.ItinerarioActivo != null)
             {
-                ListadoVuelos listadoVuelos = new ListadoVuelos();
-                listadoVuelos.ShowDialog();
+                string estado = model.ValidarEstadoReserva();
+                if (estado == "Pre-reservada" || estado == "Confirmada")
+                {
+                    MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    ListadoVuelos listadoVuelos = new ListadoVuelos();
+                    listadoVuelos.ShowDialog();
+                }
             }
             else
             {
                 MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void buttonConfirmarReserva_Click(object sender, EventArgs e)
         {
-            if (listViewItinerarios.SelectedItems.Count > 0)
+            if (ItinerarioMod.ItinerarioActivo != null)
             {
-
-                ListViewItem selectedItem = listViewItinerarios.SelectedItems[0];
-                selectedItem.SubItems[3].Text = "Confirmado";
+                string estado = model.ValidarEstadoReserva();
+                if (estado == "Confirmada")
+                {
+                    MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    string res = model.ValidarPagoReserva();
+                    if(res == "OK")
+                    {
+                        if(model.GenerarReserva() == 0)
+                        {
+                            MessageBox.Show("La reserva se confirmó exitosamente", "Reserva confirmada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al confirmar reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(res, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Selecciona un itinerario en la lista antes de cambiar el estado.");
+                MessageBox.Show("Debe activar un itinerario primero", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void actualizarListaItinerarios()
+        private void ActualizarListaItinerarios()
         {
             listViewItinerarios.Items.Clear();
             listaItinerarios = model.ListarItinerarios();

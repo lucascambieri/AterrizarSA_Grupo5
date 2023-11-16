@@ -36,10 +36,20 @@ namespace AterrizarSA_Grupo5
 
             foreach(var itinerario in ItinerarioMod.ListarItinerarios())
             {
-                string estado;
+                string estado = "";
                 if (ItinerarioMod.ItinerarioActivo == null)
                 {
-                    estado = "";
+                    foreach(var reserva in ReservasAlmacen.Reservas)
+                    {
+                        if(itinerario.Id == reserva.IdItinerario)
+                        {
+                            estado = "Reserva " + reserva.EstadoReserva;
+                        }
+                    }
+                    if(estado == "")
+                    {
+                        estado = "Itinerario iniciado";
+                    }
                 }
                 else
                 {
@@ -49,7 +59,17 @@ namespace AterrizarSA_Grupo5
                     }
                     else 
                     {
-                        estado = ""; 
+                        foreach (var reserva in ReservasAlmacen.Reservas)
+                        {
+                            if (itinerario.Id == reserva.IdItinerario)
+                            {
+                                estado = "Reserva " + reserva.EstadoReserva;
+                            }
+                        }
+                        if (estado == "")
+                        {
+                            estado = "Itinerario iniciado";
+                        }
                     }
                 }
                 GestionItinerarioModel itinerarioModel = new GestionItinerarioModel(itinerario.Id,itinerario.Cliente,itinerario.FechaCreacion,estado);
@@ -62,7 +82,6 @@ namespace AterrizarSA_Grupo5
 
             return listaItinerarios;
         }
-
         public string CrearItinerario()
         {
             int id = ItinerarioMod.ObtenerUltimoId();
@@ -81,12 +100,36 @@ namespace AterrizarSA_Grupo5
         {
             return ItinerarioMod.BuscarItinerario(itinerarioBuscado); 
         }
-
         public int ActivarItinerario(ItinerarioEnt itinerario)
         {
             ItinerarioMod.ItinerarioActivo = itinerario;
             return 0;
         }
+        public string ValidarEstadoReserva()
+        {
+            return ItinerarioMod.ValidarEstadoReserva();
+        }
+        public string ValidarPagoReserva()
+        {
+            int res = ReservaMod.ValidarPagoReserva();
+            switch (res)
+            {
+                case 0:
+                    return "OK";
+                case 1:
+                    return "Falta pago";
+                case -1:
+                    return "No existe reserva";
+                case -2:
+                    return "Se venció pre-reserva";
+                default:
+                    return "Error";
+            }
 
+        }
+        public int GenerarReserva()
+        {
+            return ReservaMod.GenerarReserva();
+        }
     }
     }

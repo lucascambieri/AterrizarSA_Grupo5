@@ -1,5 +1,6 @@
 ﻿using AterrizarSA_Grupo5.Almacenes;
 using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Entidades.Secundarias;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -215,7 +216,7 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return ultimoId;
         }
-        public static int ValidarPasajerosCargados()
+        public static int ValidarPasajerosCargadosHotel()
         {
             if(ReservaDelItinerarioActivo == null)
             {
@@ -223,18 +224,133 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             else
             {
-                foreach (var habitacion in ItinerarioMod.ItinerarioActivo.HabitacionesSelec)
+                int i = 0;
+                int j = 0;
+                List<HotelHabitacionEnt> listHotelesHabitacionesItinerario = new List<HotelHabitacionEnt>(); ;
+                foreach (var hotel in ItinerarioMod.ItinerarioActivo.HabitacionesSelec)
+                {
+                    foreach(var habitacion in hotel.Habitaciones)
+                    {
+                        HotelHabitacionEnt hotelesHabitacionesItinerario = new HotelHabitacionEnt();
+                        hotelesHabitacionesItinerario.IdHotel = hotel.IdHotel;
+                        hotelesHabitacionesItinerario.IdHabitacion = habitacion.IdHabitacion;
+                        listHotelesHabitacionesItinerario.Add(hotelesHabitacionesItinerario);
+                    }
+                }
+                foreach(var item in listHotelesHabitacionesItinerario)
                 {
                     foreach (var pasajeroHabitacion in ReservaDelItinerarioActivo.PasajeroPorHabitacion)
                     {
-                        if (habitacion == pasajeroHabitacion.HotelHabitacion)
+                        foreach (var habitacion in pasajeroHabitacion.HotelHabitacion.Habitaciones)
+                        {
+                            if (item.IdHotel == pasajeroHabitacion.HotelHabitacion.IdHotel && item.IdHabitacion == habitacion.IdHabitacion)
+                            {
+                                if (pasajeroHabitacion.Pasajeros.Count >= 1)
+                                {
+                                    j++;
+                                }
+                            }
+                        }
+                    }
+                    i++;
+                }
+                if (i == j)
+                {
+                    return 0;
+                }
+            }
+            return -1;
+        }
+        public static int ValidarPasajerosCargadosVuelo()
+        {
+            if (ReservaDelItinerarioActivo == null)
+            {
+                return -1;
+            }
+            else
+            {
+                int i = 0;
+                int j = 0;
+                foreach (var pasajeroVuelo in ReservaDelItinerarioActivo.PasajeroPorPasaje)
+                {
+                    if (pasajeroVuelo.Pasajero != null)
+                    {
+                        j++;
+                    }
+                    i++;
+                }
+                if (i == j)
+                {
+                    return 0;
+                }
+                return -1;
+            }
+        }
+        public static int GenerarPreReserva()
+        {
+            /*
+             -1 no existe reserva activa
+             -2 no se pudo actualizar la disponibilidad
+             */
+            if (ReservaDelItinerarioActivo == null)
+            {
+                return -1;
+            }
+            else
+            {
+                if(InventarioMod.ActualizarDisponibilidad() == 0)
+                {
+                    ReservaDelItinerarioActivo.FechaPreReserva = DateTime.Today;
+                    ReservaDelItinerarioActivo.EstadoReserva = "Pre-reservada";
+                    ReservaDelItinerarioActivo.EstadoPago = "Pendiente";
+                }
+                else
+                {
+                    return -2;
+                }
+                return 0;
+            }
+            
+        }
+        public static int ValidarPagoReserva()
+        {
+            foreach(var reserva in ReservasAlmacen.Reservas)
+            {
+                if(reserva.IdItinerario == ItinerarioMod.ItinerarioActivo.Id)
+                {
+                    if (reserva.EstadoPago == "Pendiente" && reserva.FechaPreReserva > DateTime.Today.AddDays(-2))
+                    {
+                        return -2;
+                    }
+                    else
+                    {
+                        if (reserva.EstadoPago == "Pendiente")
+                        {
+                            return 1;
+                        }
+                        else
                         {
                             return 0;
                         }
                     }
                 }
             }
-            return 0;
+            return -1;
+        }
+        public static int GenerarReserva()
+        {
+            /*
+             -1 no existe reserva activa
+             */
+            if (ReservaDelItinerarioActivo == null)
+            {
+                return -1;
+            }
+            else
+            {
+                ReservaDelItinerarioActivo.EstadoReserva = "Confirmada";
+                return 0;
+            }
         }
     }
 }

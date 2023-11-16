@@ -16,16 +16,7 @@
           "CantidadCamasMenores": 1,
           "CantidadCamasInfantes": 1,
           "PrecioNoche": "20000,00",
-          "Disponibilidad": [
-            {
-              "FechaInicioDisp": "2023-12-01",
-              "FechaFinDisp": "2024-05-01"
-            },
-            {
-              "FechaInicioDisp": "2024-06-01",
-              "FechaFinDisp": "2024-09-01"
-            }
-          ]
+          "Disponibilidad": []
         },
         {
           "IdHabitacion": "00002",

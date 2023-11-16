@@ -193,11 +193,38 @@ namespace AterrizarSA_Grupo5
         {
             ReservaMod.CrearReserva();
         }
-        public int ValidarPasajerosCargados()
+        public string ValidarPasajerosCargados()
         {
-            return ReservaMod.ValidarPasajerosCargados();
+            string resVuelo = "";
+            string resHotel = "";
+            int i = ReservaMod.ValidarPasajerosCargadosVuelo();
+            if(i != 0)
+            {
+                resVuelo = "Faltan cargar pasajeros en los vuelos";
+            }
+            int j = ReservaMod.ValidarPasajerosCargadosHotel();
+            if(j != 0)
+            {
+                resHotel = "Faltan cargar pasajeros en los hoteles";
+            }
+            if(i+j == 0)
+            {
+                return "OK";
+            }
+            else
+            {
+                return resVuelo + "\n" + resHotel;
+            }
+            
         }
-
+        public string GenerarPreReserva()
+        {
+            if(ReservaMod.GenerarPreReserva() == 0)
+            {
+                return "OK";
+            }
+            return "Error";
+        }
 
     }
 }

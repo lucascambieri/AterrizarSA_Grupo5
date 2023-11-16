@@ -62,7 +62,7 @@ namespace AterrizarSA_Grupo5
         public int GuardarPasaje()
         {
             // Valido si la fecha elegida es menor a la que tiene el itinerario, la guardo.
-            if (this.FechayHoraPartida < ItinerarioMod.ItinerarioActivo.FechaInicio)
+            if (this.FechayHoraPartida < ItinerarioMod.ItinerarioActivo.FechaInicio || ItinerarioMod.ItinerarioActivo.FechaInicio.Date == DateTime.Parse("0001-01-01"))
             {
                 ItinerarioMod.ItinerarioActivo.FechaInicio = this.FechayHoraPartida;
             }

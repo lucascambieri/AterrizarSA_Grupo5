@@ -1,5 +1,6 @@
 ﻿using AterrizarSA_Grupo5.Almacenes;
 using AterrizarSA_Grupo5.Entidades;
+using AterrizarSA_Grupo5.Entidades.Secundarias;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,32 @@ namespace AterrizarSA_Grupo5.Modulos
         }
         public static int AgregarHabitacion(HotelEnt habitacionesSelec,int cantAdultos, int cantMenores, int cantInfantes)
         {
+            // Valido que esa habitación no exista en las habitaciones del itinerario
+            List<HotelHabitacionEnt> listaHotelHabitacion = new List<HotelHabitacionEnt>();
+            foreach (var hotel in ItinerarioActivo.HabitacionesSelec)
+            {
+                foreach(var habitacion in hotel.Habitaciones)
+                {
+                    HotelHabitacionEnt hotelHabitacion = new HotelHabitacionEnt();
+                    hotelHabitacion.IdHotel = hotel.IdHotel;
+                    hotelHabitacion.IdHabitacion = habitacion.IdHabitacion;
+                    listaHotelHabitacion.Add(hotelHabitacion);
+                }
+            }
+            foreach (var item in listaHotelHabitacion)
+            {
+                foreach (var hotel in ItinerarioActivo.HabitacionesSelec)
+                {
+                    foreach (var habitacion in hotel.Habitaciones)
+                    {
+                        if (item.IdHotel == hotel.IdHotel && item.IdHabitacion == habitacion.IdHabitacion)
+                            // Ya tiene esta habitación asignada
+                            return -2;
+                    }
+
+                }
+            }
+            
             foreach (var itinerario in ItinerarioAlmacen.Itinerarios)
             {
                 if (itinerario.Id == ItinerarioActivo.Id)
@@ -90,6 +117,21 @@ namespace AterrizarSA_Grupo5.Modulos
                 }
             }
             return -1;
+        }
+        public static string ValidarEstadoReserva()
+        {
+            foreach(var reserva in ReservasAlmacen.Reservas)
+            {
+                if(ItinerarioActivo.Id == reserva.IdItinerario)
+                {
+                    //if (reserva.EstadoReserva == "Pre-reservada" || reserva.EstadoReserva == "Confirmada")
+                    //{
+                    //    return "Tiene";
+                    //}
+                    return reserva.EstadoReserva;
+                }
+            }
+            return "No hay reserva";
         }
 
     }

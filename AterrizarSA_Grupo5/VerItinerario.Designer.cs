@@ -71,6 +71,7 @@
             comision = new ColumnHeader();
             disponibilidad = new ColumnHeader();
             idPasaje = new ColumnHeader();
+            idPasajeroPasaje = new ColumnHeader();
             label6 = new Label();
             buttonQuitarPasajero = new Button();
             buttonEditarPasajerosPasajes = new Button();
@@ -82,7 +83,6 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             buttonGenerarPreReserva = new Button();
-            idPasajeroPasaje = new ColumnHeader();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             panel1.SuspendLayout();
@@ -157,6 +157,7 @@
             buttonQuitarHabitacion.TabIndex = 19;
             buttonQuitarHabitacion.Text = "Quitar habitación";
             buttonQuitarHabitacion.UseVisualStyleBackColor = false;
+            buttonQuitarHabitacion.Click += buttonQuitarHabitacion_Click;
             // 
             // label11
             // 
@@ -390,6 +391,10 @@
             // 
             idPasaje.Text = "IdPasaje";
             // 
+            // idPasajeroPasaje
+            // 
+            idPasajeroPasaje.Text = "IdPasajeroPasaje";
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -511,10 +516,6 @@
             buttonGenerarPreReserva.Text = "Generar pre-reserva";
             buttonGenerarPreReserva.UseVisualStyleBackColor = false;
             buttonGenerarPreReserva.Click += buttonGenerarPreReserva_Click;
-            // 
-            // idPasajeroPasaje
-            // 
-            idPasajeroPasaje.Text = "IdPasajeroPasaje";
             // 
             // VerItinerario
             // 

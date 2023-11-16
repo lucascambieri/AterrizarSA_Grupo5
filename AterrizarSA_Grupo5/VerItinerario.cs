@@ -99,105 +99,167 @@ namespace AterrizarSA_Grupo5
         }
         private void buttonEditarPasajerosPasajes_Click(object sender, EventArgs e)
         {
-            if (listaPasajesSelec.Count > 0)
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
-                if (listViewAereos.SelectedItems.Count == 1)
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (listaPasajesSelec.Count > 0)
                 {
-                    model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
-                    model.Origen = listViewAereos.SelectedItems[0].SubItems[1].Text;
-                    model.Destino = listViewAereos.SelectedItems[0].SubItems[2].Text;
-                    model.Paradas = listViewAereos.SelectedItems[0].SubItems[3].Text;
-                    model.FechayHoraPartida = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[4].Text);
-                    model.FechayHoraLlegada = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[5].Text);
-                    model.TiempoViaje = listViewAereos.SelectedItems[0].SubItems[6].Text;
-                    model.Aerolinea = listViewAereos.SelectedItems[0].SubItems[7].Text;
-                    model.Categoria = listViewAereos.SelectedItems[0].SubItems[8].Text;
-                    model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
-                    model.Precio = double.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
-                    model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
-                    model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[15].Text);
-                    if (model.RevisarPasajeroCargado() == 0)
+                    if (listViewAereos.SelectedItems.Count == 1)
                     {
-                        model.ActivarPasajeSeleccionado();
-                        NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
-                        nuevoPasajeroVuelo.ShowDialog();
+                        model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
+                        model.Origen = listViewAereos.SelectedItems[0].SubItems[1].Text;
+                        model.Destino = listViewAereos.SelectedItems[0].SubItems[2].Text;
+                        model.Paradas = listViewAereos.SelectedItems[0].SubItems[3].Text;
+                        model.FechayHoraPartida = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[4].Text);
+                        model.FechayHoraLlegada = DateTime.Parse(listViewAereos.SelectedItems[0].SubItems[5].Text);
+                        model.TiempoViaje = listViewAereos.SelectedItems[0].SubItems[6].Text;
+                        model.Aerolinea = listViewAereos.SelectedItems[0].SubItems[7].Text;
+                        model.Categoria = listViewAereos.SelectedItems[0].SubItems[8].Text;
+                        model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
+                        model.Precio = double.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
+                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[15].Text);
+                        if (model.RevisarPasajeroCargado() == 0)
+                        {
+                            model.ActivarPasajeSeleccionado();
+                            NuevoPasajeroVuelo nuevoPasajeroVuelo = new NuevoPasajeroVuelo();
+                            nuevoPasajeroVuelo.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El pasaje ya tiene un pasajero cargado", "Error al cargar", MessageBoxButtons.OK);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("El pasaje ya tiene un pasajero cargado", "Error al cargar", MessageBoxButtons.OK);
+                        MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
+                    MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
                 }
-            }
-            else
-            {
-                MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
             }
         }
         private void buttonEditarPasajerosHotel_Click(object sender, EventArgs e)
         {
-            if (listaHabitacionesSelec.Count > 0)
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
-                NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
-                nuevoPasajeroHotel.ShowDialog();
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("El itinerario no tiene habitaciones cargadas", "Sin habitaciones", MessageBoxButtons.OK);
+                if (listaHabitacionesSelec.Count > 0)
+                {
+                    NuevoPasajeroHotel nuevoPasajeroHotel = new NuevoPasajeroHotel();
+                    nuevoPasajeroHotel.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("El itinerario no tiene habitaciones cargadas", "Sin habitaciones", MessageBoxButtons.OK);
+                }
             }
         }
         private void buttonQuitarPasajero_Click(object sender, EventArgs e)
         {
-            if (listaPasajesSelec.Count > 0)
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
-                if (listViewAereos.SelectedItems.Count == 1)
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (listaPasajesSelec.Count > 0)
                 {
-                    model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
-                    model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
-                    if (model.RevisarPasajeroCargado() != 0)
+                    if (listViewAereos.SelectedItems.Count == 1)
                     {
-                        var result = MessageBox.Show("¿Está seguro que desea eliminar al pasajero?", "Eliminar pasajero", MessageBoxButtons.YesNo);
-                        if (result == DialogResult.Yes)
+                        model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
+                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                        if (model.RevisarPasajeroCargado() != 0)
                         {
-                            if(model.QuitarPasajero() == 0)
+                            var result = MessageBox.Show("¿Está seguro que desea eliminar al pasajero?", "Eliminar pasajero", MessageBoxButtons.YesNo);
+                            if (result == DialogResult.Yes)
                             {
-                                MessageBox.Show("Pasajero eliminado correctamente", "Pasajero eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (model.QuitarPasajero() == 0)
+                                {
+                                    MessageBox.Show("Pasajero eliminado correctamente", "Pasajero eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
+
                         }
-                            
+                        else
+                        {
+                            MessageBox.Show("El pasaje no tiene un pasajero cargado", "Error al eliminar", MessageBoxButtons.OK);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("El pasaje no tiene un pasajero cargado", "Error al eliminar", MessageBoxButtons.OK);
+                        MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Elija un (y solo un) pasaje", "Elija pasajes", MessageBoxButtons.OK);
+                    MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
                 }
-            }
-            else
-            {
-                MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
             }
         }
         private void buttonGenerarPreReserva_Click(object sender, EventArgs e)
         {
-            if (!(listaHabitacionesSelec.Count == 0 && listaPasajesSelec.Count == 0))
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
-                model.ValidarPasajerosCargados();
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("El itinerario no tiene ningún producto cargado aún.\nNo se puede pre-reservar","Faltan productos",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (!(listaHabitacionesSelec.Count == 0 && listaPasajesSelec.Count == 0))
+                {
+                    string res = model.ValidarPasajerosCargados();
+                    if (res == "OK")
+                    {
+                        if (model.GenerarPreReserva() == "OK")
+                        {
+                            MessageBox.Show("Se realizó correctamente la pre-reserva", "Pre-reserva realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hubo un error al realizar la pre-reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(res, "Faltan pasajeros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El itinerario no tiene ningún producto cargado aún.\nNo se puede pre-reservar", "Faltan productos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void buttonQuitarPasaje_Click(object sender, EventArgs e)
         {
-
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
+            {
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Aún no funciona");
+            }
+        }
+        private void buttonQuitarHabitacion_Click(object sender, EventArgs e)
+        {
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
+            {
+                MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Aún no funciona");
+            }
         }
     }
 }
