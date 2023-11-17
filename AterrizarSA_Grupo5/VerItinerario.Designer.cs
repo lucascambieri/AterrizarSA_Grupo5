@@ -67,9 +67,6 @@
             clase = new ColumnHeader();
             tipoPasajero = new ColumnHeader();
             precioBase = new ColumnHeader();
-            impuestos = new ColumnHeader();
-            comision = new ColumnHeader();
-            disponibilidad = new ColumnHeader();
             idPasaje = new ColumnHeader();
             idPasajeroPasaje = new ColumnHeader();
             label6 = new Label();
@@ -321,7 +318,7 @@
             // listViewAereos
             // 
             listViewAereos.AllowColumnReorder = true;
-            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje, idPasajeroPasaje });
+            listViewAereos.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, idPasaje, idPasajeroPasaje });
             listViewAereos.FullRowSelect = true;
             listViewAereos.Location = new Point(8, 53);
             listViewAereos.Margin = new Padding(3, 4, 3, 4);
@@ -373,19 +370,7 @@
             // 
             // precioBase
             // 
-            precioBase.Text = "Precio base";
-            // 
-            // impuestos
-            // 
-            impuestos.Text = "Impuestos";
-            // 
-            // comision
-            // 
-            comision.Text = "Comisión";
-            // 
-            // disponibilidad
-            // 
-            disponibilidad.Text = "Disponibilidad";
+            precioBase.Text = "Precio";
             // 
             // idPasaje
             // 
@@ -593,9 +578,6 @@
         private ColumnHeader clase;
         private ColumnHeader tipoPasajero;
         private ColumnHeader precioBase;
-        private ColumnHeader impuestos;
-        private ColumnHeader comision;
-        private ColumnHeader disponibilidad;
         private Label labelSubTotalHoteles;
         private Label labelSubTotalVuelos;
         private Label labelTotal;

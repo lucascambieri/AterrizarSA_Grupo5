@@ -63,8 +63,8 @@ namespace AterrizarSA_Grupo5
                         model.Categoria = listViewAereos.SelectedItems[0].SubItems[8].Text;
                         model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
                         model.Precio = decimal.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
-                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
-                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[15].Text);
+                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[11].Text);
+                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[12].Text);
                         if (model.RevisarPasajeroCargado() == 0)
                         {
                             model.ActivarPasajeSeleccionado();
@@ -119,7 +119,8 @@ namespace AterrizarSA_Grupo5
                     if (listViewAereos.SelectedItems.Count == 1)
                     {
                         model.IdVuelo = int.Parse(listViewAereos.SelectedItems[0].SubItems[0].Text);
-                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
+                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[11].Text);
+                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[12].Text);
                         if (model.RevisarPasajeroCargado() != 0)
                         {
                             var result = MessageBox.Show("¿Está seguro que desea eliminar al pasajero?", "Eliminar pasajero", MessageBoxButtons.YesNo);
@@ -184,7 +185,7 @@ namespace AterrizarSA_Grupo5
         }
         private void buttonQuitarPasaje_Click(object sender, EventArgs e)
         {
-            /*if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
+            if (ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Pre-reservada" || ReservaMod.ReservaDelItinerarioActivo.EstadoReserva == "Confirmada")
             {
                 MessageBox.Show("El itinerario ya tiene una reserva realizada.\nNo puede modificarse más", "Reserva hecha", MessageBoxButtons.OK);
             }
@@ -205,15 +206,15 @@ namespace AterrizarSA_Grupo5
                         model.Categoria = listViewAereos.SelectedItems[0].SubItems[8].Text;
                         model.TipoPasajero = listViewAereos.SelectedItems[0].SubItems[9].Text;
                         model.Precio = decimal.Parse(listViewAereos.SelectedItems[0].SubItems[10].Text);
-                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[14].Text);
-                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[15].Text);
+                        model.IdPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[11].Text);
+                        model.IdPasajeroPasaje = int.Parse(listViewAereos.SelectedItems[0].SubItems[12].Text);
                         var result = MessageBox.Show("¿Está seguro que desea eliminar el pasaje?", "Eliminar pasaje", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
                             if (model.QuitarPasaje() == "OK")
                             {
                                 MessageBox.Show("El pasaje fue eliminado correctamente", "Pasaje eliminado", MessageBoxButtons.OK);
-                                this.Close();
+                                ActualizarListas();
                             }
                         }
                     }
@@ -226,7 +227,7 @@ namespace AterrizarSA_Grupo5
                 {
                     MessageBox.Show("El itinerario no tiene pasajes cargados", "Sin pasajes", MessageBoxButtons.OK);
                 }
-            }*/
+            }
         }
         private void buttonQuitarHabitacion_Click(object sender, EventArgs e)
         {
@@ -325,9 +326,6 @@ namespace AterrizarSA_Grupo5
                     listViewItem.SubItems.Add(pasaje.Categoria);
                     listViewItem.SubItems.Add(pasaje.TipoPasajero);
                     listViewItem.SubItems.Add(pasaje.Precio.ToString());
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add(pasaje.CantidadElegida.ToString());
                     listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
                     listViewItem.SubItems.Add(pasaje.IdPasajeroPasaje.ToString("D5"));
                     listViewAereos.Items.Add(listViewItem);

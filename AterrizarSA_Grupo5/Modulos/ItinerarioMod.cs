@@ -134,6 +134,7 @@ namespace AterrizarSA_Grupo5.Modulos
         public static int QuitarPasaje(VueloEnt pasajeEliminar)
         {
             List<VueloPasajeEnt> listaVueloPasaje = new List<VueloPasajeEnt>();
+            int i = 1;
             foreach (var vuelo in ItinerarioActivo.PasajesSelec)
             {
                 foreach (var pasaje in vuelo.Pasajes)
@@ -145,23 +146,28 @@ namespace AterrizarSA_Grupo5.Modulos
                     listaVueloPasaje.Add(vueloPasaje);
                 }
             }
-            foreach (var vuelo in ItinerarioActivo.PasajesSelec)
+            foreach (var item in listaVueloPasaje)
             {
-                //if(pasaje.)
-                ItinerarioActivo.PasajesSelec.Remove(pasajeEliminar);
-                switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                foreach(var pasaje in pasajeEliminar.Pasajes)
                 {
-                    case "Adulto":
-                        ItinerarioActivo.CantAdultos--;
-                        break;
-                    case "Menor":
-                        ItinerarioActivo.CantMenores--;
-                        break;
-                    case "Infante":
-                        ItinerarioActivo.CantInfantes--;
-                        break;
+                    if(item.IdVuelo == pasajeEliminar.IdVuelo && item.IdPasaje == pasaje.IdPasaje)
+                    {
+                        ItinerarioActivo.PasajesSelec.Remove(item.VueloEntidad);
+                        switch (pasajeEliminar.Pasajes[0].TipoPasajero)
+                        {
+                            case "Adulto":
+                                ItinerarioActivo.CantAdultos--;
+                                break;
+                            case "Menor":
+                                ItinerarioActivo.CantMenores--;
+                                break;
+                            case "Infante":
+                                ItinerarioActivo.CantInfantes--;
+                                break;
+                        }
+                        return 0;
+                    }
                 }
-                return 0;
             }
             return -1;
         }

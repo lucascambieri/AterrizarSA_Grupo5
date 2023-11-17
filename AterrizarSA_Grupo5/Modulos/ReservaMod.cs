@@ -185,13 +185,13 @@ namespace AterrizarSA_Grupo5.Modulos
             }
             return 0;
         }
-        public static int QuitarPasajeroVuelo(int idVuelo, int idPasaje)
+        public static int QuitarPasajeroVuelo(int idVuelo, int idPasaje, int idPasajeroPasaje)
         {
             if (ReservaDelItinerarioActivo.PasajeroPorPasaje != null)
             {
                 foreach (var pasajes in ReservaDelItinerarioActivo.PasajeroPorPasaje)
                 {
-                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje)
+                    if (pasajes.VueloPasaje.IdVuelo == idVuelo && pasajes.VueloPasaje.Pasajes[0].IdPasaje == idPasaje && pasajes.IdPasajeroPasaje == idPasajeroPasaje)
                     {
                         if (pasajes.Pasajero != null)
                         {

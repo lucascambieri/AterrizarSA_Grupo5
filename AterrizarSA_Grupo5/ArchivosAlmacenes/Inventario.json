@@ -15,7 +15,7 @@
           "CantidadCamasAdultos": 2,
           "CantidadCamasMenores": 1,
           "CantidadCamasInfantes": 1,
-          "PrecioNoche": "20000,00",
+          "PrecioNoche": 20000.00,
           "Disponibilidad": []
         },
         {
@@ -25,7 +25,7 @@
           "CantidadCamasAdultos": 4,
           "CantidadCamasMenores": 0,
           "CantidadCamasInfantes": 0,
-          "PrecioNoche": "25000,00",
+          "PrecioNoche": 25000.00,
           "Disponibilidad": [
             {
               "FechaInicioDisp": "2023-12-01",
@@ -40,56 +40,211 @@
           "CantidadCamasAdultos": 1,
           "CantidadCamasMenores": 0,
           "CantidadCamasInfantes": 0,
-          "PrecioNoche": "15000,00",
+          "PrecioNoche": 15000.00,
           "Disponibilidad": [
             {
               "FechaInicioDisp": "2023-12-01",
               "FechaFinDisp": "2024-12-01"
             }
           ]
-        },
-        {
-          "IdHabitacion": "00004",
-          "Descripcion": "Simple",
-          "CapacidadMaxima": 2,
-          "CantidadCamasAdultos": 1,
-          "CantidadCamasMenores": 0,
-          "CantidadCamasInfantes": 0,
-          "PrecioNoche": "15000,00",
-          "Disponibilidad": [
-            {
-              "FechaInicioDisp": "2023-12-01",
-              "FechaFinDisp": "2024-12-01"
-            }
-          ]
-        },
-        {
-          "IdHabitacion": "00005",
-          "Descripcion": "Simple",
-          "CapacidadMaxima": 2,
-          "CantidadCamasAdultos": 1,
-          "CantidadCamasMenores": 0,
-          "CantidadCamasInfantes": 0,
-          "PrecioNoche": "15000,00",
-          "Disponibilidad": [
-            {
-              "FechaInicioDisp": "2023-12-01",
-              "FechaFinDisp": "2024-12-01"
-            }
-          ]
-        },
+        }
+      ]
+    },
+    {
+      "IdHotel": "00002",
+      "CodHotel": "SOF",
+      "Nombre": "Sofitel",
+      "Ciudad": "Buenos Aires",
+      "Calificacion": "5 estrellas",
+      "Direccion": "Avenida 9 de Julio 1200",
+      "Habitaciones": [
         {
           "IdHabitacion": "00006",
-          "Descripcion": "Simple",
+          "Descripcion": "Suite Presidencial",
+          "CapacidadMaxima": 4,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 25000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2024-03-15",
+              "FechaFinDisp": "2024-12-31"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00007",
+          "Descripcion": "Doble Deluxe",
           "CapacidadMaxima": 2,
           "CantidadCamasAdultos": 1,
           "CantidadCamasMenores": 0,
           "CantidadCamasInfantes": 0,
-          "PrecioNoche": "15000,00",
+          "PrecioNoche": 18000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-11-01",
+              "FechaFinDisp": "2024-01-31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdHotel": "00003",
+      "CodHotel": "MAR",
+      "Nombre": "Marriott",
+      "Ciudad": "Córdoba",
+      "Calificacion": "4 estrellas",
+      "Direccion": "San Martin 200",
+      "Habitaciones": [
+        {
+          "IdHabitacion": "00008",
+          "Descripcion": "Junior Suite",
+          "CapacidadMaxima": 3,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 1,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 22000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-11-15",
+              "FechaFinDisp": "2024-02-28"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00009",
+          "Descripcion": "Habitación Doble",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 16000.00,
           "Disponibilidad": [
             {
               "FechaInicioDisp": "2023-12-01",
-              "FechaFinDisp": "2024-12-01"
+              "FechaFinDisp": "2024-01-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdHotel": "00004",
+      "CodHotel": "RAD",
+      "Nombre": "Radisson",
+      "Ciudad": "Rosario",
+      "Calificacion": "3 estrellas",
+      "Direccion": "Belgrano 300",
+      "Habitaciones": [
+        {
+          "IdHabitacion": "00010",
+          "Descripcion": "Standard",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 12000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-11-01",
+              "FechaFinDisp": "2024-01-31"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00011",
+          "Descripcion": "Familiar",
+          "CapacidadMaxima": 4,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 1,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 18000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-03-31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdHotel": "00005",
+      "CodHotel": "LAK",
+      "Nombre": "Lakeside",
+      "Ciudad": "Bariloche",
+      "Calificacion": "4 estrellas",
+      "Direccion": "Avenida Nahuel Huapi 500",
+      "Habitaciones": [
+        {
+          "IdHabitacion": "00012",
+          "Descripcion": "Suite con Vista al Lago",
+          "CapacidadMaxima": 3,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 1,
+          "PrecioNoche": 22000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-02-28"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00013",
+          "Descripcion": "Habitación Doble Estándar",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 16000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-11-15",
+              "FechaFinDisp": "2024-01-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdHotel": "00006",
+      "CodHotel": "USH",
+      "Nombre": "Ushuaia Palace",
+      "Ciudad": "Ushuaia",
+      "Calificacion": "5 estrellas",
+      "Direccion": "Avenida del Fin del Mundo 100",
+      "Habitaciones": [
+        {
+          "IdHabitacion": "00014",
+          "Descripcion": "Suite Presidencial",
+          "CapacidadMaxima": 4,
+          "CantidadCamasAdultos": 2,
+          "CantidadCamasMenores": 1,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 28000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2024-01-01",
+              "FechaFinDisp": "2024-12-31"
+            }
+          ]
+        },
+        {
+          "IdHabitacion": "00015",
+          "Descripcion": "Habitación Deluxe con Vista al Canal",
+          "CapacidadMaxima": 2,
+          "CantidadCamasAdultos": 1,
+          "CantidadCamasMenores": 0,
+          "CantidadCamasInfantes": 0,
+          "PrecioNoche": 20000.00,
+          "Disponibilidad": [
+            {
+              "FechaInicioDisp": "2023-12-01",
+              "FechaFinDisp": "2024-03-31"
             }
           ]
         }
@@ -110,35 +265,35 @@
         {
           "IdPasaje": "00001",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 25
         },
         {
           "IdPasaje": "00002",
           "Categoria": "B",
-          "Precio": "55000,00",
+          "Precio": 55000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 13
         },
         {
           "IdPasaje": "00003",
           "Categoria": "P",
-          "Precio": "85000,00",
+          "Precio": 85000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 5
         },
         {
           "IdPasaje": "00004",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Menor",
           "CantidadDisponible": 15
         },
         {
           "IdPasaje": "00005",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Infante",
           "CantidadDisponible": 4
         }
@@ -158,40 +313,1320 @@
         {
           "IdPasaje": "00001",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 25
         },
         {
           "IdPasaje": "00002",
           "Categoria": "B",
-          "Precio": "55000,00",
+          "Precio": 55000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 13
         },
         {
           "IdPasaje": "00003",
           "Categoria": "P",
-          "Precio": "85000,00",
+          "Precio": 85000.00,
           "TipoPasajero": "Adulto",
           "CantidadDisponible": 5
         },
         {
           "IdPasaje": "00004",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Menor",
           "CantidadDisponible": 15
         },
         {
           "IdPasaje": "00005",
           "Categoria": "E",
-          "Precio": "35000,00",
+          "Precio": 35000.00,
           "TipoPasajero": "Infante",
           "CantidadDisponible": 4
         }
-
+      ]
+    },
+    {
+      "IdVuelo": "00003",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Buenos Aires",
+      "Paradas": "1",
+      "TiempoViaje": "3.30",
+      "FechayHoraPartida": "2023-12-10 12:30:00.000",
+      "FechayHoraLlegada": "2023-12-10 16:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00006",
+          "Categoria": "B",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00007",
+          "Categoria": "P",
+          "Precio": 90000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00008",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        },
+        {
+          "IdPasaje": "00009",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 7
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00004",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Buenos Aires",
+      "Paradas": "0",
+      "TiempoViaje": "2.15",
+      "FechayHoraPartida": "2023-12-15 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-15 11:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00010",
+          "Categoria": "E",
+          "Precio": 38000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00011",
+          "Categoria": "B",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00012",
+          "Categoria": "P",
+          "Precio": 92000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00013",
+          "Categoria": "E",
+          "Precio": 38000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 20
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00005",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Buenos Aires",
+      "Paradas": "2",
+      "TiempoViaje": "4.00",
+      "FechayHoraPartida": "2023-12-20 15:00:00.000",
+      "FechayHoraLlegada": "2023-12-20 19:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00014",
+          "Categoria": "B",
+          "Precio": 62000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00015",
+          "Categoria": "P",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00016",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00017",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00006",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Buenos Aires",
+      "Paradas": "1",
+      "TiempoViaje": "3.15",
+      "FechayHoraPartida": "2023-12-25 10:30:00.000",
+      "FechayHoraLlegada": "2023-12-25 13:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00018",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 28
+        },
+        {
+          "IdPasaje": "00019",
+          "Categoria": "B",
+          "Precio": 63000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00020",
+          "Categoria": "P",
+          "Precio": 97000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 6
+        },
+        {
+          "IdPasaje": "00021",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 22
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00007",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "0",
+      "TiempoViaje": "1.30",
+      "FechayHoraPartida": "2023-12-08 14:45:00.000",
+      "FechayHoraLlegada": "2023-12-08 16:15:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00022",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00023",
+          "Categoria": "B",
+          "Precio": 45000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00024",
+          "Categoria": "P",
+          "Precio": 70000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00025",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00008",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "1",
+      "TiempoViaje": "2.45",
+      "FechayHoraPartida": "2023-12-12 09:00:00.000",
+      "FechayHoraLlegada": "2023-12-12 11:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00026",
+          "Categoria": "B",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00027",
+          "Categoria": "P",
+          "Precio": 80000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00028",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00029",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00009",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "0",
+      "TiempoViaje": "1.15",
+      "FechayHoraPartida": "2023-12-18 17:30:00.000",
+      "FechayHoraLlegada": "2023-12-18 18:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00030",
+          "Categoria": "E",
+          "Precio": 28000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00031",
+          "Categoria": "B",
+          "Precio": 50000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00032",
+          "Categoria": "P",
+          "Precio": 75000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00033",
+          "Categoria": "E",
+          "Precio": 28000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 25
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00010",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "2",
+      "TiempoViaje": "3.30",
+      "FechayHoraPartida": "2023-12-22 11:00:00.000",
+      "FechayHoraLlegada": "2023-12-22 14:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00034",
+          "Categoria": "B",
+          "Precio": 58000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 18
+        },
+        {
+          "IdPasaje": "00035",
+          "Categoria": "P",
+          "Precio": 85000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00036",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00037",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00011",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "1",
+      "TiempoViaje": "2.15",
+      "FechayHoraPartida": "2023-12-28 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-28 11:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00038",
+          "Categoria": "E",
+          "Precio": 32000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 28
+        },
+        {
+          "IdPasaje": "00039",
+          "Categoria": "B",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00040",
+          "Categoria": "P",
+          "Precio": 82000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00041",
+          "Categoria": "E",
+          "Precio": 32000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 20
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00012",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Córdoba",
+      "Paradas": "0",
+      "TiempoViaje": "1.45",
+      "FechayHoraPartida": "2023-12-31 13:30:00.000",
+      "FechayHoraLlegada": "2023-12-31 15:15:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00042",
+          "Categoria": "B",
+          "Precio": 50000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00043",
+          "Categoria": "P",
+          "Precio": 75000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00044",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00045",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00013",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Ushuaia",
+      "Paradas": "1",
+      "TiempoViaje": "5.30",
+      "FechayHoraPartida": "2023-12-10 08:00:00.000",
+      "FechayHoraLlegada": "2023-12-10 13:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00046",
+          "Categoria": "E",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00047",
+          "Categoria": "B",
+          "Precio": 90000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00048",
+          "Categoria": "P",
+          "Precio": 120000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00049",
+          "Categoria": "E",
+          "Precio": 60000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00014",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Ushuaia",
+      "Paradas": "0",
+      "TiempoViaje": "4.00",
+      "FechayHoraPartida": "2023-12-15 12:30:00.000",
+      "FechayHoraLlegada": "2023-12-15 16:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00050",
+          "Categoria": "B",
+          "Precio": 80000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00051",
+          "Categoria": "P",
+          "Precio": 130000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00052",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00053",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00015",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Ushuaia",
+      "Paradas": "2",
+      "TiempoViaje": "6.15",
+      "FechayHoraPartida": "2023-12-20 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-20 15:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00054",
+          "Categoria": "E",
+          "Precio": 70000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00055",
+          "Categoria": "B",
+          "Precio": 110000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00056",
+          "Categoria": "P",
+          "Precio": 150000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00057",
+          "Categoria": "E",
+          "Precio": 70000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 25
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00016",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Ushuaia",
+      "Paradas": "1",
+      "TiempoViaje": "4.30",
+      "FechayHoraPartida": "2023-12-25 15:00:00.000",
+      "FechayHoraLlegada": "2023-12-25 19:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00058",
+          "Categoria": "B",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 18
+        },
+        {
+          "IdPasaje": "00059",
+          "Categoria": "P",
+          "Precio": 140000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00060",
+          "Categoria": "E",
+          "Precio": 50000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00061",
+          "Categoria": "E",
+          "Precio": 50000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00017",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "2.00",
+      "FechayHoraPartida": "2023-12-05 10:00:00.000",
+      "FechayHoraLlegada": "2023-12-05 12:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00062",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00063",
+          "Categoria": "B",
+          "Precio": 65000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00064",
+          "Categoria": "P",
+          "Precio": 90000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00065",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00018",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "1",
+      "TiempoViaje": "3.30",
+      "FechayHoraPartida": "2023-12-10 12:30:00.000",
+      "FechayHoraLlegada": "2023-12-10 16:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00066",
+          "Categoria": "B",
+          "Precio": 70000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00067",
+          "Categoria": "P",
+          "Precio": 110000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00068",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00069",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00019",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "2.15",
+      "FechayHoraPartida": "2023-12-15 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-15 11:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00070",
+          "Categoria": "E",
+          "Precio": 38000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00071",
+          "Categoria": "B",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00072",
+          "Categoria": "P",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00073",
+          "Categoria": "E",
+          "Precio": 38000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 25
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00020",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "2",
+      "TiempoViaje": "4.00",
+      "FechayHoraPartida": "2023-12-22 11:00:00.000",
+      "FechayHoraLlegada": "2023-12-22 15:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00074",
+          "Categoria": "B",
+          "Precio": 65000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 18
+        },
+        {
+          "IdPasaje": "00075",
+          "Categoria": "P",
+          "Precio": 100000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00076",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00077",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00021",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "1",
+      "TiempoViaje": "2.45",
+      "FechayHoraPartida": "2023-12-28 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-28 12:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00078",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 28
+        },
+        {
+          "IdPasaje": "00079",
+          "Categoria": "B",
+          "Precio": 70000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00080",
+          "Categoria": "P",
+          "Precio": 105000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00081",
+          "Categoria": "E",
+          "Precio": 45000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 20
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00022",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "1.45",
+      "FechayHoraPartida": "2023-12-31 13:30:00.000",
+      "FechayHoraLlegada": "2023-12-31 15:15:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00082",
+          "Categoria": "B",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00083",
+          "Categoria": "P",
+          "Precio": 80000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00084",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00085",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00023",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "1",
+      "TiempoViaje": "3.00",
+      "FechayHoraPartida": "2024-01-05 11:00:00.000",
+      "FechayHoraLlegada": "2024-01-05 14:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00086",
+          "Categoria": "E",
+          "Precio": 48000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 22
+        },
+        {
+          "IdPasaje": "00087",
+          "Categoria": "B",
+          "Precio": 75000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 18
+        },
+        {
+          "IdPasaje": "00088",
+          "Categoria": "P",
+          "Precio": 110000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00089",
+          "Categoria": "E",
+          "Precio": 48000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00024",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Buenos Aires",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "2.30",
+      "FechayHoraPartida": "2024-01-10 15:30:00.000",
+      "FechayHoraLlegada": "2024-01-10 18:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00090",
+          "Categoria": "B",
+          "Precio": 62000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 28
+        },
+        {
+          "IdPasaje": "00091",
+          "Categoria": "P",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00092",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00093",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00025",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Bariloche",
+      "Paradas": "1",
+      "TiempoViaje": "3.30",
+      "FechayHoraPartida": "2023-12-10 13:00:00.000",
+      "FechayHoraLlegada": "2023-12-10 16:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00082",
+          "Categoria": "B",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00083",
+          "Categoria": "P",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00084",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00085",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00026",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "2.15",
+      "FechayHoraPartida": "2023-12-15 09:15:00.000",
+      "FechayHoraLlegada": "2023-12-15 11:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00086",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00087",
+          "Categoria": "B",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00088",
+          "Categoria": "P",
+          "Precio": 85000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00089",
+          "Categoria": "E",
+          "Precio": 35000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 20
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00027",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Bariloche",
+      "Paradas": "2",
+      "TiempoViaje": "4.00",
+      "FechayHoraPartida": "2023-12-20 15:00:00.000",
+      "FechayHoraLlegada": "2023-12-20 19:00:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00090",
+          "Categoria": "B",
+          "Precio": 62000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00091",
+          "Categoria": "P",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00092",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00093",
+          "Categoria": "E",
+          "Precio": 42000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00028",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Bariloche",
+      "Paradas": "1",
+      "TiempoViaje": "3.15",
+      "FechayHoraPartida": "2023-12-25 10:30:00.000",
+      "FechayHoraLlegada": "2023-12-25 13:45:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00094",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 28
+        },
+        {
+          "IdPasaje": "00095",
+          "Categoria": "B",
+          "Precio": 63000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00096",
+          "Categoria": "P",
+          "Precio": 97000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 6
+        },
+        {
+          "IdPasaje": "00097",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 22
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00029",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Mendoza",
+      "Destino": "Bariloche",
+      "Paradas": "0",
+      "TiempoViaje": "1.45",
+      "FechayHoraPartida": "2023-12-31 08:45:00.000",
+      "FechayHoraLlegada": "2023-12-31 10:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00098",
+          "Categoria": "B",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00099",
+          "Categoria": "P",
+          "Precio": 88000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00100",
+          "Categoria": "E",
+          "Precio": 36000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00101",
+          "Categoria": "E",
+          "Precio": 36000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00030",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Córdoba",
+      "Destino": "Rosario",
+      "Paradas": "0",
+      "TiempoViaje": "1.30",
+      "FechayHoraPartida": "2023-12-08 12:00:00.000",
+      "FechayHoraLlegada": "2023-12-08 13:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00102",
+          "Categoria": "E",
+          "Precio": 25000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00103",
+          "Categoria": "B",
+          "Precio": 40000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00104",
+          "Categoria": "P",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00105",
+          "Categoria": "E",
+          "Precio": 25000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00031",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Córdoba",
+      "Destino": "Rosario",
+      "Paradas": "1",
+      "TiempoViaje": "2.45",
+      "FechayHoraPartida": "2023-12-15 08:30:00.000",
+      "FechayHoraLlegada": "2023-12-15 11:15:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00106",
+          "Categoria": "B",
+          "Precio": 48000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00107",
+          "Categoria": "P",
+          "Precio": 75000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 12
+        },
+        {
+          "IdPasaje": "00108",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00109",
+          "Categoria": "E",
+          "Precio": 30000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00032",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Córdoba",
+      "Destino": "Ushuaia",
+      "Paradas": "1",
+      "TiempoViaje": "6.00",
+      "FechayHoraPartida": "2023-12-10 11:30:00.000",
+      "FechayHoraLlegada": "2023-12-10 17:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00110",
+          "Categoria": "E",
+          "Precio": 55000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00111",
+          "Categoria": "B",
+          "Precio": 85000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00112",
+          "Categoria": "P",
+          "Precio": 120000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 10
+        },
+        {
+          "IdPasaje": "00113",
+          "Categoria": "E",
+          "Precio": 55000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 18
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00033",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Córdoba",
+      "Destino": "Ushuaia",
+      "Paradas": "0",
+      "TiempoViaje": "4.30",
+      "FechayHoraPartida": "2023-12-15 09:00:00.000",
+      "FechayHoraLlegada": "2023-12-15 13:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00114",
+          "Categoria": "B",
+          "Precio": 75000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 30
+        },
+        {
+          "IdPasaje": "00115",
+          "Categoria": "P",
+          "Precio": 110000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 20
+        },
+        {
+          "IdPasaje": "00116",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00117",
+          "Categoria": "E",
+          "Precio": 40000.00,
+          "TipoPasajero": "Infante",
+          "CantidadDisponible": 5
+        }
+      ]
+    },
+    {
+      "IdVuelo": "00034",
+      "Aerolinea": "Aerolineas Argentinas",
+      "Origen": "Córdoba",
+      "Destino": "Ushuaia",
+      "Paradas": "2",
+      "TiempoViaje": "7.00",
+      "FechayHoraPartida": "2023-12-20 10:30:00.000",
+      "FechayHoraLlegada": "2023-12-20 17:30:00.000",
+      "Pasajes": [
+        {
+          "IdPasaje": "00118",
+          "Categoria": "E",
+          "Precio": 60000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 25
+        },
+        {
+          "IdPasaje": "00119",
+          "Categoria": "B",
+          "Precio": 95000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 15
+        },
+        {
+          "IdPasaje": "00120",
+          "Categoria": "P",
+          "Precio": 130000.00,
+          "TipoPasajero": "Adulto",
+          "CantidadDisponible": 8
+        },
+        {
+          "IdPasaje": "00121",
+          "Categoria": "E",
+          "Precio": 60000.00,
+          "TipoPasajero": "Menor",
+          "CantidadDisponible": 22
+        }
       ]
     }
+
   ]
 }

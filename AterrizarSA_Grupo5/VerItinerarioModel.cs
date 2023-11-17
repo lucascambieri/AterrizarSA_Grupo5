@@ -185,7 +185,7 @@ namespace AterrizarSA_Grupo5
         }
         public int QuitarPasajero()
         {
-            return ReservaMod.QuitarPasajeroVuelo(this.IdVuelo,this.IdPasaje);
+            return ReservaMod.QuitarPasajeroVuelo(this.IdVuelo,this.IdPasaje, this.IdPasajeroPasaje);
         }
         public void CrearReserva()
         {

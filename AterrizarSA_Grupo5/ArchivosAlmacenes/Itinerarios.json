@@ -24,7 +24,7 @@
             "CantidadCamasAdultos": 2,
             "CantidadCamasMenores": 1,
             "CantidadCamasInfantes": 1,
-            "PrecioNoche": "20000,00",
+            "PrecioNoche": 20000.00,
             "Disponibilidad": [
               {
                 "FechaInicioDisp": "2024-02-08",
@@ -36,6 +36,6 @@
       }
     ],
     "PasajesSelec": [],
-    "TarifaTotal": "50000,00"
+    "TarifaTotal": 50000.00
   }
 ]

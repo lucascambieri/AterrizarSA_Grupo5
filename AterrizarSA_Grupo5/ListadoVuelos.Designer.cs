@@ -61,8 +61,6 @@
             clase = new ColumnHeader();
             tipoPasajero = new ColumnHeader();
             precioBase = new ColumnHeader();
-            impuestos = new ColumnHeader();
-            comision = new ColumnHeader();
             disponibilidad = new ColumnHeader();
             idPasaje = new ColumnHeader();
             label16 = new Label();
@@ -291,7 +289,7 @@
             // listViewPasajes
             // 
             listViewPasajes.AllowColumnReorder = true;
-            listViewPasajes.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, impuestos, comision, disponibilidad, idPasaje });
+            listViewPasajes.Columns.AddRange(new ColumnHeader[] { idVuelo, origen, destino, paradas, fechaSalida, fechaLlegada, tiempoVuelo, aerolinea, clase, tipoPasajero, precioBase, disponibilidad, idPasaje });
             listViewPasajes.FullRowSelect = true;
             listViewPasajes.Location = new Point(35, 377);
             listViewPasajes.Margin = new Padding(3, 4, 3, 4);
@@ -343,15 +341,7 @@
             // 
             // precioBase
             // 
-            precioBase.Text = "Precio base";
-            // 
-            // impuestos
-            // 
-            impuestos.Text = "Impuestos";
-            // 
-            // comision
-            // 
-            comision.Text = "Comisión";
+            precioBase.Text = "Precio";
             // 
             // disponibilidad
             // 
@@ -536,8 +526,6 @@
         private ColumnHeader clase;
         private ColumnHeader tipoPasajero;
         private ColumnHeader precioBase;
-        private ColumnHeader impuestos;
-        private ColumnHeader comision;
         private ColumnHeader disponibilidad;
         private Label label16;
         private GroupBox groupBoxBusqueda;
