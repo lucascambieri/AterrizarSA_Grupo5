@@ -121,7 +121,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(799, 186);
+            label8.Location = new Point(799, 189);
             label8.Name = "label8";
             label8.Size = new Size(52, 15);
             label8.TabIndex = 21;
@@ -160,7 +160,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(806, 616);
+            label11.Location = new Point(806, 572);
             label11.Name = "label11";
             label11.Size = new Size(53, 15);
             label11.TabIndex = 28;
@@ -171,7 +171,7 @@
             buttonVolverAtras.BackColor = Color.LightSteelBlue;
             buttonVolverAtras.FlatAppearance.BorderSize = 0;
             buttonVolverAtras.FlatStyle = FlatStyle.Flat;
-            buttonVolverAtras.Location = new Point(806, 666);
+            buttonVolverAtras.Location = new Point(806, 600);
             buttonVolverAtras.Margin = new Padding(3, 4, 3, 4);
             buttonVolverAtras.Name = "buttonVolverAtras";
             buttonVolverAtras.Size = new Size(153, 39);
@@ -253,11 +253,11 @@
             groupBox1.Controls.Add(buttonQuitarHabitacion);
             groupBox1.Controls.Add(buttonEditarPasajerosHotel);
             groupBox1.Controls.Add(label8);
-            groupBox1.Location = new Point(16, 345);
+            groupBox1.Location = new Point(16, 329);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(943, 267);
+            groupBox1.Size = new Size(943, 239);
             groupBox1.TabIndex = 54;
             groupBox1.TabStop = false;
             groupBox1.Text = "Hotelería";
@@ -266,7 +266,7 @@
             // 
             labelSubTotalHoteles.AutoSize = true;
             labelSubTotalHoteles.BackColor = Color.LightBlue;
-            labelSubTotalHoteles.Location = new Point(857, 186);
+            labelSubTotalHoteles.Location = new Point(857, 189);
             labelSubTotalHoteles.Name = "labelSubTotalHoteles";
             labelSubTotalHoteles.Size = new Size(69, 15);
             labelSubTotalHoteles.TabIndex = 68;
@@ -286,7 +286,7 @@
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(943, 267);
+            groupBox2.Size = new Size(943, 235);
             groupBox2.TabIndex = 62;
             groupBox2.TabStop = false;
             groupBox2.Text = "Vuelos";
@@ -432,7 +432,7 @@
             labelTotal.AutoSize = true;
             labelTotal.BackColor = Color.LightBlue;
             labelTotal.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTotal.Location = new Point(865, 616);
+            labelTotal.Location = new Point(865, 572);
             labelTotal.Name = "labelTotal";
             labelTotal.Size = new Size(77, 15);
             labelTotal.TabIndex = 77;
@@ -471,7 +471,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.bg_donut_1;
-            pictureBox2.Location = new Point(0, 292);
+            pictureBox2.Location = new Point(0, 217);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(533, 433);
             pictureBox2.TabIndex = 78;
@@ -493,7 +493,7 @@
             buttonGenerarPreReserva.FlatStyle = FlatStyle.Flat;
             buttonGenerarPreReserva.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttonGenerarPreReserva.ForeColor = Color.White;
-            buttonGenerarPreReserva.Location = new Point(24, 666);
+            buttonGenerarPreReserva.Location = new Point(24, 600);
             buttonGenerarPreReserva.Margin = new Padding(3, 4, 3, 4);
             buttonGenerarPreReserva.Name = "buttonGenerarPreReserva";
             buttonGenerarPreReserva.Size = new Size(143, 39);
@@ -507,15 +507,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(974, 724);
+            ClientSize = new Size(974, 647);
             Controls.Add(groupBox1);
             Controls.Add(buttonGenerarPreReserva);
             Controls.Add(panel1);
             Controls.Add(labelTotal);
             Controls.Add(groupBox2);
             Controls.Add(buttonVolverAtras);
-            Controls.Add(label11);
             Controls.Add(pictureBox2);
+            Controls.Add(label11);
             Controls.Add(pictureBox3);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedDialog;

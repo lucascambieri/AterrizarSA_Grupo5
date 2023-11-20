@@ -100,13 +100,13 @@ namespace AterrizarSA_Grupo5
                 model.Categoria = listViewPasajes.SelectedItems[0].SubItems[8].Text;
                 model.TipoPasajero = listViewPasajes.SelectedItems[0].SubItems[9].Text;
                 model.Precio = decimal.Parse(listViewPasajes.SelectedItems[0].SubItems[10].Text);
-                model.CantidadDisponible = int.Parse(listViewPasajes.SelectedItems[0].SubItems[13].Text);
-                model.IdPasaje = int.Parse(listViewPasajes.SelectedItems[0].SubItems[14].Text);
+                model.CantidadDisponible = int.Parse(listViewPasajes.SelectedItems[0].SubItems[11].Text);
+                model.IdPasaje = int.Parse(listViewPasajes.SelectedItems[0].SubItems[12].Text);
             }
             int result = model.GuardarPasaje();
             if (result == 0)
             {
-                listViewPasajes.SelectedItems[0].SubItems[13].Text = (model.CantidadDisponible - 1).ToString();
+                listViewPasajes.SelectedItems[0].SubItems[11].Text = (model.CantidadDisponible - 1).ToString();
                 MessageBox.Show("Pasaje agregado exitosamente", "Pasaje agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -136,8 +136,6 @@ namespace AterrizarSA_Grupo5
                     listViewItem.SubItems.Add(pasaje.Categoria);
                     listViewItem.SubItems.Add(pasaje.TipoPasajero);
                     listViewItem.SubItems.Add(pasaje.Precio.ToString());
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add(pasaje.CantidadDisponible.ToString());
                     listViewItem.SubItems.Add(pasaje.IdPasaje.ToString("D5"));
                     if(pasaje.Categoria == comboBoxCategorias.Text || comboBoxCategorias.Text == "")
@@ -199,9 +197,9 @@ namespace AterrizarSA_Grupo5
                             }
                         }
                     }
-                    listViewPasajes.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
-                if(listViewPasajes.Items.Count > 0)
+                listViewPasajes.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                if (listViewPasajes.Items.Count > 0)
                 {
                     listViewPasajes.Enabled = true;
                     buttonGuardarPasaje.Enabled = true;

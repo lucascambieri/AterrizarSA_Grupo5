@@ -25,6 +25,7 @@ namespace AterrizarSA_Grupo5
         private void GestionItinerarios_Load_1(object sender, EventArgs e)
         {
             model = new GestionItinerarioModel();
+            if(ItinerarioMod.ItinerarioActivo != null) ItinerarioSeleccionado.Text = ItinerarioMod.ItinerarioActivo.Id.ToString("D5");
             ActualizarListaItinerarios();
         }
         private void buttonNuevoItinerario_Click(object sender, EventArgs e)

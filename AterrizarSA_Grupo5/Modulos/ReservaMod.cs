@@ -217,16 +217,31 @@ namespace AterrizarSA_Grupo5.Modulos
         }
         public static int ObtenerUltimoIdPasajeroPasaje()
         {
-            int ultimoId = 0;
+            /*
+            int id = 0;
+            for (int i = 0; i <= pos; i++)
+            {
+                try 
+                {
+                    id = ReservaDelItinerarioActivo.PasajeroPorPasaje[i].IdPasajeroPasaje; 
+                } 
+                catch 
+                { 
+                    id = i;
+                }
+            }
+            return id;
+            */
+            int id = 0;
             foreach (var pasajePasajero in ReservaDelItinerarioActivo.PasajeroPorPasaje)
             {
                 if(pasajePasajero.VueloPasaje != null)
                 {
-                    ultimoId = pasajePasajero.IdPasajeroPasaje;
-                    ultimoId++;
+                    id = pasajePasajero.IdPasajeroPasaje;
+                    id++;
                 }
             }
-            return ultimoId;
+            return id;
         }
         public static int ValidarPasajerosCargadosHotel()
         {

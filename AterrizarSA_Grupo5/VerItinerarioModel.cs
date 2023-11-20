@@ -146,9 +146,36 @@ namespace AterrizarSA_Grupo5
                         }
                         else
                         {
-                            PasajerosPorPasajeEnt pasajeroPasaje = listaPasajerosPasajes[j];
-                            VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, pasajeroPasaje.IdPasajeroPasaje);
-                            listaVuelos.Add(vueloModel);
+                            try
+                            {
+                                PasajerosPorPasajeEnt pasajeroPasaje = listaPasajerosPasajes[j];
+                                VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, pasajeroPasaje.IdPasajeroPasaje);
+                                listaVuelos.Add(vueloModel);
+                            }
+                            catch
+                            {
+                                int id = ReservaMod.ObtenerUltimoIdPasajeroPasaje();
+                                VueloEnt vueloPasaje = new VueloEnt();
+                                PasajeEnt pasajeTemp = new PasajeEnt();
+                                vueloPasaje.IdVuelo = vuelo.IdVuelo;
+                                vueloPasaje.Origen = vuelo.Origen;
+                                vueloPasaje.Destino = vuelo.Destino;
+                                vueloPasaje.Paradas = vuelo.Paradas;
+                                vueloPasaje.FechayHoraPartida = vuelo.FechayHoraPartida;
+                                vueloPasaje.FechayHoraLlegada = vuelo.FechayHoraLlegada;
+                                vueloPasaje.TiempoViaje = vuelo.TiempoViaje;
+                                vueloPasaje.Aerolinea = vuelo.Aerolinea;
+                                pasajeTemp.IdPasaje = pasaje.IdPasaje;
+                                pasajeTemp.Categoria = pasaje.Categoria;
+                                pasajeTemp.Precio = pasaje.Precio;
+                                pasajeTemp.TipoPasajero = pasaje.TipoPasajero;
+                                List<PasajeEnt> listaPasajeTemp = new List<PasajeEnt>() { pasajeTemp };
+                                vueloPasaje.Pasajes = listaPasajeTemp;
+                                ReservaMod.CrearPasajeroVuelo(id, vueloPasaje);
+                                VerItinerarioModel vueloModel = new VerItinerarioModel(vuelo.IdVuelo, vuelo.Origen, vuelo.Destino, vuelo.Paradas, vuelo.FechayHoraPartida, vuelo.FechayHoraLlegada, vuelo.TiempoViaje, vuelo.Aerolinea, pasaje.IdPasaje, pasaje.Categoria, pasaje.Precio, pasaje.TipoPasajero, pasaje.CantidadDisponible, id);
+                                listaVuelos.Add(vueloModel);
+                            }
+                            
                         }
                     }
                     j++;
